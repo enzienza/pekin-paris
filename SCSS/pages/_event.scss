@@ -1,0 +1,125 @@
+// main: ../style.scss
+
+
+.card-event{
+    .card-title{
+        text-align: center;
+        margin-top: 0;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+.img-event{
+    position: relative;
+    overflow: hidden;
+    img{
+        /* opacity: .5; */
+        height: 450px;
+    }
+}
+.info-event{
+    list-style: none;
+    display: inline-flex;
+    font-family: $fontSecondary;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-left: 0;
+    span{
+        padding: 0 10px;
+    }
+}
+
+
+.hovered{
+    .card-body{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        left: 15px;
+        z-index: 2;
+        text-align: center;
+    }
+}
+.hovered:hover .btn-event{
+    opacity: 1;
+    max-height: 190px;
+}
+
+.btn-event{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    &::before, &::after{
+        display: block;
+        clear: both;
+        content: '';
+        width: 0;
+        height: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+// MEDIUM ----------------------------------------------------------------------
+@include responsive(M){
+    .card-event{
+        .card-title{
+            font-size: calc( 2rem + (1.5 - 2) * ((100vw - 20rem) / (48 - 20)));
+        }
+        .info-event{
+            font-size: 12.1px;
+        }
+        span{
+            padding: 0 2px;
+        }
+        .btn{
+            font-size: smaller;
+            white-space: normal;
+            line-height: normal;
+        }
+    }
+    .img-event{
+        img{
+            height:400px;
+        }
+    }
+}
+
+// SMALL -----------------------------------------------------------------------
+@include responsive(S){
+    .img-event{
+        img{
+            height: auto;
+        }
+    }
+}
+
+//  EXTRA SMALL ----------------------------------------------------------------
+@include responsive(XS){
+    .img-event{
+        img{
+            max-height: 450px;
+        }
+    }
+    .card-event{
+        .card-title{
+            font-size: calc( 1.8rem + (4.25 - 1.8) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc( 2 * (0.9rem + (4.25 - 2) * ((100vw - 20rem) / (48 - 20))));
+        }
+        .info-event{
+            font-size: .8em;
+        }
+        .btn{
+            font-size: smaller;
+        }
+    }
+}

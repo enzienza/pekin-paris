@@ -1,0 +1,46 @@
+/*!
+Theme Name: TFE-THEME
+Theme URL : www.enzalombardo.be
+Author: Enza Lombardo
+Description: theme de TFE
+copyright : 2019 © Enza Lombardo
+Version: 1.0
+*/
+
+// import typography by google font -----------------
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto');
+
+
+// VENDOR ----------------------------------------------------------------------
+@import "vendor/bootstrap";
+
+// HELPER / abstracts ----------------------------------------------------------
+@import "helper/variables";
+@import "helper/mixins";
+
+// BASE ------------------------------------------------------------------------
+@import "base/reset";
+@import "base/general";
+@import 'base/fonts';
+@import "base/animated";
+
+// MODULES ---------------------------------------------------------------------
+@import "modules/boutons";
+@import "modules/icons";
+@import 'modules/video';
+@import 'modules/card';
+@import 'modules/cover';
+@import 'modules/box';
+
+
+// LAYOUT ----------------------------------------------------------------------
+@import "layout/menu";
+@import "layout/footer";
+
+// PAGES -----------------------------------------------------------------------
+@import "pages/accueil";
+@import "pages/buffet";
+@import "pages/service-carte";
+@import "pages/emporter";
+@import "pages/event";
+@import "pages/contact";

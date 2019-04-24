@@ -1,0 +1,82 @@
+// main: ../style.scss
+
+
+/* --- BOUTON --- */
+.btn{
+    width: auto;
+    line-height: 2;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    &.focus {
+      box-shadow: none !important;
+    }
+    &:focus{
+        box-shadow: none !important;
+    }
+}
+
+.btn-outline{
+    border: 2px solid $colorPrimary;
+    color: $colorPrimary;
+    &:hover{
+        color: $colorLight;
+        background-color: $colorPrimary;
+        border-color: $colorPrimary;
+    }
+}
+.btn-outline-light{
+    border: 2px solid $colorLight;
+    color: $colorLight;
+    width: 100%;
+    &hover{
+        color: $colorDark;
+        background-color: $colorLight;
+        border-color: $colorLight;
+
+    }
+}
+.btn-center{
+    text-align: center;
+    .btn{
+        font-size: x-large;
+        letter-spacing: 2px;
+        width: 50%;
+
+    }
+}
+
+.btn-tarif{
+    .row{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .btn{
+        width: 100%;
+        background-color: inherit;
+        border: 2px solid $colorPrimary;
+        text-transform: uppercase;
+    }
+}
+
+// MEDIUM ----------------------------------------------------------------------
+@include responsive(M){
+
+}
+
+// SMALL -----------------------------------------------------------------------
+@include responsive(S){
+    .btn-center{
+        .btn{
+            width: 100%;
+        }
+    }
+}
+
+//  EXTRA SMALL ----------------------------------------------------------------
+@include responsive(XS){
+    .btn-center{
+        .btn{
+            width: 100%;
+        }
+    }
+}

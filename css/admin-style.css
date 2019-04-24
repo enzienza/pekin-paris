@@ -1,0 +1,307 @@
+/*
+Name : Custom Admin
+Author: Enza Lombardo
+Description: Feuille de style pour le dashboard
+Copyright: 2019 © Enza Lombardo
+Version: 1.0
+*/
+
+
+/* -------------------------------------------------------------------------- */
+/* page login */
+/* -------------------------------------------------------------------------- */
+body.login{
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+                url('../img/accueil.png') no-repeat fixed;
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+                url('../img/accueil.png') no-repeat fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+                url('../img/accueil.png') no-repeat fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+}
+
+#pearlIt{
+    background-color: inherit;
+    box-shadow: none;
+}
+
+#login #nav a, #login #backtoblog a{
+    color: white;
+    display: block;
+    background: gray;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 4px rgba(85, 85, 85, 0.7);
+}
+
+h1 a{
+    background: url('../img/logo-login.png') no-repeat !important;
+    width: 257px !important;
+    height: 198px !important;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM POST TYPE */
+/* -------------------------------------------------------------------------- */
+
+.post-type-cartes #postdivrich,
+.post-type-emporters #postdivrich{
+    display: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* GENERAL */
+/* -------------------------------------------------------------------------- */
+.backend-card-img{
+    float: left;
+    border: 1px solid #e5e5e5;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.backend-img-logo{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.backend-card-img-bg{
+    float: left;
+    border: 1px solid #e5e5e5;
+}
+.backend-img-bg{
+    max-width: 300px;
+    padding: 4px;
+}
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE FORM */
+/* -------------------------------------------------------------------------- */
+
+.form-custom .form-table-custom{
+    border: inherit;
+}
+
+.form-custom h2{
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0;
+    line-height: 3;
+    /* margin-top: 2rem; */
+    padding-left: 15px;
+}
+
+.form-custom .form-table{
+    background: #fff;
+    margin: 0;
+    margin-bottom: 2rem;
+    /* border: 1px solid #e5e5e5; */
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.form-custom .form-table th{
+    padding-left: 15px;
+}
+
+.form-custom input[type="text"]{
+    width: 60%;
+}
+
+.form-custom textarea{
+    width: 60%;
+    height: auto;
+}
+
+
+.info{
+    font-size:smaller;
+    color: #9c9c9c;
+    line-height: 1;
+    padding-left: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE HORAIRE */
+/* -------------------------------------------------------------------------- */
+.table-hour{
+    border-collapse: collapse;
+}
+
+.table-hour .day,
+.table-hour .service,
+.table-hour .open,
+.item-hour-day td{
+    border: 1px solid #ccc;
+}
+
+.table-hour thead tr .day,
+.table-hour thead tr .open{
+    width: 100px;
+}
+
+.table-hour thead tr .service{
+    width: 250px;
+}
+
+.table-hour th{
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE FORMULE */
+/* -------------------------------------------------------------------------- */
+
+.backend-tarif input[type="text"]{
+    width: 100px;
+}
+
+.backend-table-tarif {
+    border-collapse: collapse;
+}
+
+.backend-table-tarif .backend-day,
+.backend-table-tarif .backend-tarif,
+.backend-table-tarif .backend-fermer{
+    border: 1px solid #ccc;
+}
+
+.backend-table-tarif thead tr .backend-day,
+.backend-table-tarif thead tr .backend-fermer{
+    width: 100px;
+}
+
+.backend-table-tarif thead tr .backend-tarif{
+    width: 150px;
+}
+
+.backend-table-tarif th{
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE ACCUEIL */
+/* -------------------------------------------------------------------------- */
+
+.table-btn{
+    margin-top: 10px;
+    border-collapse: collapse;
+    padding: 0;
+}
+
+.table-btn td{
+    padding: 10px;
+}
+
+.table-btn input[type="text"]{
+    width: 500px;
+}
+
+.backend-item-btn-img:first-child{
+    padding-right: 2rem;
+}
+.backend-item-btn-img:last-child{
+    padding-left: 2rem;
+}
+.backend-hiden-btn, .backend-btn-txt{
+    margin-bottom: 15px;
+}
+
+.backend-img-accueil{
+    max-width: 400px;
+    max-height: 200px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE BUFFET */
+/* -------------------------------------------------------------------------- */
+.backend-element-buffet input[type="text"]{
+    width: 50px;
+    margin-right: 5px;
+}
+
+.backend-img-buffet{
+    max-width: 300px;
+    max-height: 150px;
+}
+
+.backend-item-img-buffet,
+.backend-item-btn-img{
+    display: table-cell;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+.backend-item-img-buffet:last-child,
+.backend-item-btn-img:last-child{
+    border: none;
+}
+
+
+.backend-path-img-buffet input[type="text"],
+.backend-patg-img-accueil input[type="text"],
+.backend-btn-txt input[type="text"]{
+    width: 100%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM PAGE service mennu */
+/* -------------------------------------------------------------------------- */
+
+.backend-min-couvert input[type="text"]{
+    width: 40px;
+}
+
+.service-menu .form-table tr{
+    border-bottom: 1px solid #ccc;
+}
+
+.backend-item-serveice-un td,
+.backend-item-serveice-deux td,
+.backend-item-serveice-trois td,
+.backend-item-serveice-quatre td,
+.backend-item-serveice-cinq td{
+    padding: 2px 10px;
+}
+
+.backend-item-serveice-un input[type="text"],
+.backend-item-serveice-deux input[type="text"],
+.backend-item-serveice-trois input[type="text"],
+.backend-item-serveice-quatre input[type="text"],
+.backend-item-serveice-cinq input[type="text"]{
+    width: 300px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM PAGE EMPORTER */
+/* -------------------------------------------------------------------------- */
+
+.backend-reduction input[type="text"]{
+    width: 60px;
+}
+
+.backend-offert td{
+    padding: 2px 0;
+    padding-right: 15px;
+}
+.backend-offert input[type="text"]{
+    width: 100px;
+}
+
+.backend-item-barquette, .backend-card-img-bg{
+    display: table-cell;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+.backend-info-barqquette input[type="text"]{
+    width: 100%;
+}

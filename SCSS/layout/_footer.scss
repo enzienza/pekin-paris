@@ -1,0 +1,49 @@
+// main: ../style.scss
+
+
+/* -------------------------------------------- */
+/* ---------------    FOOTER    --------------- */
+/* -------------------------------------------- */
+footer{
+    background: $colorDark;
+    color: $colorLight;
+}
+
+
+.footer-bottom{
+    text-align: center;
+    padding: 10px 0;
+    line-height: 1.7;
+    border-top: 0.1px solid $colorLight;
+    font-size: small;
+    p{
+        margin-bottom: 0;
+    }
+}
+
+
+
+// MEDIUM ----------------------------------------------------------------------
+@include responsive(M){
+    .footer-bottom{
+        font-size: 1rem;
+    }
+}
+
+// SMALL -----------------------------------------------------------------------
+@include responsive(S){
+    .footer-bottom{
+        padding: 3% 20%;
+        line-height: 1.4;
+        font-size: .8rem;
+    }
+}
+
+// EXTRA SMALL -----------------------------------------------------------------
+@include responsive(XS){
+    .footer-bottom{
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+        padding: 5%;
+    }
+}

@@ -1,0 +1,17 @@
+// main: ../style.scss
+
+
+.box-phone{
+    background-color: $colorDark;
+    color: $colorLight;
+    padding: 3rem;
+    font-size: 1.8rem;
+    h1{
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    p{
+        letter-spacing: 3px;
+        line-height: 2;
+    }
+}
