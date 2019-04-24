@@ -1,41 +1,42 @@
 <?php
 
 /*
- *    ./functions/custom-admin.php
- *
- *      Personnaliser la page de connetion
- *
- *
- */
+Name:   Custom Admin
+Description: fonction qui permet de Personnaliser la page de connetion
+Author: Enza Lombardo
+Author URI: www.enzalombardo.be
+copyright : 2019 © Enza Lombardo
+Version: 1.0
+*/
 
 
- /* ------------------------------------------- */
- /* --------------   custom css   ------------- */
- /* ------------------------------------------- */
+/* ------------------------------------------- */
+/* --------------   custom css   ------------- */
+/* ------------------------------------------- */
 
- function custom_admin(){
-     echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/css/admin-style.css" />';
- }
+function custom_admin(){
+    echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/css/admin-style.css" />';
+}
 
- add_action('login_head','custom_admin');
- add_action('admin_head','custom_admin');
-
-
-
- /* ------------------------------------------- */
- /* -----------    lien du logo    ------------ */
- /* ------------------------------------------- */
- // function custom_login_logo_link(){
- //     return get_bloginfo('siteurl');
- // }
- // add_filter( 'login_headerurl', 'custom_login_logo_link');
+add_action('login_head','custom_admin');
+add_action('admin_head','custom_admin');
 
 
- /* ------------------------------------------- */
- /* ------   description (alt de img)   ------- */
- /* ------------------------------------------- */
 
- // function custom_login_logo_title(){
- //     return get_bloginfo('description');
- // }
- // add_filter('login_headertitle', 'custom_login_logo_title');
+/* ------------------------------------------- */
+/* -----------    lien du logo    ------------ */
+/* ------------------------------------------- */
+function custom_login_logo_link(){
+    return get_bloginfo('siteurl');
+}
+add_filter( 'login_headerurl', 'custom_login_logo_link');
+
+
+/* ------------------------------------------- */
+/* ------   description (alt de img)   ------- */
+/* ------------------------------------------- */
+
+function custom_login_logo_title(){
+    return get_bloginfo('description');
+}
+add_filter('login_headertitle', 'custom_login_logo_title');
