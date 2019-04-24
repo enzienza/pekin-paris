@@ -225,8 +225,124 @@ function field_buffetpage_desc_txt_content(){
     <?php
 } // END => field_buffetpage_desc_txt_content
 
+// CALLBACK REGISTER : buffetpage_image_uno ------------------------------------
+function handle_file_uno_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_image_uno']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_image_uno'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_image_uno']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_image_uno');
+
+} // END => handle_file_uno_buffetpage
+
+// CALLBACK REGISTER : buffetpage_image_due ------------------------------------
+function handle_file_due_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_image_due']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_image_due'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_image_due']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_image_due');
+
+} // END => handle_file_due_buffetpage
+
+// CALLBACK REGISTER : buffetpage_image_tre --------------------------------------------
+function handle_file_tre_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_image_tre']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_image_tre'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_image_tre']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_image_tre');
+
+} // END => handle_file_tre_buffetpage
+
+// CALLBACK REGISTER : buffetpage_image_quattro --------------------------------------------
+function handle_file_quattro_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_image_quattro']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_image_quattro'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_image_quattro']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_image_quattro');
+
+} // END => handle_file_quattro_buffetpage
 
 
+
+// CALLBACK FIELDS : desc_img_buffet
+function field_buffetpage_desc_img_content(){
+    ?>
+    <div class="backend-item-img-buffet">
+        <h4>1ère image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_image_uno'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name="buffetpage_image_uno" id="buffetpage_image_uno" value="<?php echo get_option('buffetpage_image_uno'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_image_uno'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <div class="backend-item-img-buffet">
+        <h4>2e image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_image_due'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name="buffetpage_image_due" id="buffetpage_image_due" value="<?php echo get_option('buffetpage_image_due'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_image_due'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <div class="backend-item-img-buffet">
+        <h4>3e image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_image_tre'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name="buffetpage_image_tre" id="buffetpage_image_tre" value="<?php echo get_option('buffetpage_image_tre'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_image_tre'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <div class="backend-item-img-buffet">
+        <h4>2e image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_image_quattro'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name="buffetpage_image_quattro" id="buffetpage_image_quattro" value="<?php echo get_option('buffetpage_image_quattro'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_image_quattro'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+    <?php
+} // END => field_buffetpage_desc_img_content
 
 /* ----------------------------------------------------------------------------- */
 // SECTION 4 : section_tarif --> Option 2 -- page-buffet

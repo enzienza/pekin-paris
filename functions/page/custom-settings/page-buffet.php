@@ -206,6 +206,33 @@ register_setting('group-page-buffet', 'buffetpage_desc_hidden');
 register_setting('group-page-buffet', 'buffetpage_desc_txt_content');
 
 
+// REGISTER : buffetpage_image_uno
+register_setting(
+    'group-page-buffet',    // group (element display in the form)
+    'buffetpage_image_uno', // field ID
+    'handle_file_uno_buffetpage' // Callback function
+); // end -> register : handle_file_uno_buffetpage
+
+// REGISTER : buffetpage_image_due
+register_setting(
+    'group-page-buffet',    // group (element display in the form)
+    'buffetpage_image_due', // field ID
+    'handle_file_due_buffetpage' // Callback function
+); // end -> register : handle_file_due_buffetpage
+
+// REGISTER : buffetpage_image_tre
+register_setting(
+    'group-page-buffet',    // group (element display in the form)
+    'buffetpage_image_tre', // field ID
+    'handle_file_tre_buffetpage' // Callback function
+); // end -> register : handle_file_tre_buffetpage
+
+// REGISTER : buffetpage_image_quattro
+register_setting(
+    'group-page-buffet',    // group (element display in the form)
+    'buffetpage_image_quattro', // field ID
+    'handle_file_quattro_buffetpage' // Callback function
+); // end -> register : handle_file_quattro_buffetpage
 
 
 
