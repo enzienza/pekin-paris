@@ -190,14 +190,14 @@ add_settings_field(
     'section_buffetpage_desc'                                   // SECTION ID
 ); // end --> field : buffetpage_desc_txt_content
 
-// FIELDS : buffetpage_desc_img ----------------------------------------------
+// FIELDS : buffetpage_desc_txt_content ----------------------------------------------
 add_settings_field(
-    'buffetpage_desc_img',                              // ID
-    __('Image buffet', 'section_buffetpage_desc'),      // LABEL
-    'field_buffetpage_desc_img',                        // CALLBACK FUNCTION
-    'page-buffet',                                      // MENU PAGE SLUG
-    'section_buffetpage_desc'                           // SECTION ID
-); // end -> field : buffetpage_desc_img
+    'buffetpage_desc_img_content',                              // ID
+    __('Ajout image buffet', 'section_buffetpage_desc'),         // LABEL
+    'field_buffetpage_desc_img_content',                        // CALLBACK FUNCTION
+    'page-buffet',                                              // MENU PAGE SLUG
+    'section_buffetpage_desc'                                   // SECTION ID
+); // end --> field : buffetpage_desc_txt_content
 
 
 
@@ -206,34 +206,7 @@ register_setting('group-page-buffet', 'buffetpage_desc_hidden');
 register_setting('group-page-buffet', 'buffetpage_desc_txt_content');
 
 
-// REGISTER : buffetpage_desc_img_uno
-register_setting(
-    'group-page-buffet',                        // group (element display in the form)
-    'buffetpage_desc_img_uno',                  // field ID
-    'handle_file_unoimg_buffetpage'             // Callback function
-); // end -> register : buffetpage_desc_img_uno
 
-// REGISTER : buffetpage_desc_img_due
-register_setting(
-    'group-page-buffet',                        // group (element display in the form)
-    'buffetpage_desc_img_due',                  // field ID
-    'handle_file_dueimg_buffetpage'             // Callback function
-); // end -> register : buffetpage_desc_img_due
-
-
-// REGISTER : buffetpage_desc_img_tre
-register_setting(
-    'group-page-buffet',                        // group (element display in the form)
-    'buffetpage_desc_img_tre',                  // field ID
-    'handle_file_treimg_buffetpage'             // Callback function
-); // end -> register : buffetpage_desc_img_tre
-
-// REGISTER : buffetpage_desc_img_quattro
-register_setting(
-    'group-page-buffet',                        // group (element display in the form)
-    'buffetpage_desc_img_quattro',              // field ID
-    'handle_file_quattroimg_buffetpage'         // Callback function
-); // end -> register : buffetpage_desc_img_quattro
 
 
 /* ----------------------------------------------------------------------------- */
