@@ -62,13 +62,13 @@
                         <?php if(checked(1, get_option('emporterpage_msg_affiche_avatar'), false)){ ?>
                             <!-- SI emporterpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
 
-                            <div class="col-8">
+                            <div class="col-6">
                                 <p class="acchoche"><?php echo get_option('emporterpage_msg_txt'); ?></p>
-                            </div><!-- / .col-8 -->
+                            </div><!-- / .col-6 -->
 
-                            <div class="col-4">
+                            <div class="col-6">
                                 <img src="<?php echo get_option('emporterpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
-                            </div><!-- /.col-4 -->
+                            </div><!-- /.col-6 -->
 
                         <?php } else { ?>
                             <div class="col-12" style="padding: 0 13rem;">

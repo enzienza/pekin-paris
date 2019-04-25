@@ -60,7 +60,6 @@
         <section id="page-event-msg" class="container">
             <div class="row justify-content-md-center">
                 <div class="card box-msg col-md-8 col-12">
-                    <h2><?php echo get_option('eventpage_msg_titre'); ?></h2>
                     <div class="row">
                         <?php if(checked(1, get_option('eventpage_msg_affiche_avatar'), false)){ ?>
                             <!-- SI eventpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
@@ -73,7 +72,7 @@
                             </div><!-- / .col-5 -->
                         <?php } else { ?>
                             <div class="col-12" style="padding: 0 13rem;">
-                                <p class="acchoche"><?php echo get_option('eventpage_msg_txt'); ?></p>        
+                                <p class="acchoche"><?php echo get_option('eventpage_msg_txt'); ?></p>
                             </div><!-- /.col-12 -->
                         <?php } ?>
                     </div><!-- /.row" -->

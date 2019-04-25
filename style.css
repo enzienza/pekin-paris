@@ -6875,6 +6875,36 @@ footer {
   }
 }
 
+#page-carte-msg .box-msg h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+#page-carte-msg .box-msg ul {
+  font-size: 1.4rem;
+  margin-top: 3rem;
+}
+
+#page-emporter-msg .box-msg .acchoche {
+  font-size: 1.7rem;
+  padding: 5rem 2rem;
+  text-align: justify;
+}
+
+#page-emporter-msg .box-msg img {
+  margin-left: 0;
+}
+
+#page-event-msg .box-msg .acchoche {
+  font-size: 1.5rem;
+  padding: 5rem 1.3rem;
+  text-align: justify;
+}
+
+#page-event-msg .box-msg img {
+  padding-top: 1rem;
+}
+
 .card-event .card-title {
   text-align: center;
   margin-top: 0;
