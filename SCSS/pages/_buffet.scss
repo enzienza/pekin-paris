@@ -107,8 +107,16 @@
 
 }/* END ==> section-tarif-buffet */
 
+
+// BOX-COLLAPSE ----------------------------------------------------------------
 .box-collapse{
     height: 250px;
+
+    .titre-collapse{
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
 
     &-left{
         padding: 1rem;

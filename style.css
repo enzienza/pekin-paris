@@ -6566,16 +6566,38 @@ ul {
 /* CARD-COLLAPSE */
 /*------------------------------------------------------------------------------*/
 .card-collapse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-collapse .titre-collapse {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 1.8rem 0 1.6rem;
+  letter-spacing: 3px;
+}
+
+.card-collapse ul {
+  margin-left: 1rem;
+}
+
+.card-collapse .left {
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-collapse .table-tarif {
+  width: 70%;
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-collapse .table-tarif .tarif-day {
+  line-height: 2;
+}
+
+.card-collapse .table-tarif .tarif-day .prix {
+  font-weight: bold;
+  color: #FFC033;
+  text-align: center;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -7045,6 +7067,12 @@ footer {
 /* END ==> section-tarif-buffet */
 .box-collapse {
   height: 250px;
+}
+
+.box-collapse .titre-collapse {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .box-collapse-left {
