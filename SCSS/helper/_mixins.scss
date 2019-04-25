@@ -10,8 +10,9 @@
 
 
 
-//layout - media queries --------------------
-
+/*------------------------------------------------------------------------------*/
+/* MEDIA QUERIES */
+/*------------------------------------------------------------------------------*/
 @mixin responsive($breakpoint){
     @if $breakpoint == XS {
         @media only screen and (min-width: $XS) and (max-width: calc(#{$S} - 1px) ){

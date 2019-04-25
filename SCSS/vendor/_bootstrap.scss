@@ -1,26 +1,42 @@
 // main: ../style.scss
 
+/*------------------------------------------------------------------------------*/
+/* BOOTSTRAP */
+/*------------------------------------------------------------------------------*/
 
+
+// OBLIGATIR -------------------------------------------------------------------
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
-//@import "bootstrap/root";
 @import "bootstrap/reboot";
+@import "bootstrap/grid";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/utilities";
+@import "bootstrap/print";
+
+
+
+// UTILISER --------------------------------------------------------------------
+@import "bootstrap/tables";
+@import "bootstrap/buttons";
+@import "bootstrap/card";
+@import "bootstrap/modal";
+
+
+
+// NON UTILISER ----------------------------------------------------------------
+//@import "bootstrap/root";
 //@import "bootstrap/type";
 //@import "bootstrap/images";
 //@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
 //@import "bootstrap/forms";
-@import "bootstrap/buttons";
-@import "bootstrap/transitions";
-@import "bootstrap/dropdown";
 //@import "bootstrap/button-group";
 //@import "bootstrap/input-group";
 //@import "bootstrap/custom-forms";
-@import "bootstrap/nav";
-@import "bootstrap/navbar";
-@import "bootstrap/card";
 //@import "bootstrap/breadcrumb";
 //@import "bootstrap/pagination";
 //@import "bootstrap/badge";
@@ -30,9 +46,6 @@
 //@import "bootstrap/media";
 //@import "bootstrap/list-group";
 //@import "bootstrap/close";
-@import "bootstrap/modal";
 //@import "bootstrap/tooltip";
 //@import "bootstrap/popover";
 //@import "bootstrap/carousel";
-@import "bootstrap/utilities";
-@import "bootstrap/print";

@@ -1,8 +1,10 @@
 // main: ../_mixins.scss
 
 
+/*------------------------------------------------------------------------------*/
+/* BORDER-RADIUS */
+/*------------------------------------------------------------------------------*/
 
-// BORDER-RADIUS ----------------------------------------------------------
 @mixin border-radius($x) {
   border-radius: ($x);
 }
@@ -22,14 +24,20 @@
           align-items: center;
 }
 
-// BOX-SHADOW -------------------------------------------------------------
+/*------------------------------------------------------------------------------*/
+/* BOX-SHADOW */
+/*------------------------------------------------------------------------------*/
 @mixin shadow-menu{
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.3);
             box-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
 
+@mixin shadow-sall{
+    -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
 
-@mixin shadow-regular {
+@mixin shadow-regular{
     -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }

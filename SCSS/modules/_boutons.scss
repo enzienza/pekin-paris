@@ -1,7 +1,10 @@
 // main: ../style.scss
 
+/*------------------------------------------------------------------------------*/
+/* BOUTON */
+/*------------------------------------------------------------------------------*/
 
-/* --- BOUTON --- */
+// BTN -------------------------------------------------------------------------
 .btn{
     width: auto;
     line-height: 2;
@@ -13,8 +16,9 @@
     &:focus{
         box-shadow: none !important;
     }
-}
+} /* END ==> BTN */
 
+// BTN-OUTLINE -----------------------------------------------------------------
 .btn-outline{
     border: 2px solid $colorPrimary;
     color: $colorPrimary;
@@ -23,18 +27,22 @@
         background-color: $colorPrimary;
         border-color: $colorPrimary;
     }
-}
-.btn-outline-light{
-    border: 2px solid $colorLight;
-    color: $colorLight;
-    width: 100%;
-    &hover{
-        color: $colorDark;
-        background-color: $colorLight;
-        border-color: $colorLight;
 
-    }
-}
+    // .btn-outline-light -----------------
+    &-light{
+        border: 2px solid $colorLight;
+        color: $colorLight;
+        width: 100%;
+        &hover{
+            color: $colorDark;
+            background-color: $colorLight;
+            border-color: $colorLight;
+        }
+    } /* end --> .btn-outline-light */
+} /* END ==> .btn-outline */
+
+
+// BTN-CENTER -----------------------------------------------------------------
 .btn-center{
     text-align: center;
     .btn{
@@ -43,8 +51,9 @@
         width: 50%;
 
     }
-}
+} /* END ==> BTN-CENTER */
 
+// BTN-TARIF -------------------------------------------------------------------
 .btn-tarif{
     .row{
         margin-left: 15px;
@@ -56,22 +65,22 @@
         border: 2px solid $colorPrimary;
         text-transform: uppercase;
     }
-}
+} /* END ==> BTN-TARIF */
 
-.box-msg{
-    .btn{
-        margin: 2rem auto;
-        text-transform: uppercase;
-        font-size: larger;
-    }
-}
 
-// MEDIUM ----------------------------------------------------------------------
+
+
+/*------------------------------------------------------------------------------*/
+/* MEDIUM */
+/*------------------------------------------------------------------------------*/
 @include responsive(M){
 
 }
 
-// SMALL -----------------------------------------------------------------------
+
+/*------------------------------------------------------------------------------*/
+/* SMALL */
+/*------------------------------------------------------------------------------*/
 @include responsive(S){
     .btn-center{
         .btn{
@@ -80,7 +89,10 @@
     }
 }
 
-//  EXTRA SMALL ----------------------------------------------------------------
+
+/*------------------------------------------------------------------------------*/
+/* EXTRA SMALL */
+/*------------------------------------------------------------------------------*/
 @include responsive(XS){
     .btn-center{
         .btn{

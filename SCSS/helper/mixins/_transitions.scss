@@ -1,7 +1,8 @@
 // main: ../_mixins.scss
 
-
-// TRANSITION ------------------------------------------------------------
+/*------------------------------------------------------------------------------*/
+/* TRANSITION */
+/*------------------------------------------------------------------------------*/
 @mixin transition-nav-item{
     -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
          -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
