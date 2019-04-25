@@ -6417,6 +6417,10 @@ ul {
 }
 
 /* END ==> BTN-CENTER */
+.btn-tarif {
+  margin-bottom: 15px;
+}
+
 .btn-tarif .row {
   margin-left: 15px;
   margin-right: 15px;
@@ -6427,6 +6431,8 @@ ul {
   background-color: inherit;
   border: 2px solid #FFC033;
   text-transform: uppercase;
+  color: #FFC033;
+  letter-spacing: 5px;
 }
 
 /* END ==> BTN-TARIF */
@@ -6528,11 +6534,17 @@ ul {
 /* CARD-TARIF */
 /*------------------------------------------------------------------------------*/
 .card-tarif {
-  height: 300px;
+  height: 370px;
+}
+
+.card-tarif h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .card-tarif .card-body {
   padding-bottom: 0;
+  padding-left: 3rem;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -6911,7 +6923,7 @@ footer {
 }
 
 .item-drink {
-  line-height: 1rem;
+  line-height: 1.7rem;
   margin: 10px 10px;
 }
 
@@ -6971,13 +6983,31 @@ footer {
 
 #section-tarif-buffet h1 {
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #section-tarif-buffet .box-intro-tarif {
   margin-bottom: 3rem;
   /* end -> box-left */
   /* end --> box-right */
+}
+
+#section-tarif-buffet .box-intro-tarif .box-left {
+  padding: 6rem 4rem 0;
+}
+
+#section-tarif-buffet .box-intro-tarif .box-left p {
+  font-size: 1.4rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+#section-tarif-buffet .box-intro-tarif .box-left .catch {
+  font-size: 1.6rem;
+  letter-spacing: 3.6px;
+  font-weight: bold;
+  color: #FFC033;
 }
 
 #section-tarif-buffet .box-intro-tarif .box-right {

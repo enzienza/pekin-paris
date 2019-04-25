@@ -5,7 +5,7 @@
 }
 
 .item-drink{
-    line-height: 1rem;
+    line-height: 1.7rem;
     margin: 10px 10px;
 }
 
@@ -58,21 +58,38 @@
 #section-tarif-buffet{
     h1{
         font-size: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     // box-intro-tarif ---------------------------------------------------------
     .box-intro-tarif{
         margin-bottom: 3rem;
-        .box-left{
 
+        .box-left{
+            padding: 6rem 4rem 0;
+            p{
+                font-size: 1.4rem;
+                text-align: justify;
+                margin-bottom: 2rem;
+                letter-spacing: 3px;
+            }
+            .catch{
+                font-size: 1.6rem;
+                letter-spacing: 3.6px;
+                font-weight: bold;
+                color: $colorPrimary;
+            }
         }/* end -> box-left */
+
         .box-right{
             img{
                 width: 100%;
             } /* end -> box-right */
+
         } /* end --> box-right */
+
     } /* end --> box-intro-tarif */
+
     .item-card{
         margin-bottom: 3rem;
     }

@@ -55,6 +55,7 @@
 
 // BTN-TARIF -------------------------------------------------------------------
 .btn-tarif{
+    margin-bottom: 15px;
     .row{
         margin-left: 15px;
         margin-right: 15px;
@@ -64,6 +65,8 @@
         background-color: inherit;
         border: 2px solid $colorPrimary;
         text-transform: uppercase;
+        color: $colorPrimary;
+        letter-spacing: 5px;
     }
 } /* END ==> BTN-TARIF */
 

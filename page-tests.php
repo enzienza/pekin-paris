@@ -193,21 +193,21 @@
 
 <!-- START section 4 : section-tarif-buffet -->
 <section id="section-tarif-buffet" class="container">
-    <h1 class="text-center">Découvrez nos différents tarifs</h1>
-    <div class="row box-intro-tarif" style="border: 2px solid purple;">
-        <div class="col-md-7 col-12 box-left" style="background: antiquewhite;">
+    <h1 class="text-center">Tarif buffet</h1>
+    <div class="row box-intro-tarif">
+        <div class="col-md-7 col-12 box-left">
             <p><?php echo get_option('buffetpage_tarif_txt');?></p>
             <p class="catch"><?php echo get_option('buffetpage_tarif_catch');?></p>
         </div><!-- / .col-md-6 .col-12 .box-left -->
-        <div class="col-md-5 col-12 box-right" style="background: aliceblue;">
+        <div class="col-md-5 col-12 box-right">
             <img src="<?php echo get_option('avatar_tarif');?>" alt="sans boissons, avec boissons, full boisson">
         </div><!-- / .col-md-6 .col-12 .box-right -->
     </div><!-- / .row -->
 
-    <div class="row box-formule" style="border:2px solid lime;">
+    <div class="row box-formule">
         <div class="col-md-4 col-12 item-card">
             <div class="card card-tarif">
-                <h3>Sans boissons</h3>
+                <h3 class="text-center">Sans boissons</h3>
                 <div class="card-body">
                     <ul>
                         <!-- item-drink -->
@@ -292,7 +292,7 @@
 
         <div class="col-md-4 col-12 item-card">
             <div class="card card-tarif">
-                <h3>Avec boissons</h3>
+                <h3 class="text-center">Avec boissons</h3>
                 <div class="card-body">
                     <ul>
                         <!-- item-drink -->
@@ -377,7 +377,7 @@
 
         <div class="col-md-4 col-12 item-card">
             <div class="card card-tarif">
-                <h3>Full boissons</h3>
+                <h3 class="text-center">Full boissons</h3>
                 <div class="card-body">
                     <ul>
                         <!-- item-drink -->
