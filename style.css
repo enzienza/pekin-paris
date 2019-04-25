@@ -6765,10 +6765,16 @@ footer {
 }
 
 #section-description-buffet {
+  margin-bottom: 3rem;
   /* --- box-left --- */
   /* end -> .box-left */
   /* --- box-right --- */
   /* end -> .box-right */
+}
+
+#section-description-buffet h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 #section-description-buffet .box-left {
@@ -6792,7 +6798,8 @@ footer {
   margin-bottom: 20px;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  height: 180px;
+  max-height: 180px;
+  height: auto;
 }
 
 /* END ==> #section-description-buffet */

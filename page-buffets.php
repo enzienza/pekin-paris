@@ -159,32 +159,31 @@
         ?>
 
         <section id="section-description-buffet" class="container">
-            <h2>Description Buffet</h2>
+            <h2 class="text-center">Description Buffet</h2>
             <div class="row">
-                <div class="col-md-6 col-12 box-left">
-                    <p class="description-buffet">
+                <div class="col-lg-6 col-12 box-left">
+                    <div class="description-buffet">
                         <?php echo get_option('buffetpage_desc_txt_content'); ?>
-                    </p>
-                </div>
-                <div class="col-md-6 col-12 box-right">
+                    </div><!-- ./ description-buffet -->
+                </div><!-- ./ box-left -->
+                <div class="col-lg-6 col-12 box-right">
                     <div class="row">
-                        <div class="col-12 img-buffet">
-                            <img src="<?php echo get_option('buffetpage_desc_img_uno'); ?>" alt="Buffet">
+                        <div class="col-md-6 col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_image_uno'); ?>" alt="">
                         </div>
-                        <div class="col-12 img-buffet">
-                            <img src="<?php echo get_option('buffetpage_desc_img_due'); ?>" alt="Buffet">
+                        <div class="col-md-6 col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_image_due'); ?>" alt="Buffet">
                         </div>
-                        <div class="col-12 img-buffet">
-                            <img src="<?php echo get_option('buffetpage_desc_img_tre'); ?>" alt="Buffet">
+                        <div class="col-md-6 col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_image_tre'); ?>" alt="Buffet">
                         </div>
-                        <div class="col-12 img-buffet">
-                            <img src="<?php echo get_option('buffetpage_desc_img_quattro'); ?>" alt="Buffet">
+                        <div class="col-md-6 col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_image_quattro'); ?>" alt="Buffet">
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
+                </div><!-- ./ box-right -->
+            </div><!-- ./ row -->
+        </section><!-- ./ section #buffet -->
 
         <?php
     }
