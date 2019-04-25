@@ -58,6 +58,14 @@
     }
 }
 
+.box-msg{
+    .btn{
+        margin: 2rem auto;
+        text-transform: uppercase;
+        font-size: larger;
+    }
+}
+
 // MEDIUM ----------------------------------------------------------------------
 @include responsive(M){
 

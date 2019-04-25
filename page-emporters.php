@@ -19,30 +19,22 @@
         <section id="cover-page-emporter" class="carousel slide" data-ride="carousel" style="" >
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <?php
-                    // SI emporterpage_cover_affiche_img EST COCHE
-                    // => Alors on affiche l'image en background
-
-                    if(checked(1, get_option('emporterpage_cover_affiche_img'), false)){
-                        ?>
-                            <div class="carousel-item active" style="background-image: url(<?php echo get_option('emporterpage_cover_bg_img'); ?>);">
-                                <div class="jumbotron">
-                                    <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
-                                    <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
-                                </div><!-- /.jumbotron -->
-                            </div><!-- /.carousel-item .active -->
-                        <?php
-                    } else {
-                        ?>
-                            <div class="carousel-item active" style="background-color:#333;">
-                                <div class="jumbotron">
-                                    <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
-                                    <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
-                                </div><!-- /.jumbotron -->
-                            </div><!-- /.carousel-item .active -->
-                        <?php
-                    }
-                ?>
+                <?php if(checked(1, get_option('emporterpage_cover_affiche_img'), false)){ ?>
+                    <!-- SI emporterpage_cover_affiche_img EST COCHE => Alors on affiche l'image en background -->
+                    <div class="carousel-item active" style="background-image: url(<?php echo get_option('emporterpage_cover_bg_img'); ?>);">
+                        <div class="jumbotron">
+                            <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
+                            <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
+                        </div><!-- /.jumbotron -->
+                    </div><!-- /.carousel-item .active -->
+                <?php } else { ?>
+                    <div class="carousel-item active" style="background-color:#333;">
+                        <div class="jumbotron">
+                            <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
+                            <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
+                        </div><!-- /.jumbotron -->
+                    </div><!-- /.carousel-item .active -->
+                <?php } ?>
 
             </div><!-- /.carousel -->
         </section>
@@ -55,35 +47,38 @@
     // SI emporterpage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
 
-    if(checked(1, get_option('emporterpage_message_hidden'), false)){
+    if(checked(1, get_option('emporterpage_msg_hidden'), false)){
         ?>
         <?php
     } else {
         // SINON
         // => Afficher la section
         ?>
-        <section id="message-carte" class="container section-message">
-            <div class="row">
+        <section id="page-emporter-msg" class="container">
+            <div class="row justify-content-md-center">
+                <div class="card box-msg col-md-8 col-12">
+                    <h2><?php echo get_option('emporterpage_msg_titre'); ?></h2>
+                    <div class="row">
+                        <?php if(checked(1, get_option('emporterpage_msg_affiche_avatar'), false)){ ?>
+                            <!-- SI emporterpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
 
-                <div class="col-md-6 col-12">
-                    <p class="acchoche"><?php echo get_option('emporterpage_msg_txt'); ?></p>
-                </div><!-- / .col-md-6 col-12 -->
+                            <div class="col-8">
+                                <p class="acchoche"><?php echo get_option('emporterpage_msg_txt'); ?></p>
+                            </div><!-- / .col-8 -->
 
-                <?php
-                // SI emporterpage_msg_affiche_avatar EST COCHE
-                // => Alors on affiche l'avatar
+                            <div class="col-4">
+                                <img src="<?php echo get_option('emporterpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
+                            </div><!-- /.col-4 -->
 
-                if(checked(1, get_option('emporterpage_msg_affiche_avatar'), false)){
-                    ?>
-                    <div class="col-md-6 col-12">
-                        <img src="<?php echo get_option('emporterpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
-                    </div><!-- .col-md-6 .col-12 -->
-                    <?php
-                }
-                ?>
-
-            </div><!-- / .row -->
-        </section><!-- / #menu-section-carte .bg-carte-->
+                        <?php } else { ?>
+                            <div class="col-12" style="padding: 0 13rem;">
+                                <p class="acchoche"><?php echo get_option('emporterpage_msg_txt'); ?></p>
+                            </div><!-- /.col-12 -->
+                        <?php } ?>
+                    </div><!-- /.row" -->
+                </div><!-- /.card .box-msg .col-md-8 .col-12 -->
+            </div><!-- /.row .justify-content-md-center -->
+        </section><!-- / #page-test-msg -->
         <?php
     }
 ?>

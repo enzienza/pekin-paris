@@ -6387,6 +6387,12 @@ ul {
   text-transform: uppercase;
 }
 
+.box-msg .btn {
+  margin: 2rem auto;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
 @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
   .btn-center .btn {
     width: 100%;
@@ -6510,6 +6516,30 @@ ul {
 .box-phone p {
   letter-spacing: 3px;
   line-height: 2;
+}
+
+.box-msg {
+  margin: 9rem auto;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.box-msg img {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.box-msg h2 {
+  font-size: 1.8rem;
+  margin: 1rem auto;
+  line-height: 2;
+  text-align: center;
+}
+
+.box-msg ul {
+  margin-left: 3rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 /* -------------------------------------------- */
@@ -6732,10 +6762,6 @@ footer {
 
 .info-element-buffet {
   margin-right: 5px;
-}
-
-.msg-avatar {
-  width: 50%;
 }
 
 #section-description-buffet {

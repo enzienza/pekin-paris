@@ -6,97 +6,146 @@
 
 <!-- START section 1 : cover-page-buffet -->
 <?php
-// SI buffetpage_cover_hidden EST COCHE
-// => Alors il n'y a pas de section
+    // SI buffetpage_cover_hidden EST COCHE
+    // => Alors il n'y a pas de section
 
-if(checked(1, get_option('buffetpage_cover_hidden'), false)){
-    ?>
-    <?php
-} else {
-    // SINON
-    // => Afficher la section
-    ?>
-    <section id="cover-page-buffet" class="carousel slide" data-ride="carousel" style="" >
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <?php
-            // SI buffetpage_cover_affiche_img EST COCHE
-            // => Alors on affiche l'image en background
+    if(checked(1, get_option('buffetpage_cover_hidden'), false)){
+        ?>
+        <?php
+    } else {
+        // SINON
+        // => Afficher la section
+        ?>
+        <section id="cover-page-buffet" class="carousel slide" data-ride="carousel" style="" >
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <?php if(checked(1, get_option('buffetpage_cover_affiche_img'), false)){ ?>
+                    <!-- SI buffetpage_cover_affiche_img EST COCHE => Alors on affiche l'image en background -->
+                    <div class="carousel-item active" style="background-image: url(<?php echo get_option('buffetpage_cover_bg_img'); ?>);">
+                        <div class="jumbotron">
+                            <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
+                            <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
+                        </div><!-- /.jumbotron -->
+                    </div><!-- /.carousel-item .active -->
+                <?php } else { ?>
+                    <div class="carousel-item active" style="background-color:#333;">
+                        <div class="jumbotron">
+                            <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
+                            <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
+                        </div><!-- /.jumbotron -->
+                    </div><!-- /.carousel-item .active -->
+                <?php } ?>
 
-            if(checked(1, get_option('buffetpage_cover_affiche_img'), false)){
-                ?>
-                <div class="carousel-item active" style="background-image: url(<?php echo get_option('buffetpage_cover_bg_img'); ?>);">
-                    <div class="jumbotron">
-                        <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
-                        <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
-                    </div><!-- /.jumbotron -->
-                </div><!-- /.carousel-item .active -->
-                <?php
-            } else {
-                ?>
-                <div class="carousel-item active" style="background-color:#333;">
-                    <div class="jumbotron">
-                        <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
-                        <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
-                    </div><!-- /.jumbotron -->
-                </div><!-- /.carousel-item .active -->
-                <?php
-            }
-            ?>
-
-        </div><!-- /.carousel -->
-    </section>
-    <?php
-}
+            </div><!-- /.carousel -->
+        </section>
+        <?php
+    }
 ?>
 
-<div id="page-test-msg" class="container section-msg">
-    <div class="row">
-        <div class="col-md-5 col-12">
-            <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
-        </div><!-- .col-md-5 .col-12 -->
+<!-- START section 2 : section-buffetpage_message -->
+<?php
+    // SI buffetpage_cover_hidden EST COCHE
+    // => Alors il n'y a pas de section
 
-        <div class="col-md-7 col-12">
-            <h2><?php echo get_option('buffetpage_message_titre'); ?></h2>
-            <ul>
-                <li>
-                    <?php echo(get_option('buffetpage_msg_element_entrefroide')); ?>
-                    <span class="info-element-buffet">entrées froides</span>
-                </li>
-                <li>
-                    <?php echo(get_option('buffetpage_msg_element_potage')); ?>
-                    <span class="info-element-buffet">potages</span>
-                </li>
-                <li>
-                    <?php echo(get_option('buffetpage_msg_element_entrechaude')); ?>
-                    <span class="info-element-buffet">entrées chaude</span>
-                </li>
-                <li>
-                    <?php echo(get_option('buffetpage_msg_element_plats')); ?>
-                    <span>
-                        sortes de plats <br/>
-                        (viandes, volailles, légumes, etc...)
-                    </span class="info-element-buffet">
-                </li>
-            </ul>
+    if(checked(1, get_option('buffetpage_msg_hidden'), false)){
+        ?>
+        <?php
+    } else {
+        // SINON
+        // => Afficher la section
+        ?>
+        <section id="page-buffet-msg" class="container">
+            <div class="row justify-content-md-center">
+                <div class="card box-msg col-md-8 col-12">
+                    <h2><?php echo get_option('buffetpage_msg_titre'); ?></h2>
+                    <div class="row">
+                        <?php if(checked(1, get_option('buffetpage_msg_affiche_avatar'), false)){ ?>
+                            <!-- SI buffetpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
+                            <div class="col-4">
+                                <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
+                            </div><!-- /.col-4 -->
 
-            <div class="btn">
-                <a href="#section-tarif-buffet">
-                    Tarif buffet
-                </a>
-            </div>
+                            <div class="col-8">
 
-        </div><!-- /.col-md-7 .col-12 -->
-    </div><!-- /.row -->
-</div><!-- / #page-test-msg .section-message -->
+                                <ul>
+                                    <li>
+                                        <?php echo(get_option('buffetpage_msg_element_entrefroide')); ?>
+                                        <span class="info-element-buffet">entrées froides</span>
+                                    </li>
+                                    <li>
+                                        <?php echo(get_option('buffetpage_msg_element_potage')); ?>
+                                        <span class="info-element-buffet">potages</span>
+                                    </li>
+                                    <li>
+                                        <?php echo(get_option('buffetpage_msg_element_entrechaude')); ?>
+                                        <span class="info-element-buffet">entrées chaude</span>
+                                    </li>
+                                    <li>
+                                        <?php echo(get_option('buffetpage_msg_element_plats')); ?>
+                                        <span>
+                                            sortes de plats <br/>
+                                            (viandes, volailles, légumes, etc...)
+                                        </span class="info-element-buffet">
+                                    </li>
+                                </ul>
 
+                                <?php if(checked(1, get_option('buffetpage_msn_button'), false)){ ?>
+                                     <!-- SI buffetpage_msn_button_img EST COCHE => Alors renvois à la section-tarif-buffet -->
+                                    <div class="row justify-content-md-center">
+                                        <a href="#section-tarif-buffet" class="btn btn-outline col-9">
+                                            Voir nos tarif buffet
+                                        </a>
+                                    </div>
+                                <?php } ?>
 
+                            </div><!-- / .col-5 -->
+                        <?php } else { ?>
+                            <div class="col-12" style="padding: 0 13rem;">
+                                        <ul>
+                                            <li>
+                                                <?php echo(get_option('buffetpage_msg_element_entrefroide')); ?>
+                                                <span class="info-element-buffet">entrées froides</span>
+                                            </li>
+                                            <li>
+                                                <?php echo(get_option('buffetpage_msg_element_potage')); ?>
+                                                <span class="info-element-buffet">potages</span>
+                                            </li>
+                                            <li>
+                                                <?php echo(get_option('buffetpage_msg_element_entrechaude')); ?>
+                                                <span class="info-element-buffet">entrées chaude</span>
+                                            </li>
+                                            <li>
+                                                <?php echo(get_option('buffetpage_msg_element_plats')); ?>
+                                                <span>
+                                                    sortes de plats <br/>
+                                                    (viandes, volailles, légumes, etc...)
+                                                </span class="info-element-buffet">
+                                            </li>
+                                        </ul>
 
+                                        <?php
+                                            // SI buffetpage_msn_button_img EST COCHE
+                                            // => Alors renvois à la section-tarif-buffet
 
-
-
-
-
+                                            if(checked(1, get_option('buffetpage_msn_button'), false)){
+                                                ?>
+                                                    <div class="row justify-content-md-center">
+                                                        <a href="#section-tarif-buffet" class="btn btn-outline col-9">
+                                                            Voir nos tarif buffet
+                                                        </a>
+                                                    </div><!-- /.row .justify-content-md-center -->
+                                                <?php
+                                            }
+                                        ?>
+                                    </div><!-- /.col-12 -->
+                        <?php } ?>
+                    </div><!-- /.row" -->
+                </div><!-- /.card .box-msg .col-md-8 .col-12 -->
+            </div><!-- /.row .justify-content-md-center -->
+        </section><!-- / #page-test-msg -->
+        <?php
+    }
+?>
 
 
 
