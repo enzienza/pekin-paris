@@ -205,70 +205,76 @@
     </div><!-- / .row -->
 
     <div class="row box-formule">
+        <!-- START : SANS boissons -->
         <div class="col-md-4 col-12 item-card">
             <div class="card card-tarif">
                 <h3 class="text-center">Sans boissons</h3>
                 <div class="card-body">
+                    <h4>La formule comprend :</h4>
                     <ul>
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('sans_apero'), false)){
-                            ?>
+                        <!-- item-drink-apero -->
+                        <?php if(checked(1, get_option('sans_apero'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-apero.png' ?>" class="icon-drink" alt="1 Apéritif par personne">
                                 <span class="info-formule">1 Apéritif par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-apero.png' ?>" class="icon-drink" alt="1 Apéritif par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('sans_vin'), false)){
-                            ?>
+                        <!-- item-drink-vin -->
+                        <?php if(checked(1, get_option('sans_vin'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-vin.png' ?>" class="icon-drink" alt="1/2l de vin par personne">
                                 <span class="info-formule">1/2l de vin par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-vin.png' ?>" class="icon-drink" alt="1/2l de vin par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('sans_soft'), false)){
-                            ?>
+                        <!-- item-drink-soft -->
+                        <?php if(checked(1, get_option('sans_soft'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-soft.png' ?>" class="icon-drink" alt="Soft à volonter">
                                 <span class="info-formule">Soft à volonter</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-soft.png' ?>" class="icon-drink" alt="Soft à volonter">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('sans_cafe'), false)){
-                            ?>
+                        <!-- item-drink-cafe -->
+                        <?php if(checked(1, get_option('sans_cafe'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-cafe.png' ?>" class="icon-drink" alt="Thé ou Café">
                                 <span class="info-formule">Thé ou Café</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-cafe.png' ?>" class="icon-drink" alt="Thé ou Café">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('sans_digestif'), false)){
-                            ?>
+                        <!-- item-drink-digestif -->
+                        <?php if(checked(1, get_option('sans_digestif'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-digestif.png' ?>" class="icon-drink" alt="1 digestif par personne">
                                 <span class="info-formule">1 digestif par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-digestif.png' ?>" class="icon-drink" alt="1 digestif par personne">
+                                <span class="info-formule nope">--</span>
+                        <?php } ?>
                     </ul>
                 </div><!-- / .card-body -->
 
@@ -290,70 +296,77 @@
             </div><!-- / .card.card-tarif -->
         </div><!-- / .col-md-3.col-12 -->
 
+        <!-- START : AVEC boissons -->
         <div class="col-md-4 col-12 item-card">
             <div class="card card-tarif">
                 <h3 class="text-center">Avec boissons</h3>
                 <div class="card-body">
+                    <h4>La formule comprend :</h4>
                     <ul>
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('avec_apero'), false)){
-                            ?>
+                        <!-- item-drink-apero -->
+                        <?php if(checked(1, get_option('avec_apero'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-apero.png' ?>" class="icon-drink" alt="1 Apéritif par personne">
                                 <span class="info-formule">1 Apéritif par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-apero.png' ?>" class="icon-drink" alt="1 Apéritif par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('avec_vin'), false)){
-                            ?>
+                        <!-- item-drink-vin -->
+                        <?php if(checked(1, get_option('avec_vin'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-vin.png' ?>" class="icon-drink" alt="1/2l de vin par personne">
                                 <span class="info-formule">1/2l de vin par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-vin.png' ?>" class="icon-drink" alt="1/2l de vin par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('avec_soft'), false)){
-                            ?>
+                        <!-- item-drink-soft -->
+                        <?php if(checked(1, get_option('avec_soft'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-soft.png' ?>" class="icon-drink" alt="Soft à volonter">
                                 <span class="info-formule">Soft à volonter</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-soft.png' ?>" class="icon-drink" alt="Soft à volonter">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('avec_cafe'), false)){
-                            ?>
+                        <!-- item-drink-cafe -->
+                        <?php if(checked(1, get_option('avec_cafe'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-cafe.png' ?>" class="icon-drink" alt="Thé ou Café">
                                 <span class="info-formule">Thé ou Café</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-cafe.png' ?>" class="icon-drink" alt="Thé ou Café">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('avec_digestif'), false)){
-                            ?>
+                        <!-- item-drink-digestif -->
+                        <?php if(checked(1, get_option('avec_digestif'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-digestif.png' ?>" class="icon-drink" alt="1 digestif par personne">
                                 <span class="info-formule">1 digestif par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-digestif.png' ?>" class="icon-drink" alt="1 digestif par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
                     </ul>
                 </div><!-- / .card-bo -->
 
@@ -375,70 +388,77 @@
             </div><!-- / .card card-tarif -->
         </div><!-- / .col-md-3.col-12.card.card-tarif -->
 
+        <!-- START : FULL boissons -->
         <div class="col-md-4 col-12 item-card">
             <div class="card card-tarif">
                 <h3 class="text-center">Full boissons</h3>
                 <div class="card-body">
+                    <h4>La formule comprend :</h4>
                     <ul>
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('full_apero'), false)){
-                            ?>
+                        <!-- item-drink-apero -->
+                        <?php if(checked(1, get_option('full_apero'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-apero.png' ?>" class="icon-drink" alt="1 Apéritif par personne">
                                 <span class="info-formule">1 Apéritif par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-apero.png' ?>" class="icon-drink" alt="1 Apéritif par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('full_vin'), false)){
-                            ?>
+                        <!-- item-drink-vin -->
+                        <?php if(checked(1, get_option('full_vin'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-vin.png' ?>" class="icon-drink" alt="1/2l de vin par personne">
                                 <span class="info-formule">1/2l de vin par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-vin.png' ?>" class="icon-drink" alt="1/2l de vin par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('full_soft'), false)){
-                            ?>
+                        <!-- item-drink-soft -->
+                        <?php if(checked(1, get_option('full_soft'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-soft.png' ?>" class="icon-drink" alt="Soft à volonter">
                                 <span class="info-formule">Soft à volonter</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-soft.png' ?>" class="icon-drink" alt="Soft à volonter">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('full_cafe'), false)){
-                            ?>
+                        <!-- item-drink-cafe -->
+                        <?php if(checked(1, get_option('full_cafe'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-cafe.png' ?>" class="icon-drink" alt="Thé ou Café">
                                 <span class="info-formule">Thé ou Café</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-cafe.png' ?>" class="icon-drink" alt="Thé ou Café">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
 
-                        <!-- item-drink -->
-                        <?php
-                        if(checked(1, get_option('full_digestif'), false)){
-                            ?>
+                        <!-- item-drink-digestif -->
+                        <?php if(checked(1, get_option('full_digestif'), false)){ ?>
                             <li class="item-drink">
                                 <img src="<?php echo get_template_directory_uri().'/img/icon/icon-digestif.png' ?>" class="icon-drink" alt="1 digestif par personne">
                                 <span class="info-formule">1 digestif par personne</span>
                             </li><!-- / .item-drink -->
-                            <?php
-                        }
-                        ?>
+                        <?php } else { ?>
+                            <li class="item-drink">
+                                <img src="<?php echo get_template_directory_uri().'/img/icon/icon-nope-digestif.png' ?>" class="icon-drink" alt="1 digestif par personne">
+                                <span class="info-formule nope">--</span>
+                            </li><!-- / .item-drink -->
+                        <?php } ?>
                     </ul>
                 </div><!-- / .card-body -->
 

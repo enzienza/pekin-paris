@@ -6428,11 +6428,17 @@ ul {
 
 .btn-tarif .btn {
   width: 100%;
-  background-color: inherit;
+  background-color: transparent;
   border: 2px solid #FFC033;
   text-transform: uppercase;
   color: #FFC033;
   letter-spacing: 5px;
+}
+
+.btn-tarif .btn:hover {
+  color: #fefefe;
+  background-color: #FFC033;
+  border-color: #FFC033;
 }
 
 /* END ==> BTN-TARIF */
@@ -6534,7 +6540,12 @@ ul {
 /* CARD-TARIF */
 /*------------------------------------------------------------------------------*/
 .card-tarif {
-  height: 370px;
+  height: 380px;
+}
+
+.card-tarif:hover, .card-tarif:active, .card-tarif:focus {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .card-tarif h3 {
@@ -6545,6 +6556,10 @@ ul {
 .card-tarif .card-body {
   padding-bottom: 0;
   padding-left: 3rem;
+}
+
+.card-tarif .card-body h4 {
+  margin-left: -1.1rem;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -6929,6 +6944,11 @@ footer {
 
 .info-element-buffet {
   margin-right: 5px;
+}
+
+.nope {
+  color: #c1c1c1;
+  font-size: 1.3rem;
 }
 
 /*------------------------------------------------------------------------------*/

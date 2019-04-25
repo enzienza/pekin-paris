@@ -62,11 +62,16 @@
     }
     .btn{
         width: 100%;
-        background-color: inherit;
+        background-color: transparent;
         border: 2px solid $colorPrimary;
         text-transform: uppercase;
         color: $colorPrimary;
         letter-spacing: 5px;
+        &:hover{
+            color: $colorLight;
+            background-color: $colorPrimary;
+            border-color: $colorPrimary;
+        }
     }
 } /* END ==> BTN-TARIF */
 
