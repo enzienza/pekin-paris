@@ -16,6 +16,10 @@
     }
 }
 
+
+/*------------------------------------------------------------------------------*/
+/* SECTION-DESC-CART */
+/*------------------------------------------------------------------------------*/
 #section-desc-carte{
     margin-bottom: 2rem;
     .titre-section{
@@ -28,6 +32,31 @@
     }
 }
 
+
+/*------------------------------------------------------------------------------*/
+/* CARTE-CONTENT */
+/*------------------------------------------------------------------------------*/
+#carte-content{
+    margin-bottom: 3rem;
+
+    .tab-pane{
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    } /* end--> .tab-pane */
+
+
+    .bg-opacity{
+        @include filter-opacite(0.8);
+    } /* end--> .bg-opacity */
+
+
+    .titre-section{
+        padding: 2.5rem;
+        margin-bottom: 0;
+    } /* end--> .titre-section */
+
+}
 
 
 /*------------------------------------------------------------------------------*/

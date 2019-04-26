@@ -6573,6 +6573,7 @@ ul {
 /*------------------------------------------------------------------------------*/
 .card-collapse {
   margin-bottom: 10px;
+  /* end --> .table-tarif */
 }
 
 .card-collapse .titre-collapse {
@@ -6594,16 +6595,66 @@ ul {
   width: 70%;
   margin-left: 3rem;
   margin-bottom: 1.5rem;
+  /* end --> .tarif-day */
 }
 
 .card-collapse .table-tarif .tarif-day {
   line-height: 2;
+  /* end --> .prix */
 }
 
 .card-collapse .table-tarif .tarif-day .prix {
   font-weight: bold;
   color: #FFC033;
   text-align: center;
+}
+
+/*------------------------------------------------------------------------------*/
+/* CARD-MENU */
+/*------------------------------------------------------------------------------*/
+.card-menu {
+  margin-bottom: 3rem;
+  padding: 0 3rem;
+  background: transparent;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  /* end--> titre-card */
+  /* end --> .info-menu */
+  /* end --> .titre-service */
+  /* end --> .content-servive */
+}
+
+.card-menu .titre-card {
+  font-size: 3rem;
+  padding: 3rem 0;
+}
+
+.card-menu .info-menu {
+  background: #e4e4e4;
+  width: 25%;
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  /* end --> .prix */
+}
+
+.card-menu .info-menu .prix {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-menu .titre-service {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  padding-bottom: 0.3rem;
+}
+
+.card-menu .content-servive {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -7177,6 +7228,9 @@ footer .box-info span .icon-carte {
   margin-top: 3rem;
 }
 
+/*------------------------------------------------------------------------------*/
+/* SECTION-DESC-CART */
+/*------------------------------------------------------------------------------*/
 #section-desc-carte {
   margin-bottom: 2rem;
 }
@@ -7189,6 +7243,33 @@ footer .box-info span .icon-carte {
   font-size: 1.1rem;
   text-align: justify;
   padding: 0 6rem;
+}
+
+/*------------------------------------------------------------------------------*/
+/* CARTE-CONTENT */
+/*------------------------------------------------------------------------------*/
+#carte-content {
+  margin-bottom: 3rem;
+  /* end--> .tab-pane */
+  /* end--> .bg-opacity */
+  /* end--> .titre-section */
+}
+
+#carte-content .tab-pane {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#carte-content .bg-opacity {
+  background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+#carte-content .titre-section {
+  padding: 2.5rem;
+  margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------------------*/

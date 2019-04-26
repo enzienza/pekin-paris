@@ -25,6 +25,12 @@
     background-size: cover;
 }
 
+@mixin filter-opacite($opacite) {
+    background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, $opacite), rgba(255, 255, 255,$opacite));
+    background: -o-linear-gradient(to bottom, rgba(255, 255, 255, $opacite), rgba(255, 255, 255,$opacite));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, $opacite), rgba(255, 255, 255,$opacite));
+}
+
 @mixin bg-radial-gradient {
     background: -webkit-radial-gradient(circle, rgb(255, 255, 255), rgba(251, 221, 152, 1));
     background: -o-radial-gradient(circle, rgb(255, 255, 255), rgba(251, 221, 152, 1));
