@@ -159,7 +159,7 @@
         ?>
 
         <section id="section-description-buffet" class="container">
-            <h2 class="text-center">Description Buffet</h2>
+            <h2 class="titre-section">Description Buffet</h2>
             <div class="row">
                 <div class="col-lg-6 col-12 box-left">
                     <div class="description-buffet">

@@ -7,19 +7,38 @@
 footer{
     background: $colorDark;
     color: $colorLight;
-}
 
+    .footer-bottom{
+        text-align: center;
+        padding: 10px 0;
+        line-height: 1.7;
+        border-top: 0.1px solid $colorLight;
+        font-size: small;
+        p{
+            margin-bottom: 0;
+        }
+    }
 
-.footer-bottom{
-    text-align: center;
-    padding: 10px 0;
-    line-height: 1.7;
-    border-top: 0.1px solid $colorLight;
-    font-size: small;
-    p{
-        margin-bottom: 0;
+    .box-info{
+        padding: 3rem;
+        font-size: 1.5rem;
+        text-align: center;
+        span{
+            &:first-child{
+                img{
+                    width: 30px;
+                }
+            }
+            .icon-carte{
+                width: 60px;
+                margin: 10px 7px
+            }
+        }
     }
 }
+
+
+
 
 
 /*------------------------------------------------------------------------------*/

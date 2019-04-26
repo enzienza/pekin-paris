@@ -6063,6 +6063,12 @@ ul {
   padding: 0;
 }
 
+.titre-section {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 /*------------------------------------------------------------------------------*/
 /* FONT */
 /*------------------------------------------------------------------------------*/
@@ -6658,6 +6664,7 @@ ul {
 /*------------------------------------------------------------------------------*/
 .box-phone {
   background-color: #333;
+  opacity: 0.5;
   color: #fefefe;
   padding: 3rem;
   font-size: 1.8rem;
@@ -6880,7 +6887,7 @@ footer {
   color: #fefefe;
 }
 
-.footer-bottom {
+footer .footer-bottom {
   text-align: center;
   padding: 10px 0;
   line-height: 1.7;
@@ -6888,8 +6895,23 @@ footer {
   font-size: small;
 }
 
-.footer-bottom p {
+footer .footer-bottom p {
   margin-bottom: 0;
+}
+
+footer .box-info {
+  padding: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+footer .box-info span:first-child img {
+  width: 30px;
+}
+
+footer .box-info span .icon-carte {
+  width: 60px;
+  margin: 10px 7px;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -6982,11 +7004,6 @@ footer {
   /* end -> .box-left */
   /* --- box-right --- */
   /* end -> .box-right */
-}
-
-#section-description-buffet h2 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
 }
 
 #section-description-buffet .box-left {
@@ -7158,6 +7175,20 @@ footer {
 #page-carte-msg .box-msg ul {
   font-size: 1.4rem;
   margin-top: 3rem;
+}
+
+#section-desc-carte {
+  margin-bottom: 2rem;
+}
+
+#section-desc-carte .titre-section {
+  margin-bottom: 2rem;
+}
+
+#section-desc-carte .desc-carte {
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 0 6rem;
 }
 
 /*------------------------------------------------------------------------------*/

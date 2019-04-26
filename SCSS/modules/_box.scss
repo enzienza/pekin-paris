@@ -5,6 +5,7 @@
 /*------------------------------------------------------------------------------*/
 .box-phone{
     background-color: $colorDark;
+    opacity: 0.5;
     color: $colorLight;
     padding: 3rem;
     font-size: 1.8rem;
@@ -69,5 +70,5 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
-    
+
 }

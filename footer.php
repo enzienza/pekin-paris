@@ -1,7 +1,7 @@
 <!-- ===================== DEBUT FOOTER ===================== -->
 
 <footer  role="contentinfo">
-    <div class="container">
+    <div class="container box-info">
         <div class="row">
             <div class="col-md-6 col-12 footer-left">
                 <h3>Suivez-nous</h3>

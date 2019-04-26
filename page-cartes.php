@@ -127,9 +127,9 @@
         // SINON
         // => Afficher la section
         ?>
-        <section class="container section-desc-carte">
-            <h1 class="text-center">Description</h1>
-            <p><?php echo get_option('cartepage_desc_txt_content'); ?></p>
+        <section id="section-desc-carte" class="container">
+            <h1 class="titre-section">Description</h1>
+            <p class="desc-carte"><?php echo get_option('cartepage_desc_txt_content'); ?></p>
         </section>
         <?php
     }
