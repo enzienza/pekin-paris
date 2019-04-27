@@ -4,41 +4,41 @@
 <section id="carte-content" class="container">
     <ul class="nav nav-tabs" >
         <li class="nav-item">
-            <a class="nav-link " id="carte-memu" data-toggle="tab" href="#menu" role="tab" aria-controls="menu" aria-selected="true">
-                <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" style="width: 21px; height 21px;">
+            <a class="nav-link active" id="carte-memu" data-toggle="tab" href="#menu" role="tab" aria-controls="menu" aria-selected="true">
+                <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="">
                 <p>Menu</p>
             </a>
         </li><!-- /.nav-item -->
 
-        <!-- ICI region repete ==> get_post_meta -->
-        <li class="nav-item">
-            <a class="nav-link " id="france-tab" data-toggle="tab" href="#france" role="tab" aria-controls="france" aria-selected="true">
-                <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" style="width: 21px; height 21px;">
-                <p>france</p>
-            </a>
-        </li>
+        <!-- ICI region repete ==> cartes -->
+        <?php
+            wp_reset_postdata();
 
-        <li class="nav-item">
-            <a class="nav-link " id="tahi-tab" data-toggle="tab" href="#thai" role="tab" aria-controls="thai" aria-selected="true">
-                <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" style="width: 21px; height 21px;">
-                <p>thai</p>
-            </a>
-        </li>
+            $args = array(
+                'post_type'      => 'cartes',
+                'posts_per_page' => 5,
+                'orderby'        => 'id',
+                'order'          => 'ASC'
+            );
+            $my_query = new WP_query($args);
+            if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
 
-        <li class="nav-item">
-            <a class="nav-link " id="chinois-tab" data-toggle="tab" href="#chinois" role="tab" aria-controls="chinois" aria-selected="true">
-                <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" style="width: 21px; height 21px;">
-                <p>chinois</p>
-            </a>
-        </li>
 
-        <li class="nav-item">
-            <a class="nav-link " id="maison-tab" data-toggle="tab" href="#maison" role="tab" aria-controls="maison" aria-selected="true">
-                <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" style="width: 21px; height 21px;">
-                <p>specialite maison</p>
-            </a>
-        </li>
+            //echo get_post_meta($post->ID, 'slug_carte', true);
+            // id => ...-tab
+            // href => #...
+            // aria-controls
 
+         ?>
+
+            <li class="nav-item">
+                <a class="nav-link " id="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>-tab" data-toggle="tab" href="#<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>" role="tab" aria-controls="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>" aria-selected="true">
+                    <img src="<?php echo get_post_meta($post->ID, 'icon-carte', true); ?>" alt="">
+                    <p><?php the_title(); ?></p>
+                </a>
+            </li>
+
+        <?php endwhile; endif;  wp_reset_postdata(); ?>
         <!-- FIN region repete -->
 
 
@@ -173,61 +173,117 @@
         </div><!-- / #menu . tab-pane .fade .show .active-->
 
         <!-- ICI region retete -->
+        <?php
+            wp_reset_postdata();
 
-        <div class="tab-pane fade" id="france" role="tabpanel" aria-labelledby="france-tab" style="background-color:beige;">
-            <div class="bg-opacity">
-                <h1 class="titre-section">france</h1>
-                <div class="row justify-content-md-center">
-                    <div id="" class="card card-menu col-md-9 col-12">
-                        <h1>Hello word</h1>
-                    </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
+            $args = array(
+                'post_type'      => 'cartes',
+                'posts_per_page' => 5,
+                'orderby'        => 'id',
+                'order'          => 'ASC'
+            );
+            $my_query = new WP_query($args);
+            if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+         ?>
 
-                </div><!-- / .row .justify-content-md-center -->
+            <div class="tab-pane fade" id="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>" role="tabpanel" aria-labelledby="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>-tab" style="background-image: url(<?php echo get_post_meta($post->ID, 'bg-carte', true); ?>);">
+                <div class="bg-opacity">
+                    <h1 class="titre-section"><?php the_title(); ?></h1>
+                    <div class="row justify-content-md-center">
+                        <div id="" class="card card-carte col-md-9 col-12">
 
-            </div><!-- /.bg-opacity -->
-        </div><!-- / #france -->
+                            <!-- stat : service-1 -->
+                            <div class="service-1">
+                                <h2 class="titre-service">Entree</h2>
+                                <table class="table-service">
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                </table>
+                            </div><!-- / .service-1 -->
 
 
-        <div class="tab-pane fade" id="thai" role="tabpanel" aria-labelledby="thai-tab" style="background-color:aqua;">
-            <div class="bg-opacity">
-                <h1 class="titre-section">thai</h1>
-                <div class="row justify-content-md-center">
-                    <div id="" class="card card-menu col-md-9 col-12">
-                        <h1>Hello word</h1>
-                    </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
+                            <!-- stat : service-1 -->
+                            <div class="service-1">
+                                <h2 class="titre-service">Entree</h2>
+                                <table class="table-service">
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                </table>
+                            </div><!-- / .service-1 -->
 
-                </div><!-- / .row .justify-content-md-center -->
 
-            </div><!-- /.bg-opacity -->
-        </div><!-- / #thai -->
+                            <!-- stat : service-1 -->
+                            <div class="service-1">
+                                <h2 class="titre-service">Entree</h2>
+                                <table class="table-service">
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                    <tr class="item-service">
+                                        <td class="num">50</td>
+                                        <td class="nom">Lorem ipsum dolor sit.</td>
+                                        <td class="prix">10,00€</td>
+                                    </tr>
+                                </table>
+                            </div><!-- / .service-1 -->
 
 
-        <div class="tab-pane fade" id="chinois" role="tabpanel" aria-labelledby="chinois-tab" style="background-color:lime;">
-            <div class="bg-opacity">
-                <h1 class="titre-section">chinois</h1>
-                <div class="row justify-content-md-center">
-                    <div id="" class="card card-menu col-md-9 col-12">
-                        <h1>Hello word</h1>
-                    </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
+                        </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
 
-                </div><!-- / .row .justify-content-md-center -->
+                    </div><!-- / .row .justify-content-md-center -->
 
-            </div><!-- /.bg-opacity -->
-        </div><!-- / #chinois -->
+                </div><!-- /.bg-opacity -->
+            </div><!-- / #france -->
 
-        <div class="tab-pane fade" id="maison" role="tabpanel" aria-labelledby="maison-tab" style="background-color:pink;">
-            <div class="bg-opacity">
-                <h1 class="titre-section">specialite maison</h1>
-                <div class="row justify-content-md-center">
-                    <div id="" class="card card-menu col-md-9 col-12">
-                        <h1>Hello word</h1>
-                    </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
-
-                </div><!-- / .row .justify-content-md-center -->
-
-            </div><!-- /.bg-opacity -->
-        </div><!-- / #maison -->
-
+        <?php endwhile; endif;  wp_reset_postdata(); ?>
 
     </div><!-- /#myTabContent .tab-content -->
 </section><!-- /#carte-content -->

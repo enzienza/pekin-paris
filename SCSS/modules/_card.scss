@@ -67,7 +67,7 @@
     margin-bottom: 3rem;
     padding: 0 3rem;
     background: transparent;
-    @include shadow-regular;
+    @include shadow-sall;
 
 
     .titre-card{
@@ -105,6 +105,42 @@
 }
 
 
+
+/*------------------------------------------------------------------------------*/
+/* CARD-MENU */
+/*------------------------------------------------------------------------------*/
+.card-carte{
+    margin-bottom: 3rem;
+    /* padding: 2rem 4rem; */
+    background: transparent;
+    /* @include shadow-regular; */
+    border: none;
+
+    .titre-service{
+        padding-top: 1.5rem;
+        padding-bottom: 0.4rem;
+    } /* end --> .titre-service */
+
+    .table-service{
+        width: 100%;
+
+        .item-service{
+            border-bottom: 1px solid #e4e4e4;
+            line-height: 3;
+            &:last-child{
+                border: none;
+            }
+
+            .num, .prix{
+                width: 15%;
+            }
+
+            .num{
+                padding-left: 2rem;
+            }
+        }
+    }
+}
 
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */

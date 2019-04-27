@@ -1,0 +1,35 @@
+// main: ../style.scss
+
+
+/*-----------------------------------------------------------------------------*/
+/* nav-tabs */
+/*-----------------------------------------------------------------------------*/
+
+.nav-tabs{
+    border: none;
+    .nav-item{
+        width: 20%;
+        text-align: center;
+        border: 1px solid #dee2e6;
+    }
+    .nav-link{
+        padding: 1rem;
+        background-color: #dee2e6;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+
+        img{
+            width: 45%;
+            padding: 8px;
+        }
+
+        p{
+            font-size: 1.3rem;
+            padding: 10px 0;
+        }
+    }
+
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+        @include shadow-regular;
+    }
+}

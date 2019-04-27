@@ -43,11 +43,12 @@
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        border: 1px solid #e4e4e4;
     } /* end--> .tab-pane */
 
 
     .bg-opacity{
-        @include filter-opacite(0.8);
+        @include filter-opacite(0.95);
     } /* end--> .bg-opacity */
 
 
