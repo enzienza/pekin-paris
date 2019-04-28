@@ -14,11 +14,11 @@
         selectedClass = $(this).attr("data-rel");
         $("#portfolio").fadeTo(100, 0.1);
         // $('#portfolio').addClass(theme);
-        $("#portfolio div").not("."+selectedClass)
+        $("#portfolio > div").not("."+selectedClass)
                            .fadeOut()
-                           .removeClass('scale-anm');
+                           .find('diw.row').removeClass('scale-anm');
         setTimeout(function() {
-            $("."+selectedClass).fadeIn().addClass('scale-anm');
+            $("."+selectedClass).fadeIn().addClass('div.scale-anm');
             $("#portfolio").fadeTo(300, 1);
         }, 300); // end -> setTimeout
 

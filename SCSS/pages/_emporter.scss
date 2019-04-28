@@ -17,8 +17,36 @@
 }
 
 
+/*------------------------------------------------------------------------------*/
+/* carte-emporter */
+/*------------------------------------------------------------------------------*/
+#carte-emporter{
+    margin-bottom: 3rem;
 
+    .info-emporter{
+        img{
+            width: 60%;
+            margin-left: 4rem;
+        }
 
+        ul{
+            font-size: 1.3rem;
+            margin-top: 6rem;
+            margin-left: -2rem;
+        }
+
+        span{
+            line-height: 2;
+            vertical-align: text-top;
+        }
+    }
+
+    .titre-type-emporter{
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+}
 
 
 
