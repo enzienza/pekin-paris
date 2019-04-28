@@ -75,7 +75,19 @@
     }
 } /* END ==> BTN-TARIF */
 
+// BTN-FILTER ------------------------------------------------------------------
+.btn-filter{
+    border-radius: 100%;
+    height: 90px;
+    margin: 7px;
+    text-transform: capitalize;
 
+    img{
+        width: 50%;
+        height: auto;
+        margin-bottom: 1px;
+    }
+} /* END => BTN-FILTRE */
 
 
 /*------------------------------------------------------------------------------*/

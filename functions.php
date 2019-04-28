@@ -72,7 +72,8 @@ if ( ! function_exists( 'pekinparis_styles_scripts' ) ) {
 
 		// plugin
 		wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/plugins/menu.js', array( 'jquery' ),'', true );
-		wp_enqueue_script( 'animated', get_template_directory_uri() . '/js/plugins/animated.js', array( 'jquery' ),'', true );
+		// wp_enqueue_script( 'animated', get_template_directory_uri() . '/js/plugins/animated.js', array( 'jquery' ),'', true );
+		wp_enqueue_script( 'card-flexbox', get_template_directory_uri() . '/js/plugins/card-flexbox.js', array( 'jquery' ),'', true );
 		wp_enqueue_script( 'filtre-carte', get_template_directory_uri() . '/js/plugins/filtre-carte.js', array( 'jquery' ),'', true );
 		wp_enqueue_script( 'viewportChecker', get_template_directory_uri() . '/js/plugins/viewportChecker.js', array( 'jquery' ),'', true );
 		wp_enqueue_script( 'tarifdeon', get_template_directory_uri() . '/js/plugins/tarifdeon.js', array( 'jquery' ),'', true );

@@ -9,37 +9,25 @@
                     <div class="col align-self-center">
 
                         <!-- item-carte -->
-                        <?php
-                        if(checked(1, get_option('yes_facebbok'), false)){
-                            ?>
+                        <?php if(checked(1, get_option('yes_facebbok'), false)){ ?>
                             <a href="<?php echo(get_option('inforesto_facebook')); ?>" target="_blank">
                                 <span class="icons flaticon-facebook"></span>
                             </a>
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
 
                         <!-- item-carte -->
-                        <?php
-                        if(checked(1, get_option('yes_twitter'), false)){
-                            ?>
+                        <?php if(checked(1, get_option('yes_twitter'), false)){ ?>
                             <a href="<?php echo(get_option('inforesto_twitter')); ?>" target="_blank">
                                 <span class="icons flaticon-twitter"></span>
                             </a>
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
 
                         <!-- item-carte -->
-                        <?php
-                        if(checked(1, get_option('yes_instagram'), false)){
-                            ?>
+                        <?php if(checked(1, get_option('yes_instagram'), false)){ ?>
                             <a href="<?php echo(get_option('inforesto_instagram')); ?>" target="_blank">
                                 <span class="icons flaticon-instagram"></span>
                             </a>
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
 
                     </div>
                 </div>
@@ -49,48 +37,32 @@
                 <div class="">
 
                     <!-- item-carte -->
-                    <?php
-                    if(checked(1, get_option('inforesto_carte_visa'), false)){
-                        ?>
+                    <?php if(checked(1, get_option('inforesto_carte_visa'), false)){ ?>
                         <span>
                             <img src="<?php echo get_template_directory_uri().'/img/icon/icon-visa.png' ?>" class="icon-carte" alt="mode de paiement : accepte carte Visa" />
                         </span>
-                        <?php
-                    }
-                    ?>
+                    <?php } ?>
 
                     <!-- item-carte -->
-                    <?php
-                    if(checked(1, get_option('inforesto_carte_mastercard'), false)){
-                        ?>
+                    <?php if(checked(1, get_option('inforesto_carte_mastercard'), false)){ ?>
                         <span>
                             <img src="<?php echo get_template_directory_uri().'/img/icon/icon-mastercard.png' ?>" class="icon-carte" alt="mode de paiement : accepte carte MasterCard" />
                         </span>
-                        <?php
-                    }
-                    ?>
+                    <?php } ?>
 
                     <!-- item-carte -->
-                    <?php
-                    if(checked(1, get_option('inforesto_carte_american'), false)){
-                        ?>
+                    <?php if(checked(1, get_option('inforesto_carte_american'), false)){ ?>
                         <span>
                             <img src="<?php echo get_template_directory_uri().'/img/icon/icon-american-express.png' ?>" class="icon-carte" alt="mode de paiement : accepte carte American Express" />
                         </span>
-                        <?php
-                    }
-                    ?>
+                    <?php } ?>
 
                     <!-- item-carte -->
-                    <?php
-                    if(checked(1, get_option('inforesto_carte_maestro'), false)){
-                        ?>
+                    <?php if(checked(1, get_option('inforesto_carte_maestro'), false)){ ?>
                         <span>
                             <img src="<?php echo get_template_directory_uri().'/img/icon/icon-maestro.png' ?>" class="icon-carte" alt="mode de paiement : accepte carte Maestro / Bancontact" />
                         </span>
-                        <?php
-                    }
-                    ?>
+                    <?php } ?>
                 </div>
             </div><!-- / .footer-right -->
         </div><!-- / .row -->
