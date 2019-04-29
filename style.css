@@ -6456,6 +6456,7 @@ ul {
 /* END ==> BTN-TARIF */
 .btn-filter {
   border-radius: 100%;
+  border: 1px solid #e4e4e4;
   height: 90px;
   margin: 7px;
   text-transform: capitalize;

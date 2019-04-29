@@ -31,7 +31,7 @@
     </div><!-- /.row .justify-content-md-center -->
 
 
-    <div id="type-emporter" class="row justify-content-md-center" style="border: 1px solid red">
+    <div id="type-emporter" class="row justify-content-md-center">
         <div class="col-md-10 col-12">
             <div class="row">
 
@@ -48,16 +48,18 @@
                                 'post_type'      => 'emporters',
                                 'posts_per_page' => -1,
                                 'orderby'        => 'id',
-                                'order'          => 'DESC'
+                                'order'          => 'ASC',
+                                'meta_key'       => 'type',     // uniquement ceux qui on la mise en avant en 'oui'
+                                'meta_value'     => 'entree'
                             );
                             $my_query = new WP_query($args);
                             if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
                         ?>
 
-                            <button class="col-3 btn btn-filter fil-cat" data-rel="<?php echo get_post_meta($post->ID, 'slug_emporter', true); ?>" style="border: 1px solid red;">
+                            <div class="col-3 btn btn-filter fil-cat" data-rel="<?php echo get_post_meta($post->ID, 'slug_emporter', true); ?>">
                                 <img src="<?php echo get_post_meta($post->ID, 'icon-emporter', true); ?>" alt="<?php the_title(); ?>" >
                                 <p><?php the_title(); ?></p>
-                            </button>
+                            </div>
 
 
                         <?php endwhile; endif;  wp_reset_postdata(); ?>
@@ -72,61 +74,28 @@
 
                     <div class="row toolbar mb2 mt2">
                         <!-- START region repete -->
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="poulet" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>poulet</p>
-                        </button>
+                        <?php
+                            wp_reset_postdata();
 
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="canard" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>canard</p>
-                        </button>
+                            $args = array(
+                                'post_type'      => 'emporters',
+                                'posts_per_page' => -1,
+                                'orderby'        => 'id',
+                                'order'          => 'ASC',
+                                'meta_key'       => 'type',     // uniquement ceux qui on la mise en avant en 'oui'
+                                'meta_value'     => 'plat'
+                            );
+                            $my_query = new WP_query($args);
+                            if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+                        ?>
 
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-3" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 3</p>
-                        </button>
+                            <div class="col-2 btn btn-filter fil-cat" data-rel="<?php echo get_post_meta($post->ID, 'slug_emporter', true); ?>">
+                                <img src="<?php echo get_post_meta($post->ID, 'icon-emporter', true); ?>" alt="<?php the_title(); ?>" >
+                                <p><?php the_title(); ?></p>
+                            </div>
 
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-4" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 4</p>
-                        </button>
 
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-5" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 5</p>
-                        </button>
-
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-6" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 6</p>
-                        </button>
-
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-7" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 7</p>
-                        </button>
-
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-8" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 8</p>
-                        </button>
-
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="plat-9" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 9</p>
-                        </button>
-
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="poulet0" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 10</p>
-                        </button>
-
-                        <button class="col-2 btn btn-filter fil-cat" data-rel="poulet1" style="border: 1px solid lime;">
-                            <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" >
-                            <p>plat 11</p>
-                        </button>
-
+                        <?php endwhile; endif;  wp_reset_postdata(); ?>
                         <!-- END region repete -->
                     </div>
 

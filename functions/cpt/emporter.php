@@ -64,6 +64,7 @@ function CPT_emporters() {
 // initialisation le Custom Post Type ------------------------------------------
 add_action('init',  'CPT_emporters');
 
+
 /* ----------------------------------------------------------------------------- */
 /* Metabox - slug */
 /* ----------------------------------------------------------------------------- */
@@ -102,7 +103,7 @@ function MB_slug_emporters($POST){
 
     <?php
 
-} // END => MB_sticky_emporters
+} // END => MB_type_emporters
 
 
 // Sauvegarde des données de la métabox ----------------------------------------
@@ -113,3 +114,47 @@ function save_metabox_slug_emporters($POST_ID){
         update_post_meta($POST_ID, 'slug_emporter', $_POST['slug_emporter']);
     }
 } // END => save_metabox_slug_emporters
+
+
+/* ----------------------------------------------------------------------------- */
+/* Metabox - Type Cuisine (entre/plat) */
+/* ----------------------------------------------------------------------------- */
+
+// Création la Metabox ---------------------------------------------------------
+add_action('add_meta_boxes', 'add_metabox_type_emporters');
+
+function add_metabox_type_emporters(){
+    add_meta_box(
+        'id_metabox_type_emporters',     // ID_META_BOX
+        'Mise en avant' ,               // TITLE_META_BOX
+        'MB_type_emporters',             // CALLBACK
+        'emporters',                       // WP_SCREEN
+        'side',                         // CONTEXT [ normal | advanced | side ]
+        'high'                          // PRIORITY [ high | core | default | low ]
+    );
+}
+
+
+// Construction de la Metabox --------------------------------------------------
+function MB_type_emporters($POST){
+    wp_nonce_field(basename(__FILE__), 'metabox_type_emporters_nonce');
+    $type = get_post_meta($POST->ID, 'type', true);
+    ?>
+        <p>
+            <label for="type">Mettre en avant </label><br />
+            <input type="radio" <?php checked($type, 'entree'); ?> name="type" value="entree"/>Entrée<br />
+            <input type="radio" <?php checked($type, 'plat'); ?> name="type" value="plat"/>Plat<br />
+        </p>
+    <?php
+
+}
+
+
+// Sauvegarde des données de la métabox ----------------------------------------
+add_action('save_post', 'save_metabox_type_emporters');
+
+function save_metabox_type_emporters($POST_ID){
+    if(isset($_POST['type'])){
+        update_post_meta($POST_ID, 'type', $_POST['type']);
+    }
+}
