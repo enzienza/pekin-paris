@@ -46,9 +46,55 @@
         font-size: 1.2rem;
         padding: 1rem 0;
     }
+    .box-entre, .box-plat{
+        border: 1px solid $light-gray;
+    }
 }
 
+#portfolio{
+    margin: 3rem 0;
 
+    .scale-anm{
+        margin: 1rem 0;
+        border-radius: .35rem;
+        .box-titre, .box-table{
+            border: 1px solid $light-gray;
+        }
+    }
+
+    .box-titre{
+        text-align: center;
+
+        h2{
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        img{
+            width: 30%;
+            padding: 3rem 0;
+        }
+    }
+
+    .box-table{
+        padding: 3rem;
+
+        .table-emporter{
+            width: 100%;
+            td{
+                line-height: 2;
+            }
+            tr{
+                border-bottom: 1px solid $light-gray;
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+
+
+}
 
 
 

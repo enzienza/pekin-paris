@@ -6659,7 +6659,7 @@ height: 100%;
 }
 
 /*------------------------------------------------------------------------------*/
-/* CARD-MENU */
+/* CARD-carte */
 /*------------------------------------------------------------------------------*/
 .card-carte {
   margin-bottom: 3rem;
@@ -7144,75 +7144,6 @@ height: 100%;
   #formule-buffet .card__expander {
     width: calc(200% + 30px);
   }
-}
-
-#test-filtre {
-  /* end --> input */
-}
-
-#test-filtre input {
-  text-rendering: auto;
-  color: initial;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  margin: 0em;
-  font: 400 11px system-ui;
-}
-
-#test-filtre input[type="radio"], #test-filtre input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-#test-filtre input[type="radio"], #test-filtre input[type="checkbox"] {
-  background-color: inherit;
-  cursor: default;
-  margin: 3px 0.5ex;
-  padding: initial;
-  border: initial;
-}
-
-#test-filtre input[type="radio" i] {
-  box-sizing: border-box;
-}
-
-#test-filtre input[type="radio" i] {
-  display: none;
-}
-
-#test-filtre label {
-  width: 100%;
-  float: left;
-  text-align: center;
-  background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  color: #222222;
-  padding: 0.5%;
-  margin: 0.5%;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-
-#test-filtre .tile {
-  width: 23%;
-  height: 100px;
-  float: left;
-  transition: all 1s;
-  margin: 0.5%;
-  padding: 0.5%;
-}
-
-#test-filtre input[type="radio"][id="blue"]:checked ~ .red, #test-filtre input[type="radio"][id="blue"]:checked ~ .green {
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -7763,6 +7694,57 @@ footer .box-info span .icon-carte {
   text-align: center;
   font-size: 1.2rem;
   padding: 1rem 0;
+}
+
+#carte-emporter .box-entre, #carte-emporter .box-plat {
+  border: 1px solid #e4e4e4;
+}
+
+#portfolio {
+  margin: 3rem 0;
+}
+
+#portfolio .scale-anm {
+  margin: 1rem 0;
+  border-radius: .35rem;
+}
+
+#portfolio .scale-anm .box-titre, #portfolio .scale-anm .box-table {
+  border: 1px solid #e4e4e4;
+}
+
+#portfolio .box-titre {
+  text-align: center;
+}
+
+#portfolio .box-titre h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+#portfolio .box-titre img {
+  width: 30%;
+  padding: 3rem 0;
+}
+
+#portfolio .box-table {
+  padding: 3rem;
+}
+
+#portfolio .box-table .table-emporter {
+  width: 100%;
+}
+
+#portfolio .box-table .table-emporter td {
+  line-height: 2;
+}
+
+#portfolio .box-table .table-emporter tr {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#portfolio .box-table .table-emporter tr:last-child {
+  border: none;
 }
 
 /*------------------------------------------------------------------------------*/

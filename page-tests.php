@@ -24,7 +24,6 @@
 
 <!-- START section 3 : carte-emporter -->
 <?php require get_template_directory() . '/templates/section-3-carte-emporter.php'; ?>
-<?php //require get_template_directory() . '/templates/section-3-test-filter.php'; ?>
 
 
 
