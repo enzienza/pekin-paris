@@ -7749,6 +7749,75 @@ footer .box-info span .icon-carte {
 }
 
 /*------------------------------------------------------------------------------*/
+/* carte-emporter */
+/*------------------------------------------------------------------------------*/
+#buffet-emporter {
+  margin: 4rem auto;
+}
+
+#buffet-emporter .box-titre {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#buffet-emporter .box-titre .titre-section {
+  margin-bottom: 0;
+  line-height: 2;
+}
+
+#buffet-emporter .box-titre p {
+  font-size: 1.2rem;
+}
+
+#buffet-emporter .box-left {
+  text-align: right;
+  margin-left: 3rem;
+}
+
+#buffet-emporter .box-right {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  margin-left: -4rem;
+}
+
+#buffet-emporter .box-right img {
+  width: 70%;
+}
+
+#buffet-emporter .item-taykeaway {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#buffet-emporter .item-taykeaway .row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#buffet-emporter .item-taykeaway .row .box-taykeaway {
+  text-align: right;
+}
+
+#buffet-emporter .item-taykeaway .row .box-taykeaway img {
+  width: 50%;
+}
+
+#buffet-emporter .item-taykeaway .row .box-txt p {
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+}
+
+#buffet-emporter .item-taykeaway .row .box-prix p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-align: right;
+  color: #FFC033;
+}
+
+/*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------*/

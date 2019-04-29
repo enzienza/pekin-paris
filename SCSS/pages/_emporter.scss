@@ -92,7 +92,79 @@
             }
         }
     }
+}
 
+
+/*------------------------------------------------------------------------------*/
+/* carte-emporter */
+/*------------------------------------------------------------------------------*/
+#buffet-emporter{
+    margin: 4rem auto;
+    .box-titre{
+        text-align: center;
+        margin-bottom: 3rem;
+
+        .titre-section{
+            margin-bottom: 0;
+            line-height: 2;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+
+    .box-left{
+        text-align: right;
+        margin-left: 3rem;
+    }
+
+    .box-right{
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        margin-left: -4rem;
+
+        img{
+            width: 70%;
+        }
+    }
+
+    .item-taykeaway{
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        .row{
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+
+
+            .box-taykeaway{
+                text-align: right;
+                img{
+                    width: 50%;
+                }
+            }
+
+            .box-txt{
+                p{
+                    font-size: 1.1rem;
+                    padding-bottom: 10px;
+                }
+
+            }
+
+            .box-prix{
+                p{
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                    text-align: right;
+                    color: $colorPrimary;
+                }
+            }
+        }
+    }
 
 }
 

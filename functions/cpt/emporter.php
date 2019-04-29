@@ -14,8 +14,7 @@ Version: 1.2
 
     1. cpt-emporters
     2. metabox : slug
-    3. metabox : upload image
-    4. metabox : services
+    3. metabox : type
 
 
 */
