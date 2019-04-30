@@ -70,8 +70,8 @@
 
                         <!-- stat : service-1 -->
                         <div class="service-1">
-                            <h2 class="titre-service"><?php echo get_option('tableriz_service_un_titre'); ?></h2>
-                            <p class="content-servive"><?php echo get_option('tableriz_service_un_txt'); ?></p>
+                            <h2 class="titre-service"><?php echo get_option('tableriz_S1_titre_titre'); ?></h2>
+                            <p class="content-servive"><?php echo get_option('tableriz_S1_titre_txt'); ?></p>
                         </div><!-- / .service-1 -->
 
                         <!-- stat : service-2 -->
@@ -127,11 +127,11 @@
 
                         <!-- stat : service-1 -->
                         <div class="service-1">
-                            <h2 class="titre-service"><?php echo get_option('fondu_service_un_titre'); ?></h2>
+                            <h2 class="titre-service"><?php echo get_option('fondu_S1_titre_titre'); ?></h2>
                             <div class="content-servive">
                                 <ul>
-                                    <li class="item-choix"><?php echo get_option('fondu_service_un_choice_one'); ?></li>
-                                    <li class="item-choix"><?php echo get_option('fondu_service_un_choice_two'); ?></li>
+                                    <li class="item-choix"><?php echo get_option('fondu_S1_titre_choice_one'); ?></li>
+                                    <li class="item-choix"><?php echo get_option('fondu_S1_titre_choice_two'); ?></li>
                                 </ul>
                             </div>
                         </div><!-- / .service-1 -->
@@ -192,89 +192,160 @@
                     <div class="row justify-content-md-center">
                         <div id="" class="card card-carte col-md-9 col-12">
 
-                            <!-- stat : service-1 -->
-                            <div class="service-1">
-                                <h2 class="titre-service">Entree</h2>
-                                <table class="table-service">
-                                    <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
-                                    </tr>
-                                    <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
-                                    </tr>
-                                    <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
-                                    </tr>
-                                    <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
-                                    </tr>
-                                </table>
-                            </div><!-- / .service-1 -->
-
 
                             <!-- stat : service-1 -->
                             <div class="service-1">
-                                <h2 class="titre-service">Entree</h2>
+                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'S1_titre', true); ?></h2>
                                 <table class="table-service">
+                                    <!-- ligne 1 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L1_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L1_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L1_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 2 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L2_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L2_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L2_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 3 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L3_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L3_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L3_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 4 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L4_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L4_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L4_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 5 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L5_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L5_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L5_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 6 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L6_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L6_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L6_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 7 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L7_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L7_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L7_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 8 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L8_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L8_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L8_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 9 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L9_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L9_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L9_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 10 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S1_L10_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S1_L10_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S1_L10_price', true); ?></td>
+                                    </tr>
+
                                 </table>
                             </div><!-- / .service-1 -->
-
 
                             <!-- stat : service-1 -->
                             <div class="service-1">
-                                <h2 class="titre-service">Entree</h2>
+                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'S2_titre', true); ?></h2>
                                 <table class="table-service">
+                                    <!-- ligne 1 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L1_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L1_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L1_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 2 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L2_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L2_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L2_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 3 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L3_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L3_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L3_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 4 -->
                                     <tr class="item-service">
-                                        <td class="num">50</td>
-                                        <td class="nom">Lorem ipsum dolor sit.</td>
-                                        <td class="prix">10,00€</td>
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L4_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L4_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L4_price', true); ?></td>
                                     </tr>
+
+                                    <!-- ligne 5 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L5_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L5_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L5_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 6 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L6_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L6_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L6_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 7 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L7_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L7_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L7_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 8 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L8_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L8_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L8_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 9 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L9_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L9_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L9_price', true); ?></td>
+                                    </tr>
+
+                                    <!-- ligne 10 -->
+                                    <tr class="item-service">
+                                        <td class="num"><?php echo get_post_meta($post->ID, 'S2_L10_numb', true); ?></td>
+                                        <td class="nom"><?php echo get_post_meta($post->ID, 'S2_L10_nom', true); ?></td>
+                                        <td class="prix"><?php echo get_post_meta($post->ID, 'S2_L10_price', true); ?></td>
+                                    </tr>
+
                                 </table>
                             </div><!-- / .service-1 -->
-
 
                         </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
 

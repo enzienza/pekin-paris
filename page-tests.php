@@ -20,13 +20,18 @@
 
 
 <!-- START section 4 : carte-content -->
-<?php //require get_template_directory() . '/templates/section-4-carte.php'; ?>
+<?php require get_template_directory() . '/templates/section-4-carte.php'; ?>
 
 <!-- START section 3 : carte-emporter -->
 <?php //require get_template_directory() . '/templates/section-3-carte-emporter.php'; ?>
 
 <!-- START section 5 : buffet-emporter -->
-<?php require get_template_directory() . '/templates/section-5-buffet-emporter.php'; ?>
+<?php //require get_template_directory() . '/templates/section-5-buffet-emporter.php'; ?>
+
+
+
+
+
 
 
 
