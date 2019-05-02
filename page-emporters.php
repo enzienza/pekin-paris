@@ -216,38 +216,19 @@
                     <div class="col-7 box-table">
                         <table class="table-emporter">
                             <tbody>
-                                <!-- debut foreach -->
-                                <tr>
-                                    <td class="td-numb">00</td>
-                                    <td class="td-name">Lorem ipsum dolor sit.</td>
-                                    <td class="td-price">5,50€</td>
-                                </tr>
+                                <?php
+                                    $repeat_emporters = get_post_meta($post->ID, 'repeat_emporters', true);
+                                    foreach ($repeat_emporters as $field) :
 
-                                <tr>
-                                    <td class="td-numb">00</td>
-                                    <td class="td-name">Lorem ipsum dolor sit.</td>
-                                    <td class="td-price">5,50€</td>
-                                </tr>
-
-                                <tr>
-                                    <td class="td-numb">00</td>
-                                    <td class="td-name">Lorem ipsum dolor sit.</td>
-                                    <td class="td-price">5,50€</td>
-                                </tr>
-
-                                <tr>
-                                    <td class="td-numb">00</td>
-                                    <td class="td-name">Lorem ipsum dolor sit.</td>
-                                    <td class="td-price">5,50€</td>
-                                </tr>
-
-                                <tr>
-                                    <td class="td-numb">00</td>
-                                    <td class="td-name">Lorem ipsum dolor sit.</td>
-                                    <td class="td-price">5,50€</td>
-                                </tr>
-
-                                <!-- end foreach -->
+                                        ?>
+                                            <tr>
+                                                <td class="td-numb"><?php echo $field['numb_emporter']; ?></td>
+                                                <td class="td-nom"><?php echo $field['name_emporter']; ?></td>
+                                                <td class="td-price"><?php echo $field['price_emporter'];  ?></td>
+                                            </tr>
+                                        <?php
+                                    endforeach;
+                                 ?>
                             </tbody>
                         </table>
                     </div><!-- /. -->

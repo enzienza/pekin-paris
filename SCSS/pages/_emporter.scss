@@ -90,6 +90,13 @@
                     border: none;
                 }
             }
+
+            .td-numb, .td-price{
+                width: 15%;
+            }
+            .td-name{
+                width: 60%;
+            }
         }
     }
 }

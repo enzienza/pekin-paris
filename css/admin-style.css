@@ -77,6 +77,32 @@ h1 a{
     max-width: 300px;
     padding: 4px;
 }
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM BTN REPEATABLE  */
+/* -------------------------------------------------------------------------- */
+.button.remove-row{
+    padding: 0 15px;
+    border-radius: 15px;
+    font-size: large;
+}
+
+.button.remove-row:hover{
+    background: red;
+    color: #fff;
+}
+
+.button.add-row:hover{
+    background: green;
+    color: #fff;
+}
+
+.button.btn-save.button-large:hover{
+    background: #008ec2;
+    border-color: #006799;
+    color: #fff;
+}
+
 /* -------------------------------------------------------------------------- */
 /* CUSTOM ADMIN PAGE FORM */
 /* -------------------------------------------------------------------------- */

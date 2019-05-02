@@ -330,1160 +330,364 @@
 
 
                          <!-- start : service-1 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC1_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_one_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                         $repeat_one_services = get_post_meta($post->ID, 'repeat_one_services', true);
+                                         foreach ($repeat_one_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC1_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC1_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC1_L10_price', true); ?></td>
-                                 </tr>
+                                             ?>
+                                                 <tr class="item-service">
+                                                     <td class="num"><?php echo $field['numb_one_service']; ?></td>
+                                                     <td class="nom"><?php echo $field['name_one_service']; ?></td>
+                                                     <td class="prix"><?php echo $field['price_one_service'];  ?></td>
+                                                 </tr>
+                                             <?php
+                                         endforeach;
+                                      ?>
+                                 </tbody>
 
                              </table>
                          </div><!-- / .service-1 -->
 
                          <!-- start : service-2 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC2_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_two_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_two_services = get_post_meta($post->ID, 'repeat_two_services', true);
+                                     foreach ($repeat_two_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC2_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC2_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC2_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_two_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_two_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_two_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-2 -->
 
                          <!-- start : service-3 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC3_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_three_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_three_services = get_post_meta($post->ID, 'repeat_three_services', true);
+                                     foreach ($repeat_three_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC3_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC3_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC3_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_three_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_three_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_three_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-3 -->
 
                          <!-- start : service-4 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC4_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_four_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_four_services = get_post_meta($post->ID, 'repeat_four_services', true);
+                                     foreach ($repeat_four_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC4_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC4_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC4_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_four_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_four_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_four_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-4 -->
 
                          <!-- start : service-5 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC5_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_five_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_five_services = get_post_meta($post->ID, 'repeat_five_services', true);
+                                     foreach ($repeat_five_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC5_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC5_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC5_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_five_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_five_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_five_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-5 -->
 
                          <!-- start : service-6 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC6_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_six_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_six_services = get_post_meta($post->ID, 'repeat_six_services', true);
+                                     foreach ($repeat_six_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC6_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC6_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC6_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_six_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_six_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_six_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-6 -->
 
                          <!-- start : service-7 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC7_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_seven_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_seven_services = get_post_meta($post->ID, 'repeat_seven_services', true);
+                                     foreach ($repeat_seven_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC7_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC7_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC7_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_seven_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_seven_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_seven_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-7 -->
 
                          <!-- start : service-8 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC8_titre', true); ?></h2>
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_eight_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_eight_services = get_post_meta($post->ID, 'repeat_eight_services', true);
+                                     foreach ($repeat_eight_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC8_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC8_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC8_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_eight_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_eight_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_eight_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-8 -->
 
-                         <!-- start : service 9 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC9_titre', true); ?></h2>
+                         <!-- start : service-9 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_nine_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_nine_services = get_post_meta($post->ID, 'repeat_nine_services', true);
+                                     foreach ($repeat_nine_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC9_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC9_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC9_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_nine_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_nine_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_nine_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-9 -->
 
-                         <!-- start : service 10 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC10_titre', true); ?></h2>
+                         <!-- start : service-10 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_ten_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_ten_services = get_post_meta($post->ID, 'repeat_ten_services', true);
+                                     foreach ($repeat_ten_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC10_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC10_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC10_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_ten_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_ten_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_ten_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-10 -->
 
-                         <!-- start : service 11 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC11_titre', true); ?></h2>
+                         <!-- start : service-11 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_eleven_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_eleven_services = get_post_meta($post->ID, 'repeat_eleven_services', true);
+                                     foreach ($repeat_eleven_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC11_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC11_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC11_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_eleven_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_eleven_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_eleven_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-11 -->
 
-                         <!-- start : service 12 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC12_titre', true); ?></h2>
+                         <!-- start : service-12 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_twelve_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_twelve_services = get_post_meta($post->ID, 'repeat_twelve_services', true);
+                                     foreach ($repeat_twelve_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC12_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC12_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC12_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_twelve_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_twelve_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_twelve_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-12 -->
 
-                         <!-- start : service 13 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC13_titre', true); ?></h2>
+                         <!-- start : service-13 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_thirteen_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_thirteen_services = get_post_meta($post->ID, 'repeat_thirteen_services', true);
+                                     foreach ($repeat_thirteen_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC13_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC13_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC13_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_thirteen_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_thirteen_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_thirteen_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-13 -->
 
-                         <!-- start : service 14 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC14_titre', true); ?></h2>
+                         <!-- start : service-14 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_fourteen_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_fourteen_services = get_post_meta($post->ID, 'repeat_fourteen_services', true);
+                                     foreach ($repeat_fourteen_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC14_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC14_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC14_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_fourteen_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_fourteen_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_fourteen_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
+                         </div><!-- / .service-14 -->
 
-                         <!-- start : service 15 -->
-                         <div class="service-1">
-                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'SC15_titre', true); ?></h2>
+                         <!-- start : service-15 -->
+                         <div class="service">
+                             <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_fifteen_service', true); ?></h2>
                              <table class="table-service">
-                                 <!-- ligne 1 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L1_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L1_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L1_price', true); ?></td>
-                                 </tr>
 
-                                 <!-- ligne 2 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L2_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L2_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L2_price', true); ?></td>
-                                 </tr>
+                                 <tbody>
+                                     <?php
+                                     $repeat_fifteen_services = get_post_meta($post->ID, 'repeat_fifteen_services', true);
+                                     foreach ($repeat_fifteen_services as $field) :
 
-                                 <!-- ligne 3 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L3_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L3_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L3_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 4 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L4_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L4_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L4_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 5 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L5_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L5_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L5_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 6 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L6_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L6_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L6_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 7 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L7_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L7_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L7_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 8 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L8_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L8_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L8_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 9 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L9_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L9_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L9_price', true); ?></td>
-                                 </tr>
-
-                                 <!-- ligne 10 -->
-                                 <tr class="item-service">
-                                     <td class="num"><?php echo get_post_meta($post->ID, 'SC15_L10_numb', true); ?></td>
-                                     <td class="nom"><?php echo get_post_meta($post->ID, 'SC15_L10_nom', true); ?></td>
-                                     <td class="prix"><?php echo get_post_meta($post->ID, 'SC15_L10_price', true); ?></td>
-                                 </tr>
+                                         ?>
+                                         <tr class="item-service">
+                                             <td class="num"><?php echo $field['numb_fifteen_service']; ?></td>
+                                             <td class="nom"><?php echo $field['name_fifteen_service']; ?></td>
+                                             <td class="prix"><?php echo $field['price_fifteen_service'];  ?></td>
+                                         </tr>
+                                         <?php
+                                     endforeach;
+                                     ?>
+                                 </tbody>
 
                              </table>
-                         </div><!-- / .service-1 -->
-
+                         </div><!-- / .service-15 -->
 
                      </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
 

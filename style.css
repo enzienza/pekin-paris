@@ -7748,6 +7748,14 @@ footer .box-info span .icon-carte {
   border: none;
 }
 
+#portfolio .box-table .table-emporter .td-numb, #portfolio .box-table .table-emporter .td-price {
+  width: 15%;
+}
+
+#portfolio .box-table .table-emporter .td-name {
+  width: 60%;
+}
+
 /*------------------------------------------------------------------------------*/
 /* carte-emporter */
 /*------------------------------------------------------------------------------*/
