@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Emporter Table Repeat
-Description: Métabox dynamique | Repeat table | Page-emporter
+Description: Métabox dynamique | Tableau DYNAMIQUE | Page-emporter
 Author: Enza Lombardo
 Author URI: www.enzalombardo.be
 Copyright: 2019 © Enza Lombardo
@@ -98,7 +98,7 @@ function MB_repeat_emporter($POST) {
 						<td><input type="text" class="widefat" name="price_emporter[]" value="" /></td>
 						<!-- <td><a class="sort">|||</a></td> -->
 					</tr>
-				<?php endif; ?>
+			<?php endif; ?>
 
 				<!-- empty hidden one for jQuery -->
 				<tr class="empty-row screen-reader-text">
