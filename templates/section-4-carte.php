@@ -193,365 +193,470 @@
                         <div id="" class="card card-carte col-md-9 col-12">
 
 
-                            <!-- start : service-1 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_one_service', true); ?></h2>
-                                <table class="table-service">
+                            <?php // start : service 1 ------------
+                                $display = get_post_meta( $post->ID,'display_one_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_one_service', true); ?></h2>
+                                    <table class="table-service">
 
-                                    <tbody>
-                                        <?php
-                                            $repeat_one_services = get_post_meta($post->ID, 'repeat_one_services', true);
-                                            foreach ($repeat_one_services as $field) :
+                                        <tbody>
+                                            <?php
+                                                $repeat_one_services = get_post_meta($post->ID, 'repeat_one_services', true);
+                                                foreach ($repeat_one_services as $field) :
+
+                                                    ?>
+                                                        <tr class="item-service">
+                                                            <td class="num"><?php echo $field['numb_one_service']; ?></td>
+                                                            <td class="nom"><?php echo $field['name_one_service']; ?></td>
+                                                            <td class="prix"><?php echo $field['price_one_service'];  ?></td>
+                                                        </tr>
+                                                    <?php
+                                                endforeach;
+                                             ?>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-2 ------------
+                                $display = get_post_meta( $post->ID,'display_two_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_two_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
+                                            <?php
+                                            $repeat_two_services = get_post_meta($post->ID, 'repeat_two_services', true);
+                                            foreach ($repeat_two_services as $field) :
 
                                                 ?>
-                                                    <tr class="item-service">
-                                                        <td class="num"><?php echo $field['numb_one_service']; ?></td>
-                                                        <td class="nom"><?php echo $field['name_one_service']; ?></td>
-                                                        <td class="prix"><?php echo $field['price_one_service'];  ?></td>
-                                                    </tr>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_two_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_two_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_two_service'];  ?></td>
+                                                </tr>
                                                 <?php
                                             endforeach;
-                                         ?>
-                                    </tbody>
-
-                                </table>
-                            </div><!-- / .service-1 -->
-
-                            <!-- start : service-2 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_two_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_two_services = get_post_meta($post->ID, 'repeat_two_services', true);
-                                        foreach ($repeat_two_services as $field) :
-
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_two_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_two_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_two_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-3 ------------
+                                $display = get_post_meta( $post->ID,'display_three_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_three_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_three_services = get_post_meta($post->ID, 'repeat_three_services', true);
+                                            foreach ($repeat_three_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-2 -->
-
-                            <!-- start : service-3 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_three_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_three_services = get_post_meta($post->ID, 'repeat_three_services', true);
-                                        foreach ($repeat_three_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_three_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_three_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_three_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_three_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_three_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_three_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-4 ------------
+                                $display = get_post_meta( $post->ID,'display_four_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_four_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_four_services = get_post_meta($post->ID, 'repeat_four_services', true);
+                                            foreach ($repeat_four_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-3 -->
-
-                            <!-- start : service-4 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_four_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_four_services = get_post_meta($post->ID, 'repeat_four_services', true);
-                                        foreach ($repeat_four_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_four_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_four_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_four_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_four_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_four_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_four_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-5 ------------
+                                $display = get_post_meta( $post->ID,'display_five_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_five_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_five_services = get_post_meta($post->ID, 'repeat_five_services', true);
+                                            foreach ($repeat_five_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-4 -->
-
-                            <!-- start : service-5 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_five_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_five_services = get_post_meta($post->ID, 'repeat_five_services', true);
-                                        foreach ($repeat_five_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_five_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_five_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_five_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_five_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_five_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_five_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-6 ------------
+                                $display = get_post_meta( $post->ID,'display_six_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_six_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_six_services = get_post_meta($post->ID, 'repeat_six_services', true);
+                                            foreach ($repeat_six_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-5 -->
-
-                            <!-- start : service-6 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_six_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_six_services = get_post_meta($post->ID, 'repeat_six_services', true);
-                                        foreach ($repeat_six_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_six_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_six_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_six_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_six_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_six_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_six_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-7 ------------
+                                $display = get_post_meta( $post->ID,'display_seven_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_seven_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_seven_services = get_post_meta($post->ID, 'repeat_seven_services', true);
+                                            foreach ($repeat_seven_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-6 -->
-
-                            <!-- start : service-7 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_seven_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_seven_services = get_post_meta($post->ID, 'repeat_seven_services', true);
-                                        foreach ($repeat_seven_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_seven_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_seven_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_seven_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_seven_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_seven_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_seven_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-8 ------------
+                                $display = get_post_meta( $post->ID,'display_eight_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_eight_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_eight_services = get_post_meta($post->ID, 'repeat_eight_services', true);
+                                            foreach ($repeat_eight_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-7 -->
-
-                            <!-- start : service-8 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_eight_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_eight_services = get_post_meta($post->ID, 'repeat_eight_services', true);
-                                        foreach ($repeat_eight_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_eight_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_eight_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_eight_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_eight_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_eight_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_eight_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-9 ------------
+                                $display = get_post_meta( $post->ID,'display_nine_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_nine_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_nine_services = get_post_meta($post->ID, 'repeat_nine_services', true);
+                                            foreach ($repeat_nine_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-8 -->
-
-                            <!-- start : service-9 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_nine_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_nine_services = get_post_meta($post->ID, 'repeat_nine_services', true);
-                                        foreach ($repeat_nine_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_nine_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_nine_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_nine_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_nine_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_nine_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_nine_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-10 ------------
+                                $display = get_post_meta( $post->ID,'display_ten_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_ten_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_ten_services = get_post_meta($post->ID, 'repeat_ten_services', true);
+                                            foreach ($repeat_ten_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-9 -->
-
-                            <!-- start : service-10 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_ten_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_ten_services = get_post_meta($post->ID, 'repeat_ten_services', true);
-                                        foreach ($repeat_ten_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_ten_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_ten_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_ten_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_ten_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_ten_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_ten_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-11 ------------
+                                $display = get_post_meta( $post->ID,'display_eleven_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_eleven_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_eleven_services = get_post_meta($post->ID, 'repeat_eleven_services', true);
+                                            foreach ($repeat_eleven_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-10 -->
-
-                            <!-- start : service-11 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_eleven_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_eleven_services = get_post_meta($post->ID, 'repeat_eleven_services', true);
-                                        foreach ($repeat_eleven_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_eleven_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_eleven_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_eleven_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_eleven_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_eleven_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_eleven_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-12 ------------
+                                $display = get_post_meta( $post->ID,'display_twelve_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_twelve_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_twelve_services = get_post_meta($post->ID, 'repeat_twelve_services', true);
+                                            foreach ($repeat_twelve_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-11 -->
-
-                            <!-- start : service-12 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_twelve_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_twelve_services = get_post_meta($post->ID, 'repeat_twelve_services', true);
-                                        foreach ($repeat_twelve_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_twelve_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_twelve_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_twelve_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_twelve_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_twelve_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_twelve_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-13 ------------
+                                $display = get_post_meta( $post->ID,'display_thirteen_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_thirteen_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_thirteen_services = get_post_meta($post->ID, 'repeat_thirteen_services', true);
+                                            foreach ($repeat_thirteen_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-12 -->
-
-                            <!-- start : service-13 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_thirteen_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_thirteen_services = get_post_meta($post->ID, 'repeat_thirteen_services', true);
-                                        foreach ($repeat_thirteen_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_thirteen_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_thirteen_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_thirteen_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_thirteen_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_thirteen_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_thirteen_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-14 ------------
+                                $display = get_post_meta( $post->ID,'display_fourteen_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_fourteen_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_fourteen_services = get_post_meta($post->ID, 'repeat_fourteen_services', true);
+                                            foreach ($repeat_fourteen_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-13 -->
-
-                            <!-- start : service-14 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_fourteen_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_fourteen_services = get_post_meta($post->ID, 'repeat_fourteen_services', true);
-                                        foreach ($repeat_fourteen_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_fourteen_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_fourteen_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_fourteen_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_fourteen_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_fourteen_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_fourteen_service'];  ?></td>
-                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
+
+                            <?php // start : service-15 ------------
+                                $display = get_post_meta( $post->ID,'display_fifteen_service',true );
+                                if ($display == "oui") {
+                            ?>
+                                <div class="service">
+                                    <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_fifteen_service', true); ?></h2>
+                                    <table class="table-service">
+
+                                        <tbody>
                                             <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                            $repeat_fifteen_services = get_post_meta($post->ID, 'repeat_fifteen_services', true);
+                                            foreach ($repeat_fifteen_services as $field) :
 
-                                </table>
-                            </div><!-- / .service-14 -->
-
-                            <!-- start : service-15 -->
-                            <div class="service">
-                                <h2 class="titre-service"><?php echo get_post_meta($post->ID, 'titre_fifteen_service', true); ?></h2>
-                                <table class="table-service">
-
-                                    <tbody>
-                                        <?php
-                                        $repeat_fifteen_services = get_post_meta($post->ID, 'repeat_fifteen_services', true);
-                                        foreach ($repeat_fifteen_services as $field) :
-
+                                                ?>
+                                                <tr class="item-service">
+                                                    <td class="num"><?php echo $field['numb_fifteen_service']; ?></td>
+                                                    <td class="nom"><?php echo $field['name_fifteen_service']; ?></td>
+                                                    <td class="prix"><?php echo $field['price_fifteen_service'];  ?></td>
+                                                </tr>
+                                                <?php
+                                            endforeach;
                                             ?>
-                                            <tr class="item-service">
-                                                <td class="num"><?php echo $field['numb_fifteen_service']; ?></td>
-                                                <td class="nom"><?php echo $field['name_fifteen_service']; ?></td>
-                                                <td class="prix"><?php echo $field['price_fifteen_service'];  ?></td>
-                                            </tr>
-                                            <?php
-                                        endforeach;
-                                        ?>
-                                    </tbody>
+                                        </tbody>
 
-                                </table>
-                            </div><!-- / .service-15 -->
+                                    </table>
+                                </div><!-- / .service-1 -->
+                            <?php } elseif ($display == "non") { ?>
+                                <div class="" style="visibility: hidden;"></div>
+                            <?php } ?>
+
 
                         </div><!-- / # .card .card-menu .col-md-9 .col-12 -->
 

@@ -70,15 +70,24 @@ function script_MB_four_service(){
 function MB_four_service($POST){
 
 	$titre_four_service   = get_post_meta($POST->ID, 'titre_four_service', true);
+	$display_four_service = get_post_meta($POST->ID, 'display_four_service', true);
 	$repeat_four_services = get_post_meta($POST->ID, 'repeat_four_services', true);
 
 	wp_nonce_field( 'MB_four_service_nonce', 'MB_four_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_four_service">Titre </label>
-            <input type="text" class="widefat" id="titre_four_service" name="titre_four_service" value="<?php echo $titre_four_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_four_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_four_service, 'oui'); ?> name="display_four_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_four_service, 'non'); ?> name="display_four_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_four_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_four_service" name="titre_four_service" value="<?php echo $titre_four_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-four-service" width="100%">
@@ -190,12 +199,17 @@ function save_MB_four_service($POST_ID){
 	}
 
 
-
+	// Title : titre_four service
 	if(isset($_POST['titre_four_service'])){
         update_post_meta($POST_ID, 'titre_four_service', $_POST['titre_four_service']);
     }
 
+	// Radio : affiche_four_servie
+	if(isset($_POST['display_four_service'])){
+	    update_post_meta($POST_ID, 'display_four_service', $_POST['display_four_service']);
+	}
 
+	// repeatable : repeat_four_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_four_services', $new);
 	elseif(empty($new) && $old)

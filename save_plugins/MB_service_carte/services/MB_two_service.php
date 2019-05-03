@@ -70,15 +70,24 @@ function script_MB_two_service(){
 function MB_two_service($POST){
 
 	$titre_two_service   = get_post_meta($POST->ID, 'titre_two_service', true);
+	$display_two_service = get_post_meta($POST->ID, 'display_two_service', true);
 	$repeat_two_services = get_post_meta($POST->ID, 'repeat_two_services', true);
 
 	wp_nonce_field( 'MB_two_service_nonce', 'MB_two_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_two_service">Titre </label>
-            <input type="text" class="widefat" id="titre_two_service" name="titre_two_service" value="<?php echo $titre_two_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_two_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_two_service, 'oui'); ?> name="display_two_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_two_service, 'non'); ?> name="display_two_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_two_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_two_service" name="titre_two_service" value="<?php echo $titre_two_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-two-service" width="100%">
@@ -190,12 +199,17 @@ function save_MB_two_service($POST_ID){
 	}
 
 
-
+	// Title : titre_two service
 	if(isset($_POST['titre_two_service'])){
         update_post_meta($POST_ID, 'titre_two_service', $_POST['titre_two_service']);
     }
 
+	// Radio : affiche_two_servie
+	if(isset($_POST['display_two_service'])){
+	    update_post_meta($POST_ID, 'display_two_service', $_POST['display_two_service']);
+	}
 
+	// repeatable : repeat_two_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_two_services', $new);
 	elseif(empty($new) && $old)

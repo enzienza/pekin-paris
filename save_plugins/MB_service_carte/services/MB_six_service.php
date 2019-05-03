@@ -69,15 +69,24 @@ function script_MB_six_service(){
 function MB_six_service($POST){
 
 	$titre_six_service   = get_post_meta($POST->ID, 'titre_six_service', true);
+	$display_six_service = get_post_meta($POST->ID, 'display_six_service', true);
 	$repeat_six_services = get_post_meta($POST->ID, 'repeat_six_services', true);
 
 	wp_nonce_field( 'MB_six_service_nonce', 'MB_six_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_six_service">Titre </label>
-            <input type="text" class="widefat" id="titre_six_service" name="titre_six_service" value="<?php echo $titre_six_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_six_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_six_service, 'oui'); ?> name="display_six_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_six_service, 'non'); ?> name="display_six_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_six_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_six_service" name="titre_six_service" value="<?php echo $titre_six_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-six-service" width="100%">
@@ -189,12 +198,17 @@ function save_MB_six_service($POST_ID){
 	}
 
 
-
+	// Title : titre_six service
 	if(isset($_POST['titre_six_service'])){
         update_post_meta($POST_ID, 'titre_six_service', $_POST['titre_six_service']);
     }
 
+	// Radio : affiche_six_servie
+	if(isset($_POST['display_six_service'])){
+	    update_post_meta($POST_ID, 'display_six_service', $_POST['display_six_service']);
+	}
 
+	// repeatable : repeat_six_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_six_services', $new);
 	elseif(empty($new) && $old)

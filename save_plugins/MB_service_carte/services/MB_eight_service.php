@@ -69,15 +69,24 @@ function script_MB_eight_service(){
 function MB_eight_service($POST){
 
 	$titre_eight_service   = get_post_meta($POST->ID, 'titre_eight_service', true);
+	$display_eight_service = get_post_meta($POST->ID, 'display_eight_service', true);
 	$repeat_eight_services = get_post_meta($POST->ID, 'repeat_eight_services', true);
 
 	wp_nonce_field( 'MB_eight_service_nonce', 'MB_eight_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_eight_service">Titre </label>
-            <input type="text" class="widefat" id="titre_eight_service" name="titre_eight_service" value="<?php echo $titre_eight_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_eight_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_eight_service, 'oui'); ?> name="display_eight_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_eight_service, 'non'); ?> name="display_eight_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_eight_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_eight_service" name="titre_eight_service" value="<?php echo $titre_eight_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-eight-service" width="100%">
@@ -189,12 +198,17 @@ function save_MB_eight_service($POST_ID){
 	}
 
 
-
+	// Title : titre_eight service
 	if(isset($_POST['titre_eight_service'])){
         update_post_meta($POST_ID, 'titre_eight_service', $_POST['titre_eight_service']);
     }
 
+	// Radio : affiche_eight_servie
+	if(isset($_POST['display_eight_service'])){
+	    update_post_meta($POST_ID, 'display_eight_service', $_POST['display_eight_service']);
+	}
 
+	// repeatable : repeat_eight_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_eight_services', $new);
 	elseif(empty($new) && $old)

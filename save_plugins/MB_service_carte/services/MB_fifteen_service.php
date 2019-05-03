@@ -69,15 +69,24 @@ function script_MB_fifteen_service(){
 function MB_fifteen_service($POST){
 
 	$titre_fifteen_service   = get_post_meta($POST->ID, 'titre_fifteen_service', true);
+	$display_fifteen_service = get_post_meta($POST->ID, 'display_fifteen_service', true);
 	$repeat_fifteen_services = get_post_meta($POST->ID, 'repeat_fifteen_services', true);
 
 	wp_nonce_field( 'MB_fifteen_service_nonce', 'MB_fifteen_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_fifteen_service">Titre </label>
-            <input type="text" class="widefat" id="titre_fifteen_service" name="titre_fifteen_service" value="<?php echo $titre_fifteen_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_fifteen_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_fifteen_service, 'oui'); ?> name="display_fifteen_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_fifteen_service, 'non'); ?> name="display_fifteen_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_fifteen_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_fifteen_service" name="titre_fifteen_service" value="<?php echo $titre_fifteen_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-fifteen-service" width="100%">
@@ -189,12 +198,17 @@ function save_MB_fifteen_service($POST_ID){
 	}
 
 
-
+	// Title : titre_fifteen service
 	if(isset($_POST['titre_fifteen_service'])){
         update_post_meta($POST_ID, 'titre_fifteen_service', $_POST['titre_fifteen_service']);
     }
 
+	// Radio : affiche_fifteen_servie
+	if(isset($_POST['display_fifteen_service'])){
+	    update_post_meta($POST_ID, 'display_fifteen_service', $_POST['display_fifteen_service']);
+	}
 
+	// repeatable : repeat_fifteen_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_fifteen_services', $new);
 	elseif(empty($new) && $old)

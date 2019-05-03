@@ -69,15 +69,24 @@ function script_MB_eleven_service(){
 function MB_eleven_service($POST){
 
 	$titre_eleven_service   = get_post_meta($POST->ID, 'titre_eleven_service', true);
+	$display_eleven_service = get_post_meta($POST->ID, 'display_eleven_service', true);
 	$repeat_eleven_services = get_post_meta($POST->ID, 'repeat_eleven_services', true);
 
 	wp_nonce_field( 'MB_eleven_service_nonce', 'MB_eleven_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_eleven_service">Titre </label>
-            <input type="text" class="widefat" id="titre_eleven_service" name="titre_eleven_service" value="<?php echo $titre_eleven_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_eleven_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_eleven_service, 'oui'); ?> name="display_eleven_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_eleven_service, 'non'); ?> name="display_eleven_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_eleven_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_eleven_service" name="titre_eleven_service" value="<?php echo $titre_eleven_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-eleven-service" width="100%">
@@ -189,12 +198,17 @@ function save_MB_eleven_service($POST_ID){
 	}
 
 
-
+	// Title : titre_eleven service
 	if(isset($_POST['titre_eleven_service'])){
         update_post_meta($POST_ID, 'titre_eleven_service', $_POST['titre_eleven_service']);
     }
 
+	// Radio : affiche_eleven_servie
+	if(isset($_POST['display_eleven_service'])){
+	    update_post_meta($POST_ID, 'display_eleven_service', $_POST['display_eleven_service']);
+	}
 
+	// repeatable : repeat_eleven_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_eleven_services', $new);
 	elseif(empty($new) && $old)

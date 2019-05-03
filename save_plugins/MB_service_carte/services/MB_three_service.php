@@ -69,15 +69,24 @@ function script_MB_three_service(){
 function MB_three_service($POST){
 
 	$titre_three_service   = get_post_meta($POST->ID, 'titre_three_service', true);
+	$display_three_service = get_post_meta($POST->ID, 'display_three_service', true);
 	$repeat_three_services = get_post_meta($POST->ID, 'repeat_three_services', true);
 
 	wp_nonce_field( 'MB_three_service_nonce', 'MB_three_service_nonce' );
     ?>
 
-        <div class="">
-            <label for="titre_three_service">Titre </label>
-            <input type="text" class="widefat" id="titre_three_service" name="titre_three_service" value="<?php echo $titre_three_service ?>" />
-        </div>
+		<div class="head-metabox" style="border-bottom: 1px solid #ddd; margin-bottom: 1.5rem;">
+		    <div style="line-height: 5;">
+		        <label for="display_three_service" style="margin-right: 15px; font-weight: bold;">Afficher le service : </label>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_three_service, 'oui'); ?> name="display_three_service" value="oui"/>Oui</span>
+		        <span style="margin-right: 15px;"><input type="radio" <?php checked($display_three_service, 'non'); ?> name="display_three_service" value="non"/>Non</span>
+		    </div>
+
+		    <div  style="margin-bottom: 2rem;">
+		        <label for="titre_three_service" style="margin-right: 1rem; font-weight: bold;">Titre </label>
+		        <input type="text" id="titre_three_service" name="titre_three_service" value="<?php echo $titre_three_service ?>" style="width: 90%;" />
+		    </div>
+		</div>
 
 		<!-- START : table -->
 		<table id="table-three-service" width="100%">
@@ -189,12 +198,17 @@ function save_MB_three_service($POST_ID){
 	}
 
 
-
+	// Title : titre_three service
 	if(isset($_POST['titre_three_service'])){
         update_post_meta($POST_ID, 'titre_three_service', $_POST['titre_three_service']);
     }
 
+	// Radio : affiche_three_servie
+	if(isset($_POST['display_three_service'])){
+	    update_post_meta($POST_ID, 'display_three_service', $_POST['display_three_service']);
+	}
 
+	// repeatable : repeat_three_service
 	if(!empty($new) && $new != $old)
 		update_post_meta($POST_ID, 'repeat_three_services', $new);
 	elseif(empty($new) && $old)
