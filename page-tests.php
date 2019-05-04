@@ -14,19 +14,25 @@
 <!-- START section 3 : section-description-buffet -->
 <?php //require get_template_directory() . '/templates/section-3-desc-buffet.php'; ?>
 
+<!-- START section 3 : carte-event -->
+<?php require get_template_directory() . '/templates/section3-card-event.php'; ?>
+
+
 <!-- START section 4 : section-tarif-buffet -->
 <?php //require get_template_directory() . '/templates/section-4-tarif-buffet.php'; ?>
 <?php //require get_template_directory() . '/templates/section-4-test.php'; ?>
 
 
 <!-- START section 4 : carte-content -->
-<?php require get_template_directory() . '/templates/section-4-carte.php'; ?>
+<?php //require get_template_directory() . '/templates/section-4-carte.php'; ?>
 
 <!-- START section 3 : carte-emporter -->
 <?php //require get_template_directory() . '/templates/section-3-carte-emporter.php'; ?>
 
 <!-- START section 5 : buffet-emporter -->
 <?php //require get_template_directory() . '/templates/section-5-buffet-emporter.php'; ?>
+
+
 
 
 

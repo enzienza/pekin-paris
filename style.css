@@ -6698,14 +6698,52 @@ height: 100%;
 }
 
 /*------------------------------------------------------------------------------*/
+/* CARD-EVENT */
+/*------------------------------------------------------------------------------*/
+.card-event {
+  margin: 15px;
+  width: calc((100% / 3) - 30px);
+}
+
+.card-event .card-title {
+  text-align: center;
+  margin-top: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.card-event .card-body {
+  background-color: #FFC033;
+  color: #fefefe;
+}
+
+/*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  .card-event {
+    width: calc((100% / 2) - 30px);
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .card-event {
+    width: 100%;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .card-event {
+    width: 100%;
+  }
+}
+
 /*-----------------------------------------------------------------------------*/
 /* CAROUSEL */
 /*-----------------------------------------------------------------------------*/
@@ -7847,24 +7885,32 @@ footer .box-info span .icon-carte {
   padding-top: 1rem;
 }
 
-.card-event .card-title {
-  text-align: center;
-  margin-top: 0;
-  font-size: 2rem;
-  line-height: 1.2;
+/*------------------------------------------------------------------------------*/
+/* SECTION-EVENT */
+/*------------------------------------------------------------------------------*/
+#section-event {
+  margin: 3rem auto;
 }
 
-.img-event {
+#section-event .row {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#section-event .img-event {
   position: relative;
   overflow: hidden;
 }
 
-.img-event img {
+#section-event .img-event img {
   /* opacity: .5; */
-  height: 450px;
+  max-height: 450px;
+  height: auto;
+  padding: 3rem;
 }
 
-.info-event {
+#section-event .info-event {
   list-style: none;
   display: inline-flex;
   font-family: "Libre Baskerville", serif;
@@ -7874,37 +7920,61 @@ footer .box-info span .icon-carte {
   padding-left: 0;
 }
 
-.info-event span {
+#section-event .info-event span {
   padding: 0 10px;
 }
 
-.hovered .card-body {
+#section-event .hovered .card-body {
   position: absolute;
   bottom: 0;
   right: 15px;
   left: 15px;
+  left: 0;
   z-index: 2;
   text-align: center;
+  width: 100%;
 }
 
-.hovered:hover .btn-event {
+#section-event .hovered:hover .btn-event {
   opacity: 1;
   max-height: 190px;
 }
 
-.btn-event {
+#section-event .btn-event {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.btn-event::before, .btn-event::after {
+#section-event .btn-event::before, #section-event .btn-event::after {
   display: block;
   clear: both;
   content: '';
   width: 0;
   height: 0;
+}
+
+#section-event .btn-event .btn {
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
+/*------------------------------------------------------------------------------*/
+/* SECTION-SINGLE-EVENT */
+/*------------------------------------------------------------------------------*/
+#section-single-event {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+#section-single-event img {
+  max-width: 80%;
+  width: auto;
+  height: auto;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /*------------------------------------------------------------------------------*/
@@ -7934,7 +8004,10 @@ footer .box-info span .icon-carte {
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
-  .img-event img {
+  .card-event {
+    width: calc((100% / 2) - 30px);
+  }
+  .card-event .img-event img {
     height: auto;
   }
 }

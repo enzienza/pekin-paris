@@ -45,7 +45,6 @@
 
 
 <!-- START section 2 : section-eventpage_message -->
-<!-- START section 2 : section-eventpage_message -->
 <?php
     // SI eventpage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -92,15 +91,16 @@
             wp_reset_postdata();
 
             $args = array(
-                'post_type' => 'evenements',    // nom du CPT
-                'posts_per_page' => -1,      // limite
-                'orderby' => 'id'
+                'post_type'      => 'evenements',    // nom du CPT
+                'posts_per_page' => -1,              // limite
+                'orderby'        => 'id',
+                'order'          => 'ASC'
             );
             $my_query = new WP_query($args);
             if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
         ?>
 
-        <div class="col-md-4 col-12 card card-event hovered">
+        <div class="card card-event hovered">
             <div class="img-event">
                 <?php the_post_thumbnail(); ?>
             </div><!-- / -->
@@ -116,7 +116,7 @@
                         <?php echo get_post_meta($post->ID, 'heure_event', true); ?>
                     </li>
                 </ul>
-                <div class="btn-event row">
+                <div class="btn-event">
                     <a href="<?php the_permalink(); ?>" class="btn btn-outline-light">
                         Voir détail
                     </a>

@@ -37,9 +37,11 @@
     }
 ?>
 
-<section class="container">
+
+<!-- START section 2 : section-single-event -->
+<section id="section-single-event" class="container">
 	<?php the_content(); ?>
-</section>
+</section><!-- / #section-single-event -->
 
 <?php endwhile; endif; ?>
 
