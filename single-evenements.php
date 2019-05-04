@@ -22,12 +22,38 @@
                     <div class="carousel-item active" style="background-image: url(<?php echo get_option('eventpage_cover_bg_img'); ?>);">
                         <div class="jumbotron">
                             <h1><?php the_title(); ?></h1>
+                            <p>
+                                <span>
+                                    <span class="icons flaticon-calendar"></span>
+                                    <?php $date = get_post_meta($post->ID, 'date_event', true); if($date != ''){echo date_i18n("j M Y", strtotime($date));} ?>
+                                </span>
+
+                                <span class="separ">/</span>
+
+                                <span>
+                                    <span class="icons flaticon-clock"></span>
+                                    <?php echo get_post_meta($post->ID, 'heure_event', true); ?>
+                                </span>
+                            </p>
                         </div><!-- /.jumbotron -->
                     </div><!-- /.carousel-item .active -->
                 <?php } else {  ?>
                     <div class="carousel-item active" style="background-color:#333;">
                         <div class="jumbotron">
                             <h1><?php the_title(); ?></h1>
+                            <p>
+                                <span>
+                                    <span class="icons flaticon-calendar"></span>
+                                    <?php $date = get_post_meta($post->ID, 'date_event', true); if($date != ''){echo date_i18n("j M Y", strtotime($date));} ?>
+                                </span>
+
+                                <span class="separ">/</span>
+
+                                <span>
+                                    <span class="icons flaticon-clock"></span>
+                                    <?php echo get_post_meta($post->ID, 'heure_event', true); ?>
+                                </span>
+                            </p>
                         </div><!-- /.jumbotron -->
                     </div><!-- /.carousel-item .active -->
                 <?php  } ?>

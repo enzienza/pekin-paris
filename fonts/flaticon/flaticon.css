@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 17/04/2019 16:15
+  	Creation date: 04/05/2019 10:27
   	*/
 
 @font-face {
@@ -34,25 +34,6 @@ margin-left: 20px;
 .flaticon-instagram:before { content: "\f101"; }
 .flaticon-placeholder:before { content: "\f102"; }
 .flaticon-phone-call:before { content: "\f103"; }
-.flaticon-menu:before { content: "\f104"; }
-.flaticon-home:before { content: "\f105"; }
-.flaticon-buddha:before { content: "\f106"; }
-.flaticon-china:before { content: "\f107"; }
-.flaticon-landmark:before { content: "\f108"; }
-.flaticon-chinese:before { content: "\f109"; }
-.flaticon-rice:before { content: "\f10a"; }
-.flaticon-rice-1:before { content: "\f10b"; }
-.flaticon-xiao-long-bao:before { content: "\f10c"; }
-.flaticon-shrimp:before { content: "\f10d"; }
-.flaticon-fish:before { content: "\f10e"; }
-.flaticon-salad:before { content: "\f10f"; }
-.flaticon-bird:before { content: "\f110"; }
-.flaticon-chicken:before { content: "\f111"; }
-.flaticon-pig:before { content: "\f112"; }
-.flaticon-soup:before { content: "\f113"; }
-.flaticon-china-1:before { content: "\f114"; }
-.flaticon-beans:before { content: "\f115"; }
-.flaticon-cow:before { content: "\f116"; }
-.flaticon-lamb:before { content: "\f117"; }
-.flaticon-twitter:before { content: "\f118"; }
-.flaticon-visa:before { content: "\f119"; }
+.flaticon-twitter:before { content: "\f104"; }
+.flaticon-clock:before { content: "\f105"; }
+.flaticon-calendar:before { content: "\f106"; }

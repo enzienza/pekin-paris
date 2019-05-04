@@ -6079,8 +6079,8 @@ ul {
 /* FONT */
 /*------------------------------------------------------------------------------*/
 /*
-    Flaticon icon font: Flaticon
-    Creation date: 17/04/2019 16:15
+Flaticon icon font: Flaticon
+Creation date: 04/05/2019 10:27
 */
 @font-face {
   font-family: "Flaticon";
@@ -6128,92 +6128,16 @@ ul {
   content: "\f103";
 }
 
-.flaticon-menu:before {
+.flaticon-twitter:before {
   content: "\f104";
 }
 
-.flaticon-home:before {
+.flaticon-clock:before {
   content: "\f105";
 }
 
-.flaticon-buddha:before {
+.flaticon-calendar:before {
   content: "\f106";
-}
-
-.flaticon-china:before {
-  content: "\f107";
-}
-
-.flaticon-landmark:before {
-  content: "\f108";
-}
-
-.flaticon-chinese:before {
-  content: "\f109";
-}
-
-.flaticon-rice:before {
-  content: "\f10a";
-}
-
-.flaticon-rice-1:before {
-  content: "\f10b";
-}
-
-.flaticon-xiao-long-bao:before {
-  content: "\f10c";
-}
-
-.flaticon-shrimp:before {
-  content: "\f10d";
-}
-
-.flaticon-fish:before {
-  content: "\f10e";
-}
-
-.flaticon-salad:before {
-  content: "\f10f";
-}
-
-.flaticon-bird:before {
-  content: "\f110";
-}
-
-.flaticon-chicken:before {
-  content: "\f111";
-}
-
-.flaticon-pig:before {
-  content: "\f112";
-}
-
-.flaticon-soup:before {
-  content: "\f113";
-}
-
-.flaticon-china-1:before {
-  content: "\f114";
-}
-
-.flaticon-beans:before {
-  content: "\f115";
-}
-
-.flaticon-cow:before {
-  content: "\f116";
-}
-
-.flaticon-lamb:before {
-  content: "\f117";
-}
-
-.flaticon-twitter:before {
-  content: "\f118";
-}
-
-.flaticon-visa:before {
-  content: "\f119";
 }
 
 /* -------------------------------------------- */
@@ -7977,6 +7901,16 @@ footer .box-info span .icon-carte {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+#cover-page-event .icons {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+#cover-page-event .separ {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
@@ -8029,6 +7963,87 @@ footer .box-info span .icon-carte {
   .card-event .btn {
     font-size: smaller;
   }
+}
+
+/*------------------------------------------------------------------------------*/
+/* SECTION-LOCATION */
+/*------------------------------------------------------------------------------*/
+#section-location {
+  margin: 4rem auto;
+}
+
+#section-location iframe {
+  width: 600px;
+  height: 400px;
+}
+
+#section-location .box-right {
+  margin-top: 2rem;
+}
+
+#section-location .item-location {
+  display: flex;
+  line-height: 2;
+}
+
+#section-location .item-location .icons {
+  font-size: 1.45rem;
+  margin-right: 15px;
+}
+
+#section-location .item-location p {
+  font-size: 1.25rem;
+}
+
+/*------------------------------------------------------------------------------*/
+/* SECTION-HORAIRE */
+/*------------------------------------------------------------------------------*/
+#section-horaire {
+  margin: 4rem auto;
+}
+
+#section-horaire .box-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-horaire .box-left img {
+  width: 60%;
+}
+
+#section-horaire .table-horaire {
+  width: 65%;
+  font-size: large;
+}
+
+#section-horaire .table-horaire .item-heure {
+  border-bottom: 1px solid #e4e4e4;
+  line-height: 4;
+}
+
+#section-horaire .table-horaire .item-heure:last-child {
+  border: none;
+}
+
+#section-horaire .table-horaire .day {
+  vertical-align: middle;
+  text-transform: uppercase;
+  padding-left: 2rem;
+}
+
+#section-horaire .table-horaire .close {
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 1rem;
+}
+
+#section-horaire .table-horaire .heure {
+  line-height: 1.1;
+  font-size: medium;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 1rem;
 }
 
 /*------------------------------------------------------------------------------*/
