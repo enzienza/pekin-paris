@@ -7331,6 +7331,9 @@ footer .box-info span .icon-carte {
   }
 }
 
+/*------------------------------------------------------------------------------*/
+/* PAGE ACCUEIL */
+/*------------------------------------------------------------------------------*/
 .bg-cover {
   background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), no-repeat fixed;
   background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), no-repeat fixed;
@@ -7352,6 +7355,79 @@ footer .box-info span .icon-carte {
 .bg-section {
   /* @include bg-cover; */
   height: 80vh;
+}
+
+#page-accueil .logo-center {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+#page-accueil .logo-center img {
+  width: 80%;
+}
+
+#page-accueil .button-accueil {
+  color: #fefefe;
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#page-accueil .button-accueil .btn-left, #page-accueil .button-accueil .btn-right {
+  display: flex;
+  position: relative;
+  top: 4rem;
+}
+
+#page-accueil .button-accueil .btn-left {
+  justify-content: right;
+}
+
+#page-accueil .button-accueil .btn-right {
+  justify-content: left;
+}
+
+#page-accueil .button-accueil img {
+  width: 60%;
+  border-radius: 50%;
+  border: 1px solid #fefefe;
+  margin-bottom: 2rem;
+}
+
+#page-accueil .button-accueil img:hover {
+  background-color: #FFC033;
+  border-color: #FFC033;
+}
+
+#page-accueil .homepage-info-contact {
+  color: #fefefe;
+  display: flex;
+  justify-content: center;
+}
+
+#page-accueil .homepage-info-contact ul {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+}
+
+#page-accueil .homepage-info-contact .info-accueil {
+  display: inline-flex;
+  line-height: 2;
+  margin-right: 2rem;
+}
+
+#page-accueil .homepage-info-contact .info-accueil .icons {
+  font-size: 1.1rem;
+  margin-right: 15px;
+}
+
+#page-accueil .homepage-info-contact .info-accueil p {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -8055,3 +8131,16 @@ footer .box-info span .icon-carte {
 /*------------------------------------------------------------------------------*/
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+/* ERROR 404 */
+/*------------------------------------------------------------------------------*/
+#erreur .logo-center {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+#erreur .logo-center img {
+  width: 80%;
+}

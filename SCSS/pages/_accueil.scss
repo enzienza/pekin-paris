@@ -1,5 +1,11 @@
 // main: ../style.scss
 
+
+
+/*------------------------------------------------------------------------------*/
+/* PAGE ACCUEIL */
+/*------------------------------------------------------------------------------*/
+
 .bg-cover{
     @include bg-cover;
     height: 100vh;
@@ -22,7 +28,80 @@
 }
 
 
+#page-accueil{
+    .logo-center{
+        position: relative;
+        top: 4rem;
+        display: flex;
+        justify-content: center;
 
+        img{
+            width: 80%;
+        }
+    }
+
+    .button-accueil{
+        color: $colorLight;
+        font-size: 1.4rem;
+        text-align: center;
+        text-transform: uppercase;
+
+        .btn-left, .btn-right{
+            display: flex;
+            position: relative;
+            top: 4rem;
+        }
+
+        .btn{
+            &-left{
+                justify-content: right;
+            }
+            &-right{
+                justify-content: left;
+            }
+        }
+
+        img{
+            width: 60%;
+            border-radius: 50%;
+            border: 1px solid $colorLight;
+            margin-bottom: 2rem;
+            &:hover{
+                background-color: $colorPrimary;
+                border-color: $colorPrimary;
+            }
+        }
+    }
+
+
+    .homepage-info-contact{
+        color: $colorLight;
+        display: flex;
+        justify-content: center;
+
+        ul{
+            display: inline-flex;
+            align-items: center;
+            position: absolute;
+            bottom: 2rem;
+        }
+
+        .info-accueil{
+            display: inline-flex;
+            line-height: 2;
+            margin-right: 2rem;
+            .icons{
+                font-size: 1.1rem;
+                margin-right: 15px;
+            }
+
+            p{
+                font-size: 1.1rem;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}
 
 
 /*------------------------------------------------------------------------------*/
