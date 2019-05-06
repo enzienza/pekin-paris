@@ -81,7 +81,7 @@ register_setting('group-page-accueil', 'btn_buffet_url');
 
 register_setting('group-page-accueil', 'btn_carte_hidden');
 register_setting('group-page-accueil', 'btn_carte_txt');
-register_setting('group-page-accueil', 'bnt_carte_url');
+register_setting('group-page-accueil', 'btn_carte_url');
 
 
 // REGISTER : homepage_bg_img

@@ -21,6 +21,7 @@ Version: 1.0
             * Option 4 : page-emporter
             * Option 5 : page-event
             * Option 6 : page-contact
+            * Option 7 : page-404
         IV - FIELD CALLBACK
 
 */
@@ -56,7 +57,8 @@ function tabs_option_theme(){
         'page-carte'     => 'Page à la carte',
         'page-emporter'  => 'Page emporter',
         'page-event'     => 'Page évenement',
-        'page-contact'   => 'Page contact'
+        'page-contact'   => 'Page contact',
+        'page-404'       => 'Page 404'
     );
     return apply_filters('tabs_option_theme', $tabs);
 } // END ==>  tabs_option_theme
@@ -95,64 +97,67 @@ function theme_page_option_theme(){
 
                 <form class=""  method="post" action="options.php" enctype="multipart/form-data">
 
-                    <?php
-
-                    if($_GET['tab'] == 'page-buffet'){
-                        ?>
+                    <!-- START : page-buffet -->
+                    <?php if($_GET['tab'] == 'page-buffet'){ ?>
                         <h3 class="wp-heading-inline">Page Buffet</h3>
                         <div class="form-custom">
                             <?php settings_fields( 'group-page-buffet' );?>
                             <?php do_settings_sections( 'page-buffet' ); ?>
                         </div><!-- / .form-custom -->
-                        <?php
 
-                    } elseif($_GET['tab'] == 'page-carte'){
-                        ?>
-                            <h3 class="wp-heading-inline">Page service à la carte</h3>
-                            <div class="form-custom" >
-                                <?php settings_fields( 'group-page-carte' );?>
-                                <?php do_settings_sections( 'page-carte' ); ?>
-                            </div><!-- / .form-custom -->
-                        <?php
 
-                    } elseif($_GET['tab'] == 'page-emporter'){
-                        ?>
-                            <h3 class="wp-heading-inline">Page à emporter</h3>
-                            <div class="form-custom" >
-                                <?php settings_fields( 'group-page-emporter' );?>
-                                <?php do_settings_sections( 'page-emporter' ); ?>
-                            </div><!-- / .form-custom -->
-                        <?php
+                    <!-- START : page-carte     -->
+                    <?php } elseif($_GET['tab'] == 'page-carte'){ ?>
+                        <h3 class="wp-heading-inline">Page service à la carte</h3>
+                        <div class="form-custom" >
+                            <?php settings_fields( 'group-page-carte' );?>
+                            <?php do_settings_sections( 'page-carte' ); ?>
+                        </div><!-- / .form-custom -->
 
-                    } elseif($_GET['tab'] == 'page-event'){
-                        ?>
-                            <h3 class="wp-heading-inline">Page des évènements</h3>
-                            <div class="form-custom" >
-                                <?php settings_fields( 'group-page-event' );?>
-                                <?php do_settings_sections( 'page-event' ); ?>
-                            </div><!-- / .form-custom -->
-                        <?php
 
-                    } elseif($_GET['tab'] == 'page-contact'){
-                        ?>
-                            <h3 class="wp-heading-inline">Page de contact</h3>
-                            <div class="form-custom" >
-                                <?php settings_fields( 'group-page-contact' );?>
-                                <?php do_settings_sections( 'page-contact' ); ?>
-                            </div><!-- / .form-custom -->
-                        <?php
+                    <!-- START : page-emporter -->
+                    <?php } elseif($_GET['tab'] == 'page-emporter'){ ?>
+                        <h3 class="wp-heading-inline">Page à emporter</h3>
+                        <div class="form-custom" >
+                            <?php settings_fields( 'group-page-emporter' );?>
+                            <?php do_settings_sections( 'page-emporter' ); ?>
+                        </div><!-- / .form-custom -->
 
-                    } else {
-                        ?>
+
+                    <!-- START : page-event -->
+                    <?php } elseif($_GET['tab'] == 'page-event'){ ?>
+                        <h3 class="wp-heading-inline">Page des évènements</h3>
+                        <div class="form-custom" >
+                            <?php settings_fields( 'group-page-event' );?>
+                            <?php do_settings_sections( 'page-event' ); ?>
+                        </div><!-- / .form-custom -->
+
+
+                    <!-- START : page-contact -->
+                    <?php } elseif($_GET['tab'] == 'page-contact'){ ?>
+                        <h3 class="wp-heading-inline">Page de contact</h3>
+                        <div class="form-custom" >
+                            <?php settings_fields( 'group-page-contact' );?>
+                            <?php do_settings_sections( 'page-contact' ); ?>
+                        </div><!-- / .form-custom -->
+
+
+                    <!-- START : page-404 -->
+                <?php } elseif($_GET['tab'] == 'page-404'){ ?>
+                        <h3 class="wp-heading-inline">Page de contact</h3>
+                        <div class="form-custom" >
+                            <?php settings_fields( 'group-page-404' );?>
+                            <?php do_settings_sections( 'page-404' ); ?>
+                        </div><!-- / .form-custom -->
+
+                    <!-- START : page-accueil -->
+                    <?php } else { ?>
                         <h3 class="wp-heading-inline">Page Accueil</h3>
                         <div class="form-custom">
                             <?php settings_fields( 'group-page-accueil' );?>
                             <?php do_settings_sections( 'page-accueil' ); ?>
                         </div><!-- / .form-custom -->
-                        <?php
-                    }
-
-                    ?>
+                    <?php } ?>
 
                     <?php submit_button(); ?>
                 </form>
@@ -193,6 +198,8 @@ function custom_settings_option_theme(){
     // Option 6 -- page-contact  -----------------------------------------------
     require get_template_directory().'/functions/page/custom-settings/page-contact.php';
 
+    // Option 7 -- page-404  -----------------------------------------------
+    require get_template_directory().'/functions/page/custom-settings/page-404.php';
 
 } // END => custom_settings_option_theme
 
@@ -218,3 +225,6 @@ require get_template_directory().'/functions/page/view-form/page-event.php';
 
 // Option 6 -- page-contact  ---------------------------------------------------
 require get_template_directory().'/functions/page/view-form/page-contact.php';
+
+// Option 7 -- page-404  ---------------------------------------------------
+require get_template_directory().'/functions/page/view-form/page-404.php';

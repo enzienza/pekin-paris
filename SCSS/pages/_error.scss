@@ -1,0 +1,55 @@
+// main: ../style.scss
+
+/*------------------------------------------------------------------------------*/
+/* ERROR 404 */
+/*------------------------------------------------------------------------------*/
+
+#erreur{
+    .logo-center{
+        position: relative;
+        top: 4rem;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 80%;
+            height: 50%;
+        }
+    }
+
+    .msg-error{
+        color: $colorLight;
+        display: flex;
+        position: relative;
+        top: 6rem;
+
+        .mgs-left{
+            text-align: right;
+        }
+
+        img{
+            width: 80%;
+            /* margin-right: 3rem; */
+        }
+
+        .msg-right{
+            letter-spacing: 2px;
+
+            .titre-error{
+                font-size: 4rem;
+                margin-top: 1rem;
+                line-height: 2;
+            }
+
+            .txt-error{
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn-homepage{
+                width: 55%;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

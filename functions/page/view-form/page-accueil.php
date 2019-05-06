@@ -160,7 +160,7 @@ function field_homepage_btn(){
     /* --- btn-carte --- */
     $btn_carte_hidden = esc_attr(get_option('btn_carte_hidden'));
     $btn_carte_txt = esc_attr(get_option('btn_carte_txt'));
-    $bnt_carte_url = esc_attr(get_option('bnt_carte_url'));
+    $btn_carte_url = esc_attr(get_option('btn_carte_url'));
 
 
     ?>
@@ -211,7 +211,7 @@ function field_homepage_btn(){
 
         <div class="backend-btn-txt">
             <label for="">Lien (url)</label>
-            <input type="text" id="bnt_carte_url" name="bnt_carte_url" value="<?php echo(get_option('bnt_carte_url')); ?>" />
+            <input type="text" id="btn_carte_url" name="btn_carte_url" value="<?php echo(get_option('btn_carte_url')); ?>" />
         </div><!-- / .backend-btn-txt -->
 
         <!-- START : bnt-img -->
