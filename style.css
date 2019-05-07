@@ -6481,12 +6481,39 @@ height: 100%;
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  #video-background {
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  #video-background {
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: 100vh;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  #video-background {
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: 100vh;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* CARD-TARIF */
 /*------------------------------------------------------------------------------*/
@@ -7229,6 +7256,9 @@ height: 100%;
     font-size: 0.7rem;
     margin: 15px 0 10px 0;
   }
+  .navbar-expand-md .navbar-brand .logo {
+    left: -4.5rem;
+  }
 }
 
 /*------------------------------------------------------------------------------*/
@@ -7258,6 +7288,7 @@ height: 100%;
   }
   .navbar-expand-md .navbar-brand .logo {
     top: 12px;
+    left: -5rem;
   }
   .navbar-nav .page_item a {
     line-height: 2;
@@ -7366,7 +7397,7 @@ footer .box-info span .icon-carte {
 
 #page-accueil .logo-center img {
   width: 80%;
-  height: 50;
+  height: 50%;
 }
 
 #page-accueil .button-accueil {
@@ -7434,12 +7465,90 @@ footer .box-info span .icon-carte {
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  #page-accueil {
+    top: 6rem;
+  }
+  #page-accueil .button-accueil {
+    position: relative;
+    top: 5rem;
+    font-size: large;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  #page-accueil .logo-center img {
+    margin-bottom: 1rem;
+  }
+  #page-accueil .button-accueil .btn-left, #page-accueil .button-accueil .btn-right {
+    justify-content: center;
+  }
+  #page-accueil .button-accueil img {
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+  #page-accueil .button-accueil .btn-txt {
+    font-size: medium;
+    margin-bottom: 2rem;
+  }
+  #page-accueil .homepage-info-contact ul {
+    display: inline;
+    text-align: center;
+  }
+  #page-accueil .homepage-info-contact .info-accueil {
+    line-height: 1;
+  }
+  #page-accueil .homepage-info-contact .info-accueil p {
+    font-size: small;
+  }
+  #page-accueil .homepage-info-contact .separation {
+    display: none;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  #page-accueil .logo-center img {
+    width: 90%;
+    height: 55%;
+  }
+  #page-accueil .button-accueil .btn-left, #page-accueil .button-accueil .btn-right {
+    justify-content: center;
+  }
+  #page-accueil .button-accueil img {
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+  #page-accueil .button-accueil .btn-txt {
+    font-size: medium;
+    margin-bottom: 1.5rem;
+  }
+  #page-accueil .homepage-info-contact ul {
+    display: inline;
+    text-align: center;
+    bottom: .5rem;
+  }
+  #page-accueil .homepage-info-contact .info-accueil {
+    line-height: 1;
+    padding: 0 1rem;
+  }
+  #page-accueil .homepage-info-contact .info-accueil .icons {
+    font-size: small;
+    margin-right: 3px;
+  }
+  #page-accueil .homepage-info-contact .info-accueil p {
+    font-size: x-small;
+  }
+  #page-accueil .homepage-info-contact .separation {
+    display: none;
+  }
+}
+
 .card-formule {
   margin-bottom: 2rem;
 }

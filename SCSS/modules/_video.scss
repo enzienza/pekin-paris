@@ -39,7 +39,12 @@ height: 100%;
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
-
+    #video-background {
+        min-width: 100vw;
+        min-height: 100vh;
+        width: auto;
+        height: auto;
+    }
 }
 
 
@@ -47,7 +52,12 @@ height: 100%;
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
-
+    #video-background {
+        min-width: 100vw;
+        min-height: 100vh;
+        width: auto;
+        height: 100vh;
+    }
 }
 
 
@@ -55,5 +65,10 @@ height: 100%;
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
-
+    #video-background {
+        min-width: 100vw;
+        min-height: 100vh;
+        width: auto;
+        height: 100vh;
+    }
 }

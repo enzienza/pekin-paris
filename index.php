@@ -52,7 +52,7 @@
                             <span class="icons flaticon-placeholder"></span>
                             <p><?php echo get_option('inforesto_adresse'); ?></p>
                         </li><!-- /.info-accueil -->
-                        <li class="info-accueil">
+                        <li class="info-accueil separation">
                             <p> | </p>
                         </li>
                         <li class="info-accueil">
@@ -115,7 +115,7 @@
                             <span class="icons flaticon-placeholder"></span>
                             <p><?php echo get_option('inforesto_adresse'); ?></p>
                         </li><!-- /.info-accueil -->
-                        <li class="info-accueil">
+                        <li class="info-accueil separation">
                             <p> | </p>
                         </li>
                         <li class="info-accueil">

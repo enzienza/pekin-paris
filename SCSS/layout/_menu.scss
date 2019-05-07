@@ -112,6 +112,10 @@
         font-size: 0.7rem;
         margin: 15px 0 10px 0;
     }
+
+    .navbar-expand-md .navbar-brand .logo{
+        left: -4.5rem;
+    }
 }
 
 
@@ -147,6 +151,7 @@
     .navbar-expand-md .navbar-brand {
         .logo{
             top: 12px;
+            left: -5rem;
         }
     }
     .navbar-nav .page_item a {

@@ -37,7 +37,7 @@
 
         img{
             width: 80%;
-            height: 50;
+            height: 50%;
         }
     }
 
@@ -109,6 +109,15 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
+    #page-accueil{
+        top: 6rem;
+
+        .button-accueil{
+            position: relative;
+            top: 5rem;
+            font-size: large;
+        }
+    }
 
 }
 
@@ -117,7 +126,47 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
+    #page-accueil{
+        .logo-center{
+            img{
+                margin-bottom: 1rem;
+            }
+        }
+        .button-accueil{
+            .btn-left, .btn-right{
+                justify-content: center;
+            }
 
+            img{
+                width: 40%;
+                margin-bottom: 1rem;
+            }
+
+            .btn-txt{
+                font-size: medium;
+                margin-bottom: 2rem;
+            }
+
+        }
+
+
+        .homepage-info-contact{
+            ul{
+                display: inline;
+                text-align: center;
+            }
+            .info-accueil{
+                line-height: 1;
+                p{
+                    font-size: small;
+                }
+            }
+
+            .separation{
+                display: none;
+            }
+        }
+    }
 }
 
 
@@ -125,5 +174,50 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
+    #page-accueil{
+        .logo-center{
+            img{
+                width: 90%;
+                height: 55%;
+            }
+        }
 
+        .button-accueil{
+            .btn-left, .btn-right{
+                justify-content: center;
+            }
+            img{
+                width: 40%;
+                margin-bottom: 1rem;
+            }
+            .btn-txt{
+                font-size: medium;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .homepage-info-contact{
+            ul{
+                display: inline;
+                text-align: center;
+                bottom: .5rem;
+            }
+            .info-accueil{
+                line-height: 1;
+                padding: 0 1rem;
+
+                .icons{
+                    font-size: small;
+                    margin-right: 3px;
+                }
+                p{
+                    font-size: x-small;
+                }
+            }
+
+            .separation{
+                display: none;
+            }
+        }
+    }
 }
