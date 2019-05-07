@@ -45,8 +45,10 @@ footer{
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
-    .footer-bottom{
-        font-size: 1rem;
+    footer{
+        .footer-bottom{
+            font-size: 1rem;
+        }
     }
 }
 
@@ -55,10 +57,15 @@ footer{
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
-    .footer-bottom{
-        padding: 3% 20%;
-        line-height: 1.4;
-        font-size: .8rem;
+    footer{
+        .footer-left{
+            margin-bottom: 1.5rem;
+        }
+        .footer-bottom{
+            padding: 3% 20%;
+            line-height: 1.4;
+            font-size: .8rem;
+        }
     }
 }
 
@@ -67,9 +74,15 @@ footer{
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
-    .footer-bottom{
-        font-size: 0.6rem;
-        letter-spacing: 2px;
-        padding: 5%;
+    footer{
+        .footer-left{
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-bottom{
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            padding: 5%;
+        }
     }
 }

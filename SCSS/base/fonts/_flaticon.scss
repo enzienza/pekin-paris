@@ -38,18 +38,20 @@ Creation date: 04/05/2019 10:27
     font-smoothing: antialiased;
 }
 
-.flaticon-facebook:before { content: "\f100"; }
-.flaticon-instagram:before { content: "\f101"; }
-.flaticon-placeholder:before { content: "\f102"; }
-.flaticon-phone-call:before { content: "\f103"; }
+.flaticon-calendar:before { content: "\f100"; }
+.flaticon-clock:before { content: "\f101"; }
+.flaticon-facebook:before { content: "\f102"; }
+.flaticon-instagram:before { content: "\f103"; }
 .flaticon-twitter:before { content: "\f104"; }
-.flaticon-clock:before { content: "\f105"; }
-.flaticon-calendar:before { content: "\f106"; }
+.flaticon-placeholder:before { content: "\f105"; }
+.flaticon-phone-call:before { content: "\f106"; }
+.flaticon-cancel:before { content: "\f107"; }
 
-$font-Flaticon-facebook: "\f100";
-$font-Flaticon-instagram: "\f101";
-$font-Flaticon-placeholder: "\f102";
-$font-Flaticon-phone-call: "\f103";
+$font-Flaticon-calendar: "\f100";
+$font-Flaticon-clock: "\f101";
+$font-Flaticon-facebook: "\f102";
+$font-Flaticon-instagram: "\f103";
 $font-Flaticon-twitter: "\f104";
-$font-Flaticon-clock: "\f105";
-$font-Flaticon-calendar: "\f106";
+$font-Flaticon-placeholder: "\f105";
+$font-Flaticon-phone-call: "\f106";
+$font-Flaticon-cancel: "\f107";

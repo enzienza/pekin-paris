@@ -148,10 +148,11 @@
                 padding-bottom: 5%; */
             }
             .icons {
-                font-size: 2rem;
+                font-size: 1rem;
+                font-weight: bold;
                 position: absolute;
-                top: 10px;
-                right: 10px;
+                top: 13px;
+                right: 20px;
                 cursor: pointer;
 
                 &:hover {
@@ -161,7 +162,8 @@
 
             .box-formule{
                 width: 100%;
-                margin: 20px;
+                margin: 30px;
+                margin-top:3rem;
 
                 .titre-formule{
                     text-align: center;
@@ -220,7 +222,8 @@
 
                 //folder open icon
                 .icons:before {
-                    content: "\f115";
+                    font-family: Flaticon;
+                    content: "\f107";
                 }
             }
 
@@ -293,4 +296,147 @@
     }
 
 
+}
+
+/*------------------------------------------------------------------------------*/
+/* MEDUIM */
+/*------------------------------------------------------------------------------*/
+@include responsive(M){
+    #formule-buffet{
+        .card.is-expanded .card__expander{
+            min-height: 120%;
+        }
+        .card__expander{
+            .box-formule{
+
+                .titre-formule{
+                    font-size: medium;
+                    font-weight: bold;
+                }/* end -> .titre-formule */
+
+                h4{
+                    font-size: .9rem;
+                }
+
+                .box-info{
+                    ul{
+                        margin-left: -.6rem;
+                        margin-top: 1.5rem;
+                        font-size: .9rem;
+                    }
+
+                    .icon-drink{
+                        width: 23px;
+                        margin-left: 0;
+                        margin-right: 5px;
+                    }
+                }
+
+            }/* end -> .box-formule  */
+        }/* end --> .card__expander */
+    }/* END ==> #formule-buffet */
+}
+
+
+/*------------------------------------------------------------------------------*/
+/* SMALL */
+/*------------------------------------------------------------------------------*/
+@include responsive(S){
+    #formule-buffet{
+        .card.is-expanded .card__expander{
+            min-height: auto;
+            max-height: 1100px;
+        }
+
+        .card__expander{
+            .icons{
+                font-size: .8rem;
+                right: 12px;
+            }
+            .box-formule{
+                margin-top: 3rem;
+                .box-info{
+                    ul{
+                        margin-bottom: 2rem;
+                    }
+                    .item-drink{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
+/* EXTRA SMALL */
+/*------------------------------------------------------------------------------*/
+@include responsive(XS){
+    #formule-buffet{
+        .card{
+            height: auto;
+        }
+        .card-tarif{
+            .card-body {
+                padding-left: 0;
+                margin-left: 1rem;
+
+            }
+        }
+
+        h4{
+            margin-bottom: 1.1rem;
+        }
+
+        ul{
+            margin-left: 0;
+            margin-bottom: 1.5rem;
+            .item-drink{
+                margin: 0 auto;
+            }
+            .icon-drink{
+                margin-left: 0;
+                margin-right: 5px;
+                width: 20px;
+            }
+            .info-formule{
+                font-size: small;
+            }
+        }
+
+        .card.is-expanded .card__expander{
+            min-height: auto;
+            max-height: 200vh;
+        }
+
+
+        .card__expander{
+            .icons{
+                font-size: .8rem;
+                right: 15px;
+            }
+            .box-formule{
+                margin-left: .7rem;
+                margin-right: .7rem;
+                .box-info{
+                    ul{
+                        margin-left: 0;
+                        margin-bottom: 1.5rem;
+                        .item-drink{
+                            margin: 0 auto;
+                        }
+                        .icon-drink{
+                            margin-left: 0;
+                            margin-right: 5px;
+                            width: 20px;
+                        }
+                        .info-formule{
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -11,7 +11,7 @@
 
     .tarif-day{
         line-height: 2;
-        
+
         .prix{
             font-weight: bold;
             color: $colorPrimary;
@@ -25,7 +25,10 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
-
+    .table-tarif{
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 
@@ -33,7 +36,10 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
-
+    .table-tarif{
+        margin-left: 2rem;
+        width: 90%;
+    }
 }
 
 
@@ -41,5 +47,8 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
-
+    .table-tarif{
+        margin-left: 0;
+        width: 100%;
+    }
 }

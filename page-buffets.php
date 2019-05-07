@@ -61,11 +61,11 @@
                     <div class="row">
                         <?php if(checked(1, get_option('buffetpage_msg_affiche_avatar'), false)){ ?>
                             <!-- SI buffetpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
-                            <div class="col-4">
+                            <div class="col-md-4 col-12 box-avatar">
                                 <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
                             </div><!-- /.col-4 -->
 
-                            <div class="col-8">
+                            <div class="col-md-8 col-12">
                                 <ul>
                                     <li>
                                         <?php echo(get_option('buffetpage_msg_element_entrefroide')); ?>
@@ -168,16 +168,16 @@
                 </div><!-- ./ box-left -->
                 <div class="col-lg-6 col-12 box-right">
                     <div class="row">
-                        <div class="col-md-6 col-12 img-buffet">
+                        <div class="col-6 img-buffet">
                             <img src="<?php echo get_option('buffetpage_image_uno'); ?>" alt="">
                         </div>
-                        <div class="col-md-6 col-12 img-buffet">
+                        <div class="col-6 img-buffet">
                             <img src="<?php echo get_option('buffetpage_image_due'); ?>" alt="Buffet">
                         </div>
-                        <div class="col-md-6 col-12 img-buffet">
+                        <div class="col-6 img-buffet">
                             <img src="<?php echo get_option('buffetpage_image_tre'); ?>" alt="Buffet">
                         </div>
-                        <div class="col-md-6 col-12 img-buffet">
+                        <div class="col-6 img-buffet">
                             <img src="<?php echo get_option('buffetpage_image_quattro'); ?>" alt="Buffet">
                         </div>
                     </div>
@@ -199,9 +199,13 @@
             <p><?php echo get_option('buffetpage_tarif_txt');?></p>
             <p class="catch"><?php echo get_option('buffetpage_tarif_catch');?></p>
         </div><!-- / .col-md-6 .col-12 .box-left -->
-        <div class="col-md-5 col-12 box-right">
-            <img src="<?php echo get_option('avatar_tarif');?>" alt="sans boissons, avec boissons, full boisson">
-        </div><!-- / .col-md-6 .col-12 .box-right -->
+
+        <?php if(checked(1, get_option('buffetpage_tarif_affiche_avatar'), false)) { ?>
+            <div class="col-md-5 col-12 box-right">
+                <img src="<?php echo get_option('avatar_tarif');?>" alt="sans boissons, avec boissons, full boisson">
+            </div><!-- / .col-md-6 .col-12 .box-right -->
+        <?php } ?>
+
     </div><!-- / .row -->
 
     <!-- star : formule-buffet -->
@@ -286,7 +290,7 @@
                 </div><!-- .btn-tarif -->
 
                 <div class="card__expander">
-                    <i class="fa fa-close [ js-collapser ]"></i>
+                    <i class="icons flaticon-cancel [ js-collapser ]"></i>
 
                     <div class="row box-formule">
                         <div class="col-md-4 col-12 box-info">
@@ -610,7 +614,7 @@
                 </div><!-- .btn-tarif -->
 
                 <div class="card__expander">
-                    <i class="fa fa-close [ js-collapser ]"></i>
+                    <i class="icons flaticon-cancel [ js-collapser ]"></i>
 
                     <div class="row box-formule">
                         <div class="col-md-4 col-12 box-info">
@@ -934,7 +938,7 @@
                 </div><!-- .btn-tarif -->
 
                 <div class="card__expander">
-                    <i class="fa fa-close [ js-collapser ]"></i>
+                    <i class="icons flaticon-cancel [ js-collapser ]"></i>
 
                     <div class="row box-formule">
                         <div class="col-md-4 col-12 box-info">
