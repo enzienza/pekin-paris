@@ -14,10 +14,10 @@
 }
 
 
-    .nope{
-        color: #c1c1c1;
-        font-size: 1.3rem;
-    }
+.nope{
+    color: #c1c1c1;
+    font-size: 1.3rem;
+}
 
 
 /*------------------------------------------------------------------------------*/
@@ -133,6 +133,14 @@
     } /* end ---> #section-description-buffet */
 
 
+    // #page-buffet-msg ---------------------------------------------------------
+    #page-buffet-msg{
+        h2{
+            margin-bottom: 1rem;
+            line-height: 2;
+        }
+     }
+
     // section-tarif-buffet ----------------------------------------------------
     #section-tarif-buffet{
         .box-intro-tarif{
@@ -224,7 +232,7 @@
             margin-right: 0;
             margin-left: 0;
         }
-        
+
     }/* END ---> #page-buffet-msg */
 
 

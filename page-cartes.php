@@ -63,12 +63,12 @@
                     <div class="row">
                         <?php if(checked(1, get_option('cartepage_msg_affiche_avatar'), false)){ ?>
                             <!-- SI cartepage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
-                            <div class="col-5">
+                            <div class="col-md-5 col-12 box-avatar">
                                 <img src="<?php echo get_option('cartepage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
                             </div><!-- /.col-4 -->
 
-                            <div class="col-6">
-                                <ul>
+                            <div class="col-md-6 col-12">
+                                <ul class="ul-carte">
                                     <?php if(checked(1, get_option('cartepage_mgs_chinois'), false)){ ?>
                                         <!-- SI cartepage_mgs_chinois EST COCHE => alors on affiche -->
                                         <li>Chinoise</li>
@@ -188,7 +188,7 @@
 
                 <div class="row justify-content-md-center">
 
-                    <div id="table-riz" class="card card-menu col-md-9 col-12">
+                    <div id="table-riz" class="card card-menu col-lg-9 col-md-10 col-12">
 
                         <!-- stat : titre -->
                         <div class="titre-card">
@@ -204,14 +204,14 @@
                             </ul>
                         </div><!-- /.info-menu -->
 
-                        <!-- stat : service-1 -->
-                        <div class="service-1">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('tableriz_service_un_titre'); ?></h2>
                             <p class="content-servive"><?php echo get_option('tableriz_service_un_txt'); ?></p>
-                        </div><!-- / .service-1 -->
+                        </div><!-- / .service -->
 
-                        <!-- stat : service-2 -->
-                        <div class="service-2">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('tableriz_service_deux_titre'); ?></h2>
                             <div class="content-servive">
                                 <ul>
@@ -221,10 +221,10 @@
                                     <li class="item-choix"><?php echo get_option('tableriz_service_deux_choice_four'); ?></li>
                                 </ul>
                             </div>
-                        </div><!-- / .service-2 -->
+                        </div><!-- / .service -->
 
-                        <!-- stat : service-3 -->
-                        <div class="service-3">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('tableriz_service_trois_titre'); ?></h2>
                             <div class="content-servive">
                                 <ul>
@@ -235,17 +235,17 @@
                                     <li class="item-specialite"><?php echo get_option('tableriz_service_trois_plat_five'); ?></li>
                                 </ul>
                             </div>
-                        </div><!-- / .service-3 -->
+                        </div><!-- / .service -->
 
-                        <!-- stat : service-4 -->
-                        <div class="service-4">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('tableriz_service_quatre_titre'); ?></h2>
                             <p class="content-servive"><?php echo get_option('tableriz_service_quatre_txt'); ?></p>
-                        </div><!-- / .service-4 -->
+                        </div><!-- / .service -->
 
                     </div><!-- / #table-riz .card .card-menu .col-md-9 .col-12 -->
 
-                    <div id="fondu-chinoise" class="card card-menu col-md-9 col-12">
+                    <div id="fondu-chinoise" class="card card-menu col-lg-9 col-md-10 col-12">
 
                         <!-- stat : titre -->
                         <div class="titre-card">
@@ -261,8 +261,8 @@
                             </ul>
                         </div><!-- /.info-menu -->
 
-                        <!-- stat : service-1 -->
-                        <div class="service-1">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('fondu_service_un_titre'); ?></h2>
                             <div class="content-servive">
                                 <ul>
@@ -270,10 +270,10 @@
                                     <li class="item-choix"><?php echo get_option('fondu_service_un_choice_two'); ?></li>
                                 </ul>
                             </div>
-                        </div><!-- / .service-1 -->
+                        </div><!-- / .service -->
 
-                        <!-- stat : service-2 -->
-                        <div class="service-2">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('fondu_service_deux_titre'); ?></h2>
                             <div class="content-servive">
                                 <ul>
@@ -289,15 +289,15 @@
                                     <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_ten'); ?></li>
                                 </ul>
                             </div>
-                        </div><!-- / .service-2 -->
+                        </div><!-- / .service -->
 
-                        <!-- stat : service-3 -->
-                        <div class="service-3">
+                        <!-- stat : service -->
+                        <div class="service">
                             <h2 class="titre-service"><?php echo get_option('fondu_service_tre_titre'); ?></h2>
                             <div class="content-servive">
                                 <?php echo get_option('fondu_service_tre_txt'); ?>
                             </div>
-                        </div><!-- / .service-3 -->
+                        </div><!-- / .service -->
 
 
 
@@ -326,7 +326,7 @@
              <div class="bg-opacity">
                  <h1 class="titre-section"><?php the_title(); ?></h1>
                  <div class="row justify-content-md-center">
-                     <div id="" class="card card-carte col-md-9 col-12">
+                     <div id="" class="card card-carte col-lg-9 col-md-10 col-12">
 
 
                          <?php // start : service 1 ------------
@@ -354,7 +354,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -385,7 +385,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -416,7 +416,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -447,7 +447,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -478,7 +478,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -509,7 +509,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -540,7 +540,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -571,7 +571,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -602,7 +602,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -633,7 +633,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -664,7 +664,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -695,7 +695,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -726,7 +726,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -757,7 +757,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>
@@ -788,7 +788,7 @@
                                      </tbody>
 
                                  </table>
-                             </div><!-- / .service-1 -->
+                             </div><!-- / .service -->
                          <?php } elseif ($display == "non") { ?>
                              <div class="" style="visibility: hidden;"></div>
                          <?php } ?>

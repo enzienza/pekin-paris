@@ -88,7 +88,6 @@
 }
 
 
-
 /*------------------------------------------------------------------------------*/
 /* CARD-carte */
 /*------------------------------------------------------------------------------*/
@@ -100,29 +99,14 @@
     border: none;
 
     .titre-service{
-        padding-top: 1.5rem;
-        padding-bottom: 0.4rem;
+        padding-top: 2.5rem;
+        padding-bottom: 0rem;
+        font-size: larger;
+        line-height: 2;
+        text-transform: capitalize;
+        font-weight: bold;
     } /* end --> .titre-service */
 
-    .table-service{
-        width: 100%;
-
-        .item-service{
-            border-bottom: 1px solid $light-gray;
-            line-height: 3;
-            &:last-child{
-                border: none;
-            }
-
-            .num, .prix{
-                width: 15%;
-            }
-
-            .num{
-                padding-left: 2rem;
-            }
-        }
-    }
 }
 
 
@@ -154,6 +138,25 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
+    // card-menu ---------------------------------------------------------------
+    .card-menu{
+        padding: auto 2rem;
+        .titre-card{
+            font-size: xx-large;
+        }
+        .info-menu{
+            width: 30%;
+            padding: 1rem;
+            ul{
+                font-size: small;
+            }
+        }
+    }
+
+    // card-carte --------------------------------------------------------------
+
+
+    // card-event --------------------------------------------------------------
     .card-event{
         width: calc((100% / 2) - 30px);
     }
@@ -164,6 +167,29 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
+    // card-menu ---------------------------------------------------------------
+    .card-menu{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .titre-card{
+            font-size: xx-large;
+            margin-right: 5rem;
+            line-height: 1;
+        }
+        .info-menu{
+            width: 35%;
+            padding: 1rem;
+            ul{
+                font-size: small;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    // card-carte --------------------------------------------------------------
+
+
+    // card-event --------------------------------------------------------------
     .card-event{
         width: 100%;
     }
@@ -174,6 +200,49 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
+    // card-menu ---------------------------------------------------------------
+    .card-menu{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .titre-card{
+            font-size: x-large;
+            margin-right: 6rem;
+            line-height: 1;
+        }
+        .info-menu{
+            width: 40%;
+            padding: .5rem;
+            .prix{
+                font-size: 1.5rem;
+            }
+            ul{
+                font-size: x-small;
+                line-height: 1.2;
+            }
+        }
+        .service{
+            .titre-service{
+                font-size: large;
+                line-height: 1;
+                padding-bottom: 1rem;
+            }
+            .content-servive{
+                font-size: small;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+    // card-carte --------------------------------------------------------------
+    .card-carte{
+        .titre-service{
+            font-size: medium;
+            padding-top: 2rem;
+        }
+    }
+
+    // card-event --------------------------------------------------------------
     .card-event{
         width: 100%;
     }

@@ -1,9 +1,44 @@
 // main: ../style.scss
 
+
 /*------------------------------------------------------------------------------*/
-/* BOX-PHONE */
+/* TABLE-SERVICE */
 /*------------------------------------------------------------------------------*/
-// table-tarif ------------------
+.table-service{
+    width: 100%;
+
+    .item-service{
+        border-bottom: 1px solid $light-gray;
+        line-height: 3;
+        &:last-child{
+            border: none;
+        }
+
+        .num, .prix{
+            width: 15%;
+        }
+
+        .num{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .prix{
+            padding-left: 2rem;
+            padding-right: 2rem;
+            text-align: right;
+        }
+        .nom{
+            width: 50%;
+            line-height: 1;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
+/* TABLE-TARIF */
+/*------------------------------------------------------------------------------*/
 .table-tarif{
     width: 70%;
     margin-left: 3rem;
@@ -25,6 +60,21 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
+    //table-service ------------------------------------------------------------
+    .table-service{
+        .item-service{
+            .num{
+                padding-left: 1rem;
+            }
+            .prix{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+
+
+    //table-tarif --------------------------------------------------------------
     .table-tarif{
         margin-left: 0;
         width: 100%;
@@ -36,6 +86,21 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
+    //table-service ------------------------------------------------------------
+    .table-service{
+        .item-service{
+            .num{
+                padding-left: 1rem;
+            }
+            .prix{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+
+
+    //table-tarif --------------------------------------------------------------
     .table-tarif{
         margin-left: 2rem;
         width: 90%;
@@ -47,6 +112,27 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
+    //table-service ------------------------------------------------------------
+    .table-service{
+        font-size: small;
+        .item-service{
+            .num{
+                padding-left: 1rem;
+            }
+            .nom{
+                font-size: x-small;
+            }
+            .prix{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+
+    }
+
+
+
+    //table-tarif --------------------------------------------------------------
     .table-tarif{
         margin-left: 0;
         width: 100%;

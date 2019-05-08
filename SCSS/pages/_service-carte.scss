@@ -1,34 +1,19 @@
 // main: ../style.scss
 
-/*------------------------------------------------------------------------------*/
-/* PAGE-CARTE-MSG */
-/*------------------------------------------------------------------------------*/
-#page-carte-msg{
-    .box-msg{
-        h2{
-            font-size: 1.8rem;
-            margin-bottom: 0;
-        }
-        ul{
-            font-size: 1.4rem;
-            margin-top: 3rem;
-        }
-    }
-}
-
 
 /*------------------------------------------------------------------------------*/
 /* SECTION-DESC-CART */
 /*------------------------------------------------------------------------------*/
 #section-desc-carte{
-    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 7rem;
     .titre-section{
         margin-bottom: 2rem;
     }
     .desc-carte{
-        font-size: 1.1rem;
+        font-size: large;
         text-align: justify;
-        padding: 0 6rem;
+        padding: 0 11rem;
     }
 }
 
@@ -65,6 +50,29 @@
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
 
+    // #page-carte-msg ---------------------------------------------------------
+    #page-carte-msg{
+        .box-avatar{
+             img{
+                 margin-left: 0;
+                 max-height: 100%;
+             }
+         }
+     }
+
+    // #section-desc-carte -----------------------------------------------------
+    #section-desc-carte{
+        .desc-carte{
+            padding: 0 6.6rem;
+        }
+    }
+
+    // #carte-content ----------------------------------------------------------
+    #carte-content{
+        .titre-section{
+            padding-bottom: 0;
+        }
+    }
 }
 
 
@@ -72,7 +80,38 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
+    // #page-carte-msg ---------------------------------------------------------
+    #page-carte-msg{
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .box-avatar{
+             img{
+                width: 60%;
+             }
+         }
+    }/* END ---> #page-carte-msg */
 
+    // #section-desc-carte -----------------------------------------------------
+    #section-desc-carte{
+        margin-bottom: 3rem;
+        .desc-carte{
+            padding: 1rem;
+        }
+    }
+
+
+    // #carte-content ----------------------------------------------------------
+    #carte-content{
+        .titre-section{
+            padding: 2rem;
+        }
+        .justify-content-md-center{
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
 }
 
 
@@ -80,5 +119,38 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
+    // #page-carte-msg ---------------------------------------------------------
+    #page-carte-msg{
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .box-avatar{
+            img{
+                width: 70%;
+            }
+        }
+    }/* END ---> #page-carte-msg */
+
+    // #section-desc-carte -----------------------------------------------------
+    #section-desc-carte{
+        margin-bottom: 3rem;
+        .desc-carte{
+            padding: 1rem;
+        }
+    }
+
+
+    // #carte-content ----------------------------------------------------------
+    #carte-content{
+        .titre-section{
+            padding: 1.5rem;
+            line-height: 1;
+        }
+        .justify-content-md-center{
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
 
 }
