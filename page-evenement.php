@@ -62,11 +62,11 @@
                     <div class="row">
                         <?php if(checked(1, get_option('eventpage_msg_affiche_avatar'), false)){ ?>
                             <!-- SI eventpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
-                            <div class="col-4">
+                            <div class="col-md-4 col-12 box-avatar">
                                 <img src="<?php echo get_option('eventpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
                             </div><!-- /.col-4 -->
 
-                            <div class="col-8">
+                            <div class="col-md-8 col-12">
                                 <p class="acchoche"><?php echo get_option('eventpage_msg_txt'); ?></p>
                             </div><!-- / .col-5 -->
                         <?php } else { ?>

@@ -73,7 +73,7 @@ add_action('add_meta_boxes', 'add_metabox_info_events');
 function add_metabox_info_events(){
     add_meta_box(
         'id_metabox_info_events',                         // ID_META_BOX
-        'Slug',                                           // TITLE_META_BOX
+        'Information',                                           // TITLE_META_BOX
         'MB_info_events',                                 // CALLBACK
         'evenements',                                     // WP_SCREEN
         'side',                                           // CONTEXT [ normal | advanced | side ]

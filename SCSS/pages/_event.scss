@@ -126,26 +126,31 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
-    .card-event{
-        .card-title{
-            font-size: calc( 2rem + (1.5 - 2) * ((100vw - 20rem) / (48 - 20)));
-        }
-        .info-event{
-            font-size: 12.1px;
-        }
-        span{
-            padding: 0 2px;
-        }
-        .btn{
-            font-size: smaller;
-            white-space: normal;
-            line-height: normal;
+    // page-event-msg ----------------------------------------------------------
+    #page-event-msg{
+        .box-msg{
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            .acchoche{
+                font-size: 1.1rem;
+                padding: 2rem;
+            }
         }
     }
-    .img-event{
-        img{
-            height:400px;
-        }
+
+    // section-event -----------------------------------------------------------
+    #section-event{
+        margin-top: 0;
+    }
+
+    // section-single-event ----------------------------------------------------
+    #section-single-event{
+
+    }
+
+    // cover-page-event --------------------------------------------------------
+    #cover-page-event{
+
     }
 }
 
@@ -154,16 +159,28 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
-    .card-event{
-        width: calc((100% / 2) - 30px);
-        .img-event{
-            img{
-                height: auto;
-            }
+    // page-event-msg ----------------------------------------------------------
+    #page-event-msg{
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
         }
+    }
+
+    // section-event -----------------------------------------------------------
+    #section-event{
 
     }
 
+    // section-single-event ----------------------------------------------------
+    #section-single-event{
+
+    }
+
+    // cover-page-event --------------------------------------------------------
+    #cover-page-event{
+
+    }
 }
 
 
@@ -171,21 +188,23 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
-    .img-event{
-        img{
-            max-height: 450px;
-        }
+    // page-event-msg ----------------------------------------------------------
+    #page-event-msg{
+
     }
-    .card-event{
-        .card-title{
-            font-size: calc( 1.8rem + (4.25 - 1.8) * ((100vw - 20rem) / (48 - 20)));
-            line-height: calc( 2 * (0.9rem + (4.25 - 2) * ((100vw - 20rem) / (48 - 20))));
-        }
-        .info-event{
-            font-size: .8em;
-        }
-        .btn{
-            font-size: smaller;
-        }
+
+    // section-event -----------------------------------------------------------
+    #section-event{
+
+    }
+
+    // section-single-event ----------------------------------------------------
+    #section-single-event{
+
+    }
+
+    // cover-page-event --------------------------------------------------------
+    #cover-page-event{
+
     }
 }
