@@ -116,6 +116,13 @@
     .navbar-expand-md .navbar-brand .logo{
         left: -4.5rem;
     }
+
+    a {
+        &::before, &::after {
+            margin-top: -0.2rem;
+            margin-bottom: -0.2rem;
+        }
+    }
 }
 
 
@@ -136,6 +143,7 @@
         line-height: 2;
         font-size: larger;
     }
+
 }
 
 

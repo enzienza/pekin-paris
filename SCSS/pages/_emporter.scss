@@ -5,13 +5,9 @@
 /*------------------------------------------------------------------------------*/
 #page-emporter-msg{
     .box-msg{
-        .acchoche{
-            font-size: 1.7rem;
-            padding: 5rem 2rem;
-            text-align: justify;
-        }
         img{
             margin-left: 0;
+            width: 110%;
         }
     }
 }
@@ -51,7 +47,7 @@
     }
 }
 
-#portfolio{
+#content-emporter{
     margin: 3rem 0;
 
     .scale-anm{
@@ -79,25 +75,7 @@
     .box-table{
         padding: 3rem;
 
-        .table-emporter{
-            width: 100%;
-            td{
-                line-height: 2;
-            }
-            tr{
-                border-bottom: 1px solid $light-gray;
-                &:last-child{
-                    border: none;
-                }
-            }
 
-            .td-numb, .td-price{
-                width: 15%;
-            }
-            .td-name{
-                width: 60%;
-            }
-        }
     }
 }
 
@@ -127,12 +105,12 @@
 
     .box-right{
         display: flex;
-        align-items: center;
-        padding: 2rem;
-        margin-left: -4rem;
+        justify-content: center;
+        margin-left: -6rem;
 
         img{
             width: 70%;
+            height: auto;
         }
     }
 
@@ -143,32 +121,34 @@
         .row{
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 1rem 0;
+        }
+        .box-taykeaway{
+            text-align: center;
+            img{
+                width: 60%;
+                margin-top: -1rem;
+            }
+        }
 
-
-            .box-taykeaway{
-                text-align: right;
-                img{
-                    width: 50%;
-                }
+        .box-txt{
+            text-align: left;
+            p{
+                font-size: 1.1rem;
+                padding-bottom: 10px;
             }
 
-            .box-txt{
-                p{
-                    font-size: 1.1rem;
-                    padding-bottom: 10px;
-                }
+        }
 
-            }
-
-            .box-prix{
-                p{
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                    padding-bottom: 10px;
-                    text-align: right;
-                    color: $colorPrimary;
-                }
+        .box-prix{
+            margin-left: -7rem;
+            p{
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding-bottom: 10px;
+                text-align: left;
+                color: $colorPrimary;
             }
         }
     }
@@ -181,6 +161,58 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
+    // carte-emporter ----------------------------------------------------------
+    #carte-emporter{
+        .info-emporter{
+            display: flex;
+            justify-content: center;
+            ul{
+                font-size: large;
+                margin-top: 3rem;
+                margin-left: -1rem;
+            }
+        }
+    }
+    // content-emporter --------------------------------------------------------
+    #content-emporter{
+        .box-table{
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+    }
+    // buffet-emporter ---------------------------------------------------------
+    #buffet-emporter{
+        .box{
+            &-left{
+                margin-left: 0;
+                text-align: left;
+            }
+
+            &-right{
+                justify-content: center;
+                margin-left: 0;
+                padding: 2rem;
+                img{
+                    width: 90%;
+                }
+            }
+        }
+        .item-taykeaway{
+            .box{
+                &-taykeaway{
+                    text-align: left;
+                    img{
+                        width: 100%;
+                        margin-top: -1rem;
+                        min-height: 75px;
+                    }
+                }
+                &-prix{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 
 }
 
@@ -189,7 +221,115 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
+    // page-emporter-msg -------------------------------------------------------
+    #page-emporter-msg{
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
+        }
 
+        .box-msg .row{
+            margin-bottom: 0;
+        }
+        .box-avatar{
+             img{
+                width: 70%;
+             }
+         }
+    }
+
+    // carte-emporter ----------------------------------------------------------
+    #carte-emporter{
+        .titre-section{
+            margin-bottom: 1.5rem;
+        }
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .info-emporter{
+            img{
+                width: 80%;
+                margin-left: 0;
+            }
+            ul{
+                margin-left: -2rem;
+                margin-top: 1.5rem;
+                font-size: medium;
+                li{
+                    margin-bottom: 0.5rem;
+                    &:first-child{
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+            span{
+                line-height: 0;
+                vertical-align: initial;
+            }
+        }
+
+        .box-entre, .box-plat{
+            padding-bottom: 1.5rem;
+        }
+        .titre-type-emporter{
+            font-size: 1.3rem;
+        }
+    }
+
+    // content-emporter --------------------------------------------------------
+    #content-emporter{
+        .box-titre{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: x-large;
+                margin-top: 0;
+                margin-left: 0;
+                padding: 1rem 0;
+            }
+            .img-choix{
+                width: 55%;
+                text-align: right;
+            }
+            img{
+                padding: 1rem 0;
+                width: 25;
+                margin-right: 0;
+            }
+        }
+    }
+
+    // buffet-emporter ---------------------------------------------------------
+    #buffet-emporter{
+        .box{
+            &-left{
+                margin-left: 0;
+                text-align: left;
+            }
+            &-right{
+                display: none;
+            }
+        }
+        .item-taykeaway{
+            .box{
+                &-taykeaway{
+                    text-align: left;
+                    img{
+                        width: 80%;
+                        /* min-height: 75px; */
+                    }
+                }
+                &-prix{
+                    margin-left: -2rem;
+                    p{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -197,5 +337,118 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
+    // page-emporter-msg -------------------------------------------------------
+    #page-emporter-msg{
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
+        }
 
+        .box-msg .row{
+            margin-bottom: 0;
+        }
+        .box-avatar{
+             img{
+                width: 70%;
+             }
+         }
+    }
+
+    // carte-emporter ----------------------------------------------------------
+    #carte-emporter{
+        .titre-section{
+            margin-bottom: 1.5rem;
+        }
+        .justify-content-md-center {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .info-emporter{
+            img{
+                display: none;
+            }
+            ul{
+                margin-left: -7rem;
+                margin-top: 1.5rem;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+                li{
+                    margin-bottom: 0.5rem;
+                    &:first-child{
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+            span{
+                line-height: 0;
+                vertical-align: initial;
+            }
+        }
+
+        .box-entre, .box-plat{
+            padding-bottom: 1.5rem;
+        }
+        .titre-type-emporter{
+            font-size: 1.3rem;
+        }
+    }
+
+    // content-emporter --------------------------------------------------------
+    #content-emporter{
+        .box-titre{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: larger;
+                margin-top: 0;
+                margin-left: 0;
+                padding: 1rem 0;
+                line-height: 1;
+            }
+            .img-choix{
+                width: 55%;
+                text-align: right;
+            }
+            img{
+                padding: 1rem 0;
+                width: 25;
+                margin-right: 0;
+            }
+        }
+        .box-table{
+            padding: 1rem;
+        }
+    }
+
+    // buffet-emporter ---------------------------------------------------------
+    #buffet-emporter{
+        .box{
+            &-left{
+                margin-left: 0;
+                text-align: left;
+            }
+            &-right{
+                display: none;
+            }
+        }
+        .item-taykeaway{
+            background-size: contain;
+            .box{
+                &-taykeaway{
+                    text-align: left;
+                    margin-left: -2.5rem;
+                    img{
+                        max-width: 120%;
+                        width: auto;
+                        max-height: 75px;
+                        height: auto;
+                    }
+                }
+                &-prix{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }

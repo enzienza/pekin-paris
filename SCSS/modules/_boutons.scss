@@ -95,7 +95,27 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
-
+    // BTN-FILTER --------------------------------------------------------------
+    .btn-filter{
+        min-height: 75px;
+        min-width: 75px;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+        img{
+            width: 70%;
+            height: auto;
+            margin-bottom: 6px;
+        }
+        p{
+            font-size: small;
+            text-align: center;
+            white-space: normal;
+            line-height: 1;
+        }
+    }
 }
 
 
@@ -103,9 +123,34 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
+    // BTN-CENTER --------------------------------------------------------------
     .btn-center{
         .btn{
             width: 100%;
+        }
+    }
+
+    // BTN-FILTER --------------------------------------------------------------
+    .btn-filter{
+        min-height: 75px;
+        min-width: 75px;
+        height: 100%;
+        width: 100%;
+        max-height: 90px;
+        max-width: 90px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+        img{
+            width: 50%;
+            height: auto;
+            margin-bottom: 8px;
+        }
+        p{
+            font-size: small;
+            text-align: center;
+            white-space: normal;
+            line-height: 1;
         }
     }
 }
@@ -115,9 +160,34 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
+    // BTN-CENTER --------------------------------------------------------------
     .btn-center{
         .btn{
             width: 100%;
+        }
+    }
+
+    // BTN-FILTER --------------------------------------------------------------
+    .btn-filter{
+        min-height: 75px;
+        min-width: 75px;
+        height: 100%;
+        width: 100%;
+        max-height: 100px;
+        max-width: 100px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+        img{
+            width: 70%;
+            height: auto;
+            margin-bottom: 8px;
+        }
+        p{
+            font-size: small;
+            text-align: center;
+            white-space: normal;
+            line-height: 1;
         }
     }
 }

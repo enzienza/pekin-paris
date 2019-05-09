@@ -28,13 +28,12 @@
             text-align: right;
         }
         .nom{
-            width: 50%;
+            width: 60%;
             line-height: 1;
             vertical-align: middle;
         }
     }
 }
-
 
 /*------------------------------------------------------------------------------*/
 /* TABLE-TARIF */
@@ -57,6 +56,39 @@
 
 
 /*------------------------------------------------------------------------------*/
+/* TABLE-EMPORTER */
+/*------------------------------------------------------------------------------*/
+.table-emporter{
+    width: 100%;
+    td{
+        line-height: 2;
+    }
+    tr{
+        border-bottom: 1px solid $light-gray;
+        &:last-child{
+            border: none;
+        }
+    }
+
+    .numb, .price{
+        width: 15%;
+    }
+    .numb{
+        padding-left: 1rem;
+        padding-right: 2rem;
+    }
+    .price{
+        text-align: right;
+    }
+    .name{
+        width: 60%;
+        line-height: 1;
+        vertical-align: middle;
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
@@ -73,11 +105,15 @@
         }
     }
 
-
     //table-tarif --------------------------------------------------------------
     .table-tarif{
         margin-left: 0;
         width: 100%;
+    }
+
+    //table-tarif --------------------------------------------------------------
+    .table-emporter{
+
     }
 }
 
@@ -99,11 +135,15 @@
         }
     }
 
-
     //table-tarif --------------------------------------------------------------
     .table-tarif{
         margin-left: 2rem;
         width: 90%;
+    }
+
+    //table-tarif --------------------------------------------------------------
+    .table-emporter{
+
     }
 }
 
@@ -127,14 +167,24 @@
                 padding-left: 1rem;
             }
         }
-
     }
-
-
 
     //table-tarif --------------------------------------------------------------
     .table-tarif{
         margin-left: 0;
         width: 100%;
+    }
+
+    //table-tarif --------------------------------------------------------------
+    .table-emporter{
+        font-size: small;
+        .numb{
+            padding-left: 0.5rem;
+            padding-right: 0.6rem;
+        }
+
+        .name{
+            font-size: x-small;
+        }
     }
 }

@@ -62,11 +62,11 @@
                         <?php if(checked(1, get_option('emporterpage_msg_affiche_avatar'), false)){ ?>
                             <!-- SI emporterpage_msg_affiche_avatar EST COCHE => Alors on affiche l'avatar -->
 
-                            <div class="col-6">
+                            <div class="col-md-6 col-12 box-txt">
                                 <p class="acchoche"><?php echo get_option('emporterpage_msg_txt'); ?></p>
                             </div><!-- / .col-6 -->
 
-                            <div class="col-6">
+                            <div class="col-md-5 col-12 box-avatar">
                                 <img src="<?php echo get_option('emporterpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
                             </div><!-- /.col-6 -->
 
@@ -106,7 +106,7 @@
                                 <?php echo get_option('emporterpage_promo_offert'); ?> offert
                             </strong>
                             <span>a partir de </span>
-                            <span><?php echo get_option('emporterpage_promo_minimum'); ?></span>
+                            <span class="color-price"><?php echo get_option('emporterpage_promo_minimum'); ?></span>
                         </li>
                     </ul>
                 </div><!-- /.col-9 -->
@@ -119,7 +119,7 @@
         <div class="col-md-10 col-12">
             <div class="row">
 
-                <div class="col-5 box-entre">
+                <div class="col-md-5 col-12 box-entre">
                     <h2 class="titre-type-emporter">Entrées</h2>
 
                     <div class="row toolbar mb2 mt2">
@@ -153,7 +153,7 @@
                 </div><!-- /.col-5 .box-entre -->
 
 
-                <div class="col-7 box-plat">
+                <div class="col-md-7 col-12 box-plat">
                     <h2 class="titre-type-emporter">Plats</h2>
 
                     <div class="row toolbar mb2 mt2">
@@ -190,7 +190,7 @@
 
 
 
-        <div id="portfolio" class="col-md-10 col-12">
+        <div id="content-emporter" class="col-md-10 col-12">
             <!-- STAR : region repete -->
             <?php
                 wp_reset_postdata();
@@ -207,13 +207,13 @@
 
                 <div class="tile scale-anm <?php echo get_post_meta($post->ID, 'slug_emporter', true); ?>">
                 <div class="row">
-                    <div class="col-5 box-titre">
+                    <div class="col-md-5 col-12 box-titre">
                         <h2><?php the_title(); ?></h2>
                         <div class="img-choix">
                             <img src="<?php echo get_post_meta($post->ID, 'bg-emporter', true); ?>" alt="">
                         </div>
                     </div><!-- /. -->
-                    <div class="col-7 box-table">
+                    <div class="col-md-7 col-12 box-table">
                         <table class="table-emporter">
                             <tbody>
                                 <?php
@@ -222,9 +222,9 @@
 
                                         ?>
                                             <tr>
-                                                <td class="td-numb"><?php echo $field['numb_emporter']; ?></td>
-                                                <td class="td-nom"><?php echo $field['name_emporter']; ?></td>
-                                                <td class="td-price"><?php echo $field['price_emporter'];  ?></td>
+                                                <td class="numb"><?php echo $field['numb_emporter']; ?></td>
+                                                <td class="name"><?php echo $field['name_emporter']; ?></td>
+                                                <td class="price"><?php echo $field['price_emporter'];  ?></td>
                                             </tr>
                                         <?php
                                     endforeach;
@@ -279,11 +279,11 @@
                     <!-- item-takeaway -->
                 <li class="item-taykeaway" style="background-image: url(<?php echo get_template_directory_uri().'/img/ruban-v2.png' ?>);">
                     <div class="row">
-                        <div class="col-4 box-taykeaway">
+                        <div class="col-3 box-taykeaway">
                             <img src="<?php echo get_option('emporterpage_formule_uno'); ?>" alt="">
                         </div>
 
-                        <div class="col-3 box-txt">
+                        <div class="col-5 box-txt">
                             <p><?php echo get_option('txt_barquette_uno'); ?></p>
                         </div>
 
@@ -297,11 +297,11 @@
                 <!-- item-takeaway -->
                 <li class="item-taykeaway" style="background-image: url(<?php echo get_template_directory_uri().'/img/ruban-v2.png' ?>);">
                     <div class="row">
-                        <div class="col-4 box-taykeaway">
+                        <div class="col-3 box-taykeaway">
                             <img src="<?php echo get_option('emporterpage_formule_due'); ?>" alt="">
                         </div>
 
-                        <div class="col-3 box-txt">
+                        <div class="col-5 box-txt">
                             <p><?php echo get_option('txt_barquette_due'); ?></p>
                         </div>
 
@@ -315,11 +315,11 @@
                 <!-- item-takeaway -->
                 <li class="item-taykeaway" style="background-image: url(<?php echo get_template_directory_uri().'/img/ruban-v2.png' ?>);">
                     <div class="row">
-                        <div class="col-4 box-taykeaway">
+                        <div class="col-3 box-taykeaway">
                             <img src="<?php echo get_option('emporterpage_formule_tre'); ?>" alt="">
                         </div>
 
-                        <div class="col-3 box-txt">
+                        <div class="col-5 box-txt">
                             <p><?php echo get_option('txt_barquette_tre'); ?></p>
                         </div>
 

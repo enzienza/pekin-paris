@@ -12,14 +12,14 @@
     var selectedClass = "";
     $(".fil-cat").click(function(){
         selectedClass = $(this).attr("data-rel");
-        $("#portfolio").fadeTo(100, 0.1);
-        // $('#portfolio').addClass(theme);
-        $("#portfolio > div").not("."+selectedClass)
+        $("#content-emporter").fadeTo(100, 0.1);
+        // $('#content-emporter').addClass(theme);
+        $("#content-emporter > div").not("."+selectedClass)
                            .fadeOut()
                            .find('diw.row').removeClass('scale-anm');
         setTimeout(function() {
             $("."+selectedClass).fadeIn().addClass('div.scale-anm');
-            $("#portfolio").fadeTo(300, 1);
+            $("#content-emporter").fadeTo(300, 1);
         }, 300); // end -> setTimeout
 
     }); // end -> click .fil-cat
