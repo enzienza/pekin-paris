@@ -46,35 +46,6 @@
             width: 60%;
         }
     }
-
-    .table-horaire{
-        width: 65%;
-        font-size: large;
-        .item-heure{
-            border-bottom: 1px solid $light-gray;
-            line-height: 4;
-            &:last-child{
-                border: none;
-            }
-        }
-        .day{
-            vertical-align: middle;
-            text-transform: uppercase;
-            padding-left: 2rem;
-        }
-        .close{
-            text-align: right;
-            text-transform: uppercase;
-            padding-right: 1rem;
-        }
-        .heure{
-            line-height: 1.1;
-            font-size: medium;
-            text-align: right;
-            vertical-align: middle;
-            padding-right: 1rem;
-        }
-    }
 }
 
 
@@ -86,7 +57,35 @@
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @include responsive(M){
+    // section-location --------------------------------------------------------
+    #section-location{
+        iframe{
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+        }
 
+        .item-location{
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            &:last-child{
+                @include align-items(center);
+            }
+        }
+    }
+
+    // section-horaire ---------------------------------------------------------
+    #section-horaire{
+        .box{
+            &-left{
+                @include align-items(normal);
+                img{
+                    width: 80%;
+                    height: 50%;
+                }
+            }
+        }
+    }
 }
 
 
@@ -94,7 +93,49 @@
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(S){
-
+    // section-location --------------------------------------------------------
+    #section-location{
+        margin-top: 3rem;
+        .titre-section{
+            margin-bottom: 2rem;
+        }
+        .box{
+            &-left{
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            &-right{
+                @include flexbox;
+                @include justify-content(center);
+                margin-top: 3rem;
+            }
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            max-height: 400px;
+        }
+    }
+    // section-horaire ---------------------------------------------------------
+    #section-horaire{
+        .box{
+            &-left{
+                display: none;
+                img{
+                    width: 60%;
+                    position: absolute;
+                    top: 5rem;
+                    z-index: -1;
+                    opacity: .14;
+                }
+            }
+            &-right{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    }
 }
 
 
@@ -102,5 +143,55 @@
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @include responsive(XS){
-
+    // section-location --------------------------------------------------------
+    #section-location{
+        margin-top: 3rem;
+        margin-bottom: 0;
+        .titre-section{
+            margin-bottom: 2rem;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+            max-height: 210px;
+            min-height: 200px;
+        }
+        .box-right{
+            ul{
+                margin-left: 2rem;
+                margin-right: 1rem;
+            }
+        }
+        .item-location{
+            line-height: 1;
+            p{
+                font-size: medium;
+            }
+            &:first-child{
+                margin-bottom: 1.2rem
+            }
+        }
+    }
+    // section-horaire ---------------------------------------------------------
+    #section-horaire{
+        .titre-section{
+            margin-bottom: 2rem;
+        }
+        .box{
+            &-left{
+                display: none;
+                img{
+                    width: 60%;
+                    position: absolute;
+                    top: 5rem;
+                    z-index: -1;
+                    opacity: .14;
+                }
+            }
+            &-right{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    }
 }

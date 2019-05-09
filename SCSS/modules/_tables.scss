@@ -87,6 +87,37 @@
     }
 }
 
+/*------------------------------------------------------------------------------*/
+/* TABLE-HORAIRE */
+/*------------------------------------------------------------------------------*/
+.table-horaire{
+    width: 65%;
+    font-size: large;
+    .item-heure{
+        border-bottom: 1px solid $light-gray;
+        line-height: 4;
+        &:last-child{
+            border: none;
+        }
+    }
+    .day{
+        vertical-align: middle;
+        text-transform: uppercase;
+        padding-left: 2rem;
+    }
+    .close{
+        text-align: right;
+        text-transform: uppercase;
+        padding-right: 1rem;
+    }
+    .heure{
+        line-height: 1.1;
+        font-size: medium;
+        text-align: right;
+        vertical-align: middle;
+        padding-right: 1rem;
+    }
+}
 
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */
@@ -111,9 +142,10 @@
         width: 100%;
     }
 
-    //table-tarif --------------------------------------------------------------
-    .table-emporter{
-
+    //table-horaire --------------------------------------------------------------
+    .table-horaire{
+        width: 100%;
+        margin-left: -2rem;
     }
 }
 
@@ -141,9 +173,9 @@
         width: 90%;
     }
 
-    //table-tarif --------------------------------------------------------------
-    .table-emporter{
-
+    //table-horaire --------------------------------------------------------------
+    .table-horaire{
+        width: 90%;
     }
 }
 
@@ -157,14 +189,16 @@
         font-size: small;
         .item-service{
             .num{
-                padding-left: 1rem;
+                padding-left: 0;
+                padding-right: 1rem;
             }
             .nom{
                 font-size: x-small;
+                padding-right: .5rem;
             }
             .prix{
-                padding-right: 1rem;
-                padding-left: 1rem;
+                padding-right: 0;
+                padding-left: 0;
             }
         }
     }
@@ -185,6 +219,18 @@
 
         .name{
             font-size: x-small;
+        }
+    }
+
+    //table-horaire --------------------------------------------------------------
+    .table-horaire{
+        width: 90%;
+        font-size: medium;
+        .day{
+            padding-left: 1rem;
+        }
+        .heure{
+            font-size: small;
         }
     }
 }

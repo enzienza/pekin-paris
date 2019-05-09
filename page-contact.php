@@ -82,7 +82,7 @@
              ?>
         </div><!-- /.box-left -->
 
-        <div class="col-md-6 col-12 box-rigt">
+        <div class="col-md-6 col-12 box-right">
             <table class="table-horaire">
                 <tr class="item-heure">
                     <td class="day">Lundi</td>

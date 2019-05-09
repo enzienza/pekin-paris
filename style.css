@@ -7407,6 +7407,43 @@ height: 100%;
 }
 
 /*------------------------------------------------------------------------------*/
+/* TABLE-HORAIRE */
+/*------------------------------------------------------------------------------*/
+.table-horaire {
+  width: 65%;
+  font-size: large;
+}
+
+.table-horaire .item-heure {
+  border-bottom: 1px solid #e4e4e4;
+  line-height: 4;
+}
+
+.table-horaire .item-heure:last-child {
+  border: none;
+}
+
+.table-horaire .day {
+  vertical-align: middle;
+  text-transform: uppercase;
+  padding-left: 2rem;
+}
+
+.table-horaire .close {
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 1rem;
+}
+
+.table-horaire .heure {
+  line-height: 1.1;
+  font-size: medium;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 1rem;
+}
+
+/*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
@@ -7420,6 +7457,10 @@ height: 100%;
   .table-tarif {
     margin-left: 0;
     width: 100%;
+  }
+  .table-horaire {
+    width: 100%;
+    margin-left: -2rem;
   }
 }
 
@@ -7438,6 +7479,9 @@ height: 100%;
     margin-left: 2rem;
     width: 90%;
   }
+  .table-horaire {
+    width: 90%;
+  }
 }
 
 /*------------------------------------------------------------------------------*/
@@ -7448,14 +7492,16 @@ height: 100%;
     font-size: small;
   }
   .table-service .item-service .num {
-    padding-left: 1rem;
+    padding-left: 0;
+    padding-right: 1rem;
   }
   .table-service .item-service .nom {
     font-size: x-small;
+    padding-right: .5rem;
   }
   .table-service .item-service .prix {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0;
+    padding-left: 0;
   }
   .table-tarif {
     margin-left: 0;
@@ -7470,6 +7516,16 @@ height: 100%;
   }
   .table-emporter .name {
     font-size: x-small;
+  }
+  .table-horaire {
+    width: 90%;
+    font-size: medium;
+  }
+  .table-horaire .day {
+    padding-left: 1rem;
+  }
+  .table-horaire .heure {
+    font-size: small;
   }
 }
 
@@ -8616,6 +8672,7 @@ footer .box-info span .icon-carte {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   border: 1px solid #e4e4e4;
 }
 
@@ -9361,49 +9418,129 @@ footer .box-info span .icon-carte {
   width: 60%;
 }
 
-#section-horaire .table-horaire {
-  width: 65%;
-  font-size: large;
-}
-
-#section-horaire .table-horaire .item-heure {
-  border-bottom: 1px solid #e4e4e4;
-  line-height: 4;
-}
-
-#section-horaire .table-horaire .item-heure:last-child {
-  border: none;
-}
-
-#section-horaire .table-horaire .day {
-  vertical-align: middle;
-  text-transform: uppercase;
-  padding-left: 2rem;
-}
-
-#section-horaire .table-horaire .close {
-  text-align: right;
-  text-transform: uppercase;
-  padding-right: 1rem;
-}
-
-#section-horaire .table-horaire .heure {
-  line-height: 1.1;
-  font-size: medium;
-  text-align: right;
-  vertical-align: middle;
-  padding-right: 1rem;
-}
-
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  #section-location iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+  }
+  #section-location .item-location {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  #section-location .item-location:last-child {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  #section-horaire .box-left {
+    -webkit-box-align: normal;
+    -ms-flex-align: normal;
+    align-items: normal;
+  }
+  #section-horaire .box-left img {
+    width: 80%;
+    height: 50%;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  #section-location {
+    margin-top: 3rem;
+  }
+  #section-location .titre-section {
+    margin-bottom: 2rem;
+  }
+  #section-location .box-left {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #section-location .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  #section-location iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    max-height: 400px;
+  }
+  #section-horaire .box-left {
+    display: none;
+  }
+  #section-horaire .box-left img {
+    width: 60%;
+    position: absolute;
+    top: 5rem;
+    z-index: -1;
+    opacity: .14;
+  }
+  #section-horaire .box-right {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  #section-location {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+  #section-location .titre-section {
+    margin-bottom: 2rem;
+  }
+  #section-location iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 210px;
+    min-height: 200px;
+  }
+  #section-location .box-right ul {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+  #section-location .item-location {
+    line-height: 1;
+  }
+  #section-location .item-location p {
+    font-size: medium;
+  }
+  #section-location .item-location:first-child {
+    margin-bottom: 1.2rem;
+  }
+  #section-horaire .titre-section {
+    margin-bottom: 2rem;
+  }
+  #section-horaire .box-left {
+    display: none;
+  }
+  #section-horaire .box-left img {
+    width: 60%;
+    position: absolute;
+    top: 5rem;
+    z-index: -1;
+    opacity: .14;
+  }
+  #section-horaire .box-right {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 /*------------------------------------------------------------------------------*/
 /* ERROR 404 */
 /*------------------------------------------------------------------------------*/
