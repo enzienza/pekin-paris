@@ -53,3 +53,93 @@
         }
     }
 }
+
+
+/*------------------------------------------------------------------------------*/
+/* MEDIUM */
+/*------------------------------------------------------------------------------*/
+@include responsive(M){
+    #erreur{
+        .msg-error{
+            @include align-items(end);
+            img{
+                width: 100%;
+            }
+
+            .msg-right{
+                .txt-error{
+                    margin-top: -1rem;
+                    margin-bottom: 0;
+                }
+                .btn-homepage{
+                    min-width: 55%;
+                    max-width: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
+/* SMALL */
+/*------------------------------------------------------------------------------*/
+@include responsive(S){
+    #erreur{
+        .msg-error{
+            text-align: center;
+            .mgs-left{
+                text-align: center;
+            }
+            img{
+                width: 45%;
+            }
+            .msg-right{
+                .titre-error{
+                    font-size: 3rem;
+                    margin-top: -.3rem;
+                }
+                .txt-error{
+                    margin-top: -1rem;
+                }
+                .btn-homepage{
+                    width: 90%;
+                    margin: auto;
+                    .btn{
+                        margin-top: 1rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
+/* EXTRA SMALL */
+/*------------------------------------------------------------------------------*/
+@include responsive(XS){
+    #erreur{
+        .logo-center img{
+            width: 90%;
+        }
+        .msg-error{
+            text-align: center;
+            .msg-left{
+                text-align: center;
+            }
+            img{
+                width: 65%;
+            }
+            .msg-right{
+                margin-top: -1rem;
+                .btn-homepage{
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

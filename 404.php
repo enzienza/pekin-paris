@@ -17,7 +17,7 @@
             </div><!-- /.logo-center -->
         <?php } ?>
         <div class="row msg-error">
-            <div class="col-md-6 col 12 mgs-left">
+            <div class="col-md-5 col 12 mgs-left">
 
                 <?php if(checked(1, get_option('page404_affiche_avatar'), false)){ ?>
                     <div class="msg-avatar">
@@ -26,7 +26,7 @@
                 <?php } ?>
             </div><!-- /.mgs-left -->
 
-            <div class="col-md-6 col-12 msg-right">
+            <div class="col-md-7 col-12 msg-right">
                 <h2 class="titre-error">
                     <?php echo get_option('avatar_msg_h1'); ?>
                 </h2>
