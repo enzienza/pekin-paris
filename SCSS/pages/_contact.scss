@@ -16,7 +16,7 @@
     }
 
     .item-location{
-        display: flex;
+        @include flexbox;
         line-height: 2;
         .icons{
             font-size: 1.45rem;
@@ -39,9 +39,9 @@
     margin: 4rem auto;
 
     .box-left{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
         img{
             width: 60%;
         }

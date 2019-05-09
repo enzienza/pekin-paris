@@ -66,8 +66,8 @@
         padding: 15px;
         padding-bottom: 7%;
         margin-bottom: 9%;
-        display: flex;
-        flex-flow: row wrap;
+        @include flexbox;
+        @include flex-flow;
     }
 
     //Cards
@@ -135,8 +135,8 @@
             position: relative;
             height: auto;
 
-            display: flex;
-            align-items: center;
+            @include flexbox;
+            @include align-items(center);
 
             /* text-transform: uppercase; */
             color: $colorDark;

@@ -159,9 +159,9 @@
             }/* end -> .box-left */
 
             .box-right{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexbox;
+                @include justify-content(center);
+                @include align-items(center);
             }/* end -> .box-right */
         }/* end -> .box-intro-tarif */
     }/* end ---> #section-tarif-buffet */
@@ -213,9 +213,9 @@
             }
 
             .box-right{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexbox;
+                @include justify-content(center);
+                @include align-items(center);
                 img{
                     width: 80%;
                 }
@@ -280,9 +280,9 @@
             }
 
             .box-right{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexbox;
+                @include justify-content(center);
+                @include align-items(center);
                 img{
                     width: 90%;
                 }

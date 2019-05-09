@@ -6745,6 +6745,12 @@ height: 100%;
 .card-event {
   margin: 15px;
   width: calc((100% / 3) - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .card-event .card-title {
@@ -6778,6 +6784,26 @@ height: 100%;
   }
   .card-event {
     width: calc((100% / 2) - 30px);
+    min-height: 450px;
+    max-height: 500px;
+    height: 100%;
+  }
+  .card-event .img-event img {
+    height: 400px;
+  }
+  .card-event .card-title {
+    font-size: calc( 2rem + (1.5 - 2) * ((100vw - 20rem) / (48 - 20)));
+  }
+  .card-event .info-event {
+    font-size: 12.1px;
+  }
+  .card-event span {
+    padding: 0 2px;
+  }
+  .card-event .btn {
+    font-size: smaller;
+    white-space: normal;
+    line-height: normal;
   }
 }
 
@@ -6803,6 +6829,15 @@ height: 100%;
     line-height: 1.2;
   }
   .card-event {
+    width: 100%;
+    min-height: 500px;
+    max-height: 600px;
+    height: 100%;
+  }
+  .card-event .img-event img {
+    max-height: 500px;
+    min-height: 250px;
+    height: auto;
     width: 100%;
   }
 }
@@ -6846,6 +6881,7 @@ height: 100%;
   }
   .card-event {
     width: 100%;
+    min-height: 350px;
   }
 }
 
@@ -7026,7 +7062,11 @@ height: 100%;
     font-size: x-large;
   }
   .box-msg .box-avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .box-msg .box-avatar img {
@@ -7074,14 +7114,21 @@ height: 100%;
     margin-bottom: 2rem;
   }
   .box-msg .box-avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .box-msg .box-avatar img {
     width: 50%;
   }
   .box-msg ul {
+    display: -ms-grid;
     display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 2rem;
   }
@@ -7119,7 +7166,11 @@ height: 100%;
     font-size: x-large;
   }
   .box-msg .box-avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .box-msg .box-avatar img {
@@ -7127,7 +7178,10 @@ height: 100%;
     margin-left: 0;
   }
   .box-msg ul {
+    display: -ms-grid;
     display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 2rem;
     margin-left: 2rem;
@@ -7482,7 +7536,12 @@ height: 100%;
   padding: 15px;
   padding-bottom: 7%;
   margin-bottom: 9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 
@@ -7549,7 +7608,11 @@ height: 100%;
   width: 100%;
   position: relative;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   /* text-transform: uppercase; */
   color: #333;
@@ -8071,7 +8134,11 @@ footer .box-info span .icon-carte {
 #page-accueil .logo-center {
   position: relative;
   top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -8088,16 +8155,22 @@ footer .box-info span .icon-carte {
 }
 
 #page-accueil .button-accueil .btn-left, #page-accueil .button-accueil .btn-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   top: 4rem;
 }
 
 #page-accueil .button-accueil .btn-left {
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
   justify-content: right;
 }
 
 #page-accueil .button-accueil .btn-right {
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
   justify-content: left;
 }
 
@@ -8115,12 +8188,18 @@ footer .box-info span .icon-carte {
 
 #page-accueil .homepage-info-contact {
   color: #fefefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 #page-accueil .homepage-info-contact ul {
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   bottom: 2rem;
@@ -8164,6 +8243,8 @@ footer .box-info span .icon-carte {
     margin-bottom: 1rem;
   }
   #page-accueil .button-accueil .btn-left, #page-accueil .button-accueil .btn-right {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   #page-accueil .button-accueil img {
@@ -8198,6 +8279,8 @@ footer .box-info span .icon-carte {
     height: 55%;
   }
   #page-accueil .button-accueil .btn-left, #page-accueil .button-accueil .btn-right {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   #page-accueil .button-accueil img {
@@ -8379,8 +8462,14 @@ footer .box-info span .icon-carte {
     font-size: 1.4rem;
   }
   #section-tarif-buffet .box-intro-tarif .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   /* end ---> #section-tarif-buffet */
@@ -8418,8 +8507,14 @@ footer .box-info span .icon-carte {
     padding-bottom: 0;
   }
   #section-tarif-buffet .box-intro-tarif .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   #section-tarif-buffet .box-intro-tarif .box-right img {
@@ -8473,8 +8568,14 @@ footer .box-info span .icon-carte {
     line-height: 1.2;
   }
   #section-tarif-buffet .box-intro-tarif .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   #section-tarif-buffet .box-intro-tarif .box-right img {
@@ -8699,7 +8800,11 @@ footer .box-info span .icon-carte {
 }
 
 #buffet-emporter .box-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-left: -6rem;
 }
@@ -8715,8 +8820,14 @@ footer .box-info span .icon-carte {
 }
 
 #buffet-emporter .item-taykeaway .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem 0;
 }
@@ -8756,7 +8867,11 @@ footer .box-info span .icon-carte {
 /*------------------------------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
   #carte-emporter .info-emporter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   #carte-emporter .info-emporter ul {
@@ -8773,6 +8888,8 @@ footer .box-info span .icon-carte {
     text-align: left;
   }
   #buffet-emporter .box-right {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-left: 0;
     padding: 2rem;
@@ -8840,8 +8957,14 @@ footer .box-info span .icon-carte {
     font-size: 1.3rem;
   }
   #content-emporter .box-titre {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   #content-emporter .box-titre h2 {
@@ -8928,8 +9051,14 @@ footer .box-info span .icon-carte {
     font-size: 1.3rem;
   }
   #content-emporter .box-titre {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   #content-emporter .box-titre h2 {
@@ -8998,7 +9127,12 @@ footer .box-info span .icon-carte {
 
 #section-event .row {
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 
@@ -9066,8 +9200,18 @@ footer .box-info span .icon-carte {
 }
 
 /*------------------------------------------------------------------------------*/
-/* SECTION-SINGLE-EVENT */
+/* SINGLE-EVENT */
 /*------------------------------------------------------------------------------*/
+#cover-page-event .icons {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+#cover-page-event .separ {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 #section-single-event {
   margin: 3rem auto;
   text-align: center;
@@ -9081,36 +9225,23 @@ footer .box-info span .icon-carte {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-#cover-page-event .icons {
-  font-size: 1.2rem;
-  margin-right: 5px;
-}
-
-#cover-page-event .separ {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 /*------------------------------------------------------------------------------*/
 /* MEDIUM */
 /*------------------------------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
-  .card-event .card-title {
-    font-size: calc( 2rem + (1.5 - 2) * ((100vw - 20rem) / (48 - 20)));
+  #page-event-msg .box-msg {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
-  .card-event .info-event {
-    font-size: 12.1px;
+  #page-event-msg .box-msg .acchoche {
+    font-size: 1.1rem;
+    padding: 2rem;
   }
-  .card-event span {
-    padding: 0 2px;
+  #section-event {
+    margin-top: 0;
   }
-  .card-event .btn {
-    font-size: smaller;
-    white-space: normal;
-    line-height: normal;
-  }
-  .img-event img {
-    height: 400px;
+  #cover-page-event .icons {
+    font-size: 1rem;
   }
 }
 
@@ -9118,11 +9249,24 @@ footer .box-info span .icon-carte {
 /* SMALL */
 /*------------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
-  .card-event {
-    width: calc((100% / 2) - 30px);
+  #page-event-msg .justify-content-md-center {
+    margin-right: 0;
+    margin-left: 0;
   }
-  .card-event .img-event img {
-    height: auto;
+  #page-event-msg .box-msg .acchoche {
+    line-height: 1.3;
+    padding: 2rem;
+    padding-bottom: 0;
+    font-size: x-large;
+  }
+  #section-event {
+    margin-top: 0;
+  }
+  #cover-page-event .icons {
+    font-size: 1rem;
+  }
+  #section-single-event img {
+    max-width: 100%;
   }
 }
 
@@ -9130,18 +9274,35 @@ footer .box-info span .icon-carte {
 /* EXTRA SMALL */
 /*------------------------------------------------------------------------------*/
 @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
-  .img-event img {
-    max-height: 450px;
+  #page-event-msg .justify-content-md-center {
+    margin-right: 0;
+    margin-left: 0;
   }
-  .card-event .card-title {
-    font-size: calc( 1.8rem + (4.25 - 1.8) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 2 * (0.9rem + (4.25 - 2) * ((100vw - 20rem) / (48 - 20))));
+  #page-event-msg .box-msg .acchoche {
+    line-height: 1.3;
+    padding: 1rem 2rem;
+    font-size: large;
   }
-  .card-event .info-event {
+  #section-single-event img {
+    max-width: 100%;
+  }
+  #section-event {
+    margin-top: 0;
+  }
+  #section-event .info-event {
     font-size: .8em;
   }
-  .card-event .btn {
+  #section-event .img-event img {
+    max-height: 450px;
+    padding: 1rem 2rem;
+  }
+  #section-event .card-title {
+    font-size: x-large;
+    line-height: 0.5;
+  }
+  #section-event .btn-event .btn {
     font-size: smaller;
+    margin: .3rem 0;
   }
 }
 
@@ -9162,6 +9323,8 @@ footer .box-info span .icon-carte {
 }
 
 #section-location .item-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   line-height: 2;
 }
@@ -9183,8 +9346,14 @@ footer .box-info span .icon-carte {
 }
 
 #section-horaire .box-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -9241,7 +9410,11 @@ footer .box-info span .icon-carte {
 #erreur .logo-center {
   position: relative;
   top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -9252,6 +9425,8 @@ footer .box-info span .icon-carte {
 
 #erreur .msg-error {
   color: #fefefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   top: 6rem;

@@ -32,8 +32,8 @@
     .logo-center{
         position: relative;
         top: 4rem;
-        display: flex;
-        justify-content: center;
+        @include flexbox;
+        @include justify-content(center);
 
         img{
             width: 80%;
@@ -48,17 +48,17 @@
         text-transform: uppercase;
 
         .btn-left, .btn-right{
-            display: flex;
+            @include flexbox;
             position: relative;
             top: 4rem;
         }
 
         .btn{
             &-left{
-                justify-content: right;
+                @include justify-content(right);
             }
             &-right{
-                justify-content: left;
+                @include justify-content(left);
             }
         }
 
@@ -77,12 +77,12 @@
 
     .homepage-info-contact{
         color: $colorLight;
-        display: flex;
-        justify-content: center;
+        @include flexbox;
+        @include justify-content(center);
 
         ul{
             display: inline-flex;
-            align-items: center;
+            @include align-items(center);
             position: absolute;
             bottom: 2rem;
         }
@@ -134,7 +134,7 @@
         }
         .button-accueil{
             .btn-left, .btn-right{
-                justify-content: center;
+                @include justify-content(center);
             }
 
             img{
@@ -184,7 +184,7 @@
 
         .button-accueil{
             .btn-left, .btn-right{
-                justify-content: center;
+                @include justify-content(center);
             }
             img{
                 width: 40%;

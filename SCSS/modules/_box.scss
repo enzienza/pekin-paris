@@ -81,8 +81,9 @@
             font-size: x-large;
         }
         .box-avatar{
-            display: flex;
-            justify-content: center;
+            @include flexbox;
+            @include justify-content(center);
+
             img{
                 margin-left: 3rem;
                 height: auto;
@@ -134,16 +135,16 @@
             margin-bottom: 2rem;
         }
         .box-avatar{
-            display: flex;
-            justify-content: center;
+            @include flexbox;
+            @include justify-content(center);
             img{
                 width: 50%;
             }
         }
 
         ul{
-            display: grid;
-            justify-content: center;
+            @include display-grid;
+            @include justify-content(center);
             margin-top: 2rem;
         }
 
@@ -186,8 +187,8 @@
             font-size: x-large;
         }
         .box-avatar{
-            display: flex;
-            justify-content: center;
+            @include flexbox;
+            @include justify-content(center);
             img{
                 width: 50%;
                 margin-left: 0;
@@ -195,8 +196,8 @@
         }
 
         ul{
-            display: grid;
-            justify-content: center;
+            @include display-grid;
+            @include justify-content(center);
             margin-top: 2rem;
             margin-left: 2rem;
         }

@@ -104,8 +104,8 @@
     }
 
     .box-right{
-        display: flex;
-        justify-content: center;
+        @include flexbox;
+        @include justify-content(center);
         margin-left: -6rem;
 
         img{
@@ -119,9 +119,9 @@
         background-position: 50% 50%;
 
         .row{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
             padding: 1rem 0;
         }
         .box-taykeaway{
@@ -164,8 +164,8 @@
     // carte-emporter ----------------------------------------------------------
     #carte-emporter{
         .info-emporter{
-            display: flex;
-            justify-content: center;
+            @include flexbox;
+            @include justify-content(center);
             ul{
                 font-size: large;
                 margin-top: 3rem;
@@ -189,7 +189,7 @@
             }
 
             &-right{
-                justify-content: center;
+                @include justify-content(center);
                 margin-left: 0;
                 padding: 2rem;
                 img{
@@ -280,9 +280,9 @@
     // content-emporter --------------------------------------------------------
     #content-emporter{
         .box-titre{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox;
+            @include justify-content(center);
+            @include align-items(center);
             h2{
                 font-size: x-large;
                 margin-top: 0;
@@ -396,9 +396,9 @@
     // content-emporter --------------------------------------------------------
     #content-emporter{
         .box-titre{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox;
+            @include justify-content(center);
+            @include align-items(center);
             h2{
                 font-size: larger;
                 margin-top: 0;
