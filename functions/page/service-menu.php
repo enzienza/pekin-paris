@@ -49,7 +49,7 @@ function add_page_sercive_menu(){
 function tabs_sercive_menu(){
     $tabs = array(
         'table-riz' => 'Table de riz',
-        'fondu' => 'Fondu chinoise'
+        'fondu' => 'Fondue chinoise'
     );
     return apply_filters('tabs_sercive_menu', $tabs);
 } // END ==>  tabs_sercive_menu
@@ -93,7 +93,7 @@ function theme_page_sercive_menu(){
 
                     if($_GET['tab'] == 'fondu'){
                         ?>
-                        <h3>Fondu chinoise</h3>
+                        <h3>Fondue chinoisee</h3>
                         <!-- <div class=""> -->
                             <?php settings_fields( 'group-fondu' );?>
                             <?php do_settings_sections( 'fondu' ); ?>

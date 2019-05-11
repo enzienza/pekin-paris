@@ -49,3 +49,7 @@
 
     </div><!-- /.container -->
 </section><!-- /#erreur -->
+
+<div style="display:none;">
+    <?php get_footer(); ?>
+</div>

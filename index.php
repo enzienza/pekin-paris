@@ -133,4 +133,6 @@
 
 </main>
 
-<?php //get_footer(); ?>
+<div style="display:none;">
+    <?php get_footer(); ?>
+</div>

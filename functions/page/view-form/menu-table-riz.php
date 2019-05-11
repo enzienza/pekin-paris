@@ -54,7 +54,7 @@ function field_tableriz_info(){
                 </span>
             </div>
             <div class="backend-min-couvert">
-                <span>Couvert minimum</span>
+                <span>Couverts minimum</span>
                 <input type="text" id="tableriz_couvert" name="tableriz_couvert" value="<?php echo get_option('tableriz_couvert'); ?>" />
             </div>
 

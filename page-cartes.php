@@ -200,7 +200,7 @@
                             <p class="prix"><?php echo get_option('tableriz_prix'); ?></p>
                             <ul>
                                 <li>Prix par personnne</li>
-                                <li>Minimum <?php echo get_option('tableriz_couvert'); ?> couvert</li>
+                                <li>Minimum <?php echo get_option('tableriz_couvert'); ?> couverts</li>
                             </ul>
                         </div><!-- /.info-menu -->
 
@@ -249,7 +249,7 @@
 
                         <!-- stat : titre -->
                         <div class="titre-card">
-                            <h1>Fondu chinoise</h1>
+                            <h1>Fondue chinoise</h1>
                         </div><!-- /.titre -->
 
                         <!-- stat :  info-menu-->
@@ -257,7 +257,7 @@
                             <p class="prix"><?php echo get_option('fondu_prix'); ?></p>
                             <ul>
                                 <li>Prix par personnne</li>
-                                <li>Minimum <?php echo get_option('fondu_couvert'); ?> couvert</li>
+                                <li>Minimum <?php echo get_option('fondu_couvert'); ?> couverts</li>
                             </ul>
                         </div><!-- /.info-menu -->
 

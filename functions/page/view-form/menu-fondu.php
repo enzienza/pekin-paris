@@ -54,7 +54,7 @@ function field_fondu_info(){
                 </span>
             </div>
             <div class="backend-min-couvert">
-                <span>Couvert minimum</span>
+                <span>Couverts minimum</span>
                 <input type="text" id="fondu_couvert" name="fondu_couvert" value="<?php echo get_option('fondu_couvert'); ?>" />
             </div>
 
