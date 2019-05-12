@@ -77,7 +77,7 @@
                                     </li>
                                     <li>
                                         <?php echo(get_option('buffetpage_msg_element_entrechaude')); ?>
-                                        <span class="info-element-buffet">entrées chaude</span>
+                                        <span class="info-element-buffet">entrées chaudes</span>
                                     </li>
                                     <li>
                                         <?php echo(get_option('buffetpage_msg_element_plats')); ?>

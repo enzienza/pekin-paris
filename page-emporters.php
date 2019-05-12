@@ -103,7 +103,7 @@
                         </li>
                         <li>
                             <strong class="strong-color">
-                                <?php echo get_option('emporterpage_promo_offert'); ?> offert
+                                <?php echo get_option('emporterpage_promo_offert'); ?> offerte
                             </strong>
                             <span>à partir de </span>
                             <span class="color-price"><?php echo get_option('emporterpage_promo_minimum'); ?></span>
